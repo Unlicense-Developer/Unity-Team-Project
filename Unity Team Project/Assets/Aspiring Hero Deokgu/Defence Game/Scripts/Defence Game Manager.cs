@@ -6,17 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class DefenceGameManager : MonoBehaviour
 {
-    public int score = 0;
-    public Text scoreText;
-    public Text gameOverScore;
-    public Text scoreGoldText;
+    [SerializeField] private Text scoreText;
+    [SerializeField] private Text gameOverScore;
+    [SerializeField] private Text scoreGoldText;
+    [SerializeField] private GameObject goal;
+    [SerializeField] private GameObject gameOverUI;
+    [SerializeField] private GameObject gameStartUI;
 
-    int life = 5;
-    public bool isPlaying = true;
-    public GameObject goal;
     public PlayerLife playerLife;
-    public GameObject gameOverUI;
-    public GameObject gameStartUI;
+
+    int score = 0;
+    int life = 5;
+    bool isPlaying = false;
 
     //ΩÃ±€≈Ê
     public static DefenceGameManager instance = null;
@@ -63,6 +64,21 @@ public class DefenceGameManager : MonoBehaviour
         Time.timeScale = 1.0f;
     }
 
+    public bool IsPlaying()
+    {
+        return isPlaying;
+    }
+
+    public int GetScore()
+    {
+        return score;
+    }
+
+    public void AddScore(int addScore)
+    {
+        score += addScore;
+    }
+
     public int GetLifeCount()
     {
         return life;
@@ -71,6 +87,14 @@ public class DefenceGameManager : MonoBehaviour
     public void CalculateLife(int value)
     {
         life += value;
+    }
+
+    public void GameStart()
+    {
+        isPlaying = true;
+        gameStartUI.SetActive(false);
+        Camera.main.transform.rotation = Quaternion.Euler(new Vector3(50.0f, 90.0f, 0.0f));
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void CheckGameOver()
