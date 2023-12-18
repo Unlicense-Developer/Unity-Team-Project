@@ -104,7 +104,7 @@ public class DefenceGameManager : MonoBehaviour
             isPlaying = false;
             Cursor.lockState = CursorLockMode.None;
             gameOverScore.text = "´Þ¼º Á¡¼ö : " + score.ToString();
-            scoreGoldText.text = "È¹µæ °ñµå : " + (score / 2).ToString();
+            scoreGoldText.text = "È¹µæ °ñµå : " + ((int)(score * 0.5f)).ToString();
             gameOverUI.SetActive(true);
             Time.timeScale = 0.0f;
         }
@@ -112,7 +112,7 @@ public class DefenceGameManager : MonoBehaviour
 
     public void ReturnWorldScene()
     {
-        PlayerData.instance.AddGold(score / 2);
+        PlayerData.instance.AddGold((int)(score * 0.5f));
         PlayerData.instance.AddItemData("Ax");
         SceneManager.LoadScene("WorldMap");
     }

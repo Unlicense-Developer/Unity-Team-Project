@@ -9,19 +9,21 @@ public class VeganNinjaManager : MonoBehaviour
     public static VeganNinjaManager Instance { get; private set; }
 
     [SerializeField] private Blade blade;
-    [SerializeField] private Spawner spawner;
+    [SerializeField] private SpawnManager spawnManager;
     [SerializeField] private Text scoreText;
     [SerializeField] private Text gameOverScoreText;
     [SerializeField] private Image fadeImage;
     [SerializeField] private Image awardImage;
     [SerializeField] private GameObject gameOverUI;
+    [SerializeField] private List<AudioClip> sliceSounds;
+    [SerializeField] private AudioClip gameoverSound;
 
-    public List<AudioClip> sliceSounds;
     AudioSource sliceSound;
 
-    private int score;
-    public int playerLife = 5;
     public bool isSliceFruit = false;
+    bool isPlaying = false;
+    int score;
+    int playerLife = 5;
 
     public int Score => score;
 
@@ -52,9 +54,14 @@ public class VeganNinjaManager : MonoBehaviour
         ClearScene();
 
         blade.enabled = true;
-        spawner.enabled = true;
+        spawnManager.enabled = true;
 
         score = 0;
+    }
+
+    public bool IsPlaying()
+    {
+        return isPlaying;
     }
 
     private void ClearScene()
@@ -91,7 +98,7 @@ public class VeganNinjaManager : MonoBehaviour
     public void Explode()
     {
         blade.enabled = false;
-        spawner.enabled = false;
+        spawnManager.enabled = false;
 
         StartCoroutine(ExplodeSequence());
     }
@@ -148,8 +155,10 @@ public class VeganNinjaManager : MonoBehaviour
             yield return null;
         }
 
-        yield return new WaitForSecondsRealtime(1f);
+        yield return new WaitForSecondsRealtime(2.0f);
 
+        sliceSound.clip = gameoverSound;
+        sliceSound.Play();
         CheckScoreAward();
         gameOverScoreText.text = "달성 점수 : " + score.ToString();
         gameOverUI.SetActive(true);

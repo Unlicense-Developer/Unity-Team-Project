@@ -2,14 +2,16 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
-public class Spawner : MonoBehaviour
+public class SpawnManager: MonoBehaviour
 {
+    [SerializeField] private GameObject[] fruitPrefabs;
+    [SerializeField] private GameObject bombPrefab;
+    [SerializeField] private AudioClip spawnSoundClip;
+
     AudioSource spawnSound;
 
-    private Collider spawnArea;
+    Collider spawnArea;
 
-    public GameObject[] fruitPrefabs;
-    public GameObject bombPrefab;
     [Range(0f, 1f)] public float bombChance = 0.05f;
 
     public float minSpawnDelay = 0.25f;
@@ -23,25 +25,29 @@ public class Spawner : MonoBehaviour
 
     public float maxLifetime = 5f;
 
-    private void Awake()
+    void Awake()
     {
         spawnArea = GetComponent<Collider>();
         spawnSound = GetComponent<AudioSource>();
     }
 
-    private void OnEnable()
+    public void StartSpawn()
     {
+        spawnSound.Play();
         StartCoroutine(Spawn());
     }
+
 
     private void OnDisable()
     {
         StopAllCoroutines();
     }
 
-    private IEnumerator Spawn()
+    public IEnumerator Spawn()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3.0f);
+
+        spawnSound.clip = spawnSoundClip;
 
         while (enabled)
         {

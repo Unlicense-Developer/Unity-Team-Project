@@ -11,7 +11,6 @@ public class Bomb : MonoBehaviour
     private void Start()
     {
         bombSound = GetComponent<AudioSource>();
-        bombSound.volume = 0.5f;
         bombSound.clip = fuzeSound;
         bombSound.Play();
     }
