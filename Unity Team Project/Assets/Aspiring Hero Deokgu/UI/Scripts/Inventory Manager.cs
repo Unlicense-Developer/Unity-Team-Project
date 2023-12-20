@@ -119,7 +119,15 @@ public class InventoryManager : MonoBehaviour
 
     public void UseSelectItem()
     {
-        
+        if (select_Item == null)
+            return;
+
+        if (GetSelectItem().type == ItemType.Potion)
+        {
+            Debug.Log("포션을 사용했습니다.");
+            RemoveItem(select_Item.transform.Find("Image_item").GetComponent<Image>().sprite.name);
+            UpdateInven();
+        }
     }
 
     public void DeleteSelectItem()
