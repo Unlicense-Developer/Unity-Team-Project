@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class DefenceGameManager : MonoBehaviour
 {
-    [SerializeField] private Text scoreText;
-    [SerializeField] private Text gameOverScore;
-    [SerializeField] private Text scoreGoldText;
+    [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private TMP_Text gameOverScore;
+    [SerializeField] private TMP_Text scoreGoldText;
     [SerializeField] private GameObject goal;
     [SerializeField] private GameObject gameOverUI;
     [SerializeField] private GameObject gameStartUI;
@@ -93,7 +94,7 @@ public class DefenceGameManager : MonoBehaviour
             isPlaying = false;
             Cursor.lockState = CursorLockMode.None;
             gameOverScore.text = "´Þ¼º Á¡¼ö : " + score.ToString();
-            scoreGoldText.text = "È¹µæ °ñµå : " + ((int)(score * 0.5f)).ToString();
+            scoreGoldText.text = ((int)(score * 0.6f)).ToString();
             gameOverUI.SetActive(true);
             Time.timeScale = 0.0f;
         }
@@ -101,9 +102,7 @@ public class DefenceGameManager : MonoBehaviour
 
     public void ReturnWorldScene()
     {
-        PlayerData.instance.AddGold((int)(score * 0.5f));
-        PlayerData.instance.AddItemData("Ax");
-        //SceneManager.LoadScene("WorldMap");
+        PlayerData.instance.AddGold((int)(score * 0.6f));
         LoadingSceneManager.Instance.StartLoadScene("WorldMap");
     }
 }
