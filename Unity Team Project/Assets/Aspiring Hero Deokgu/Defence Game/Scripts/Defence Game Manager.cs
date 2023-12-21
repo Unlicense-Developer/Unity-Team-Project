@@ -20,28 +20,17 @@ public class DefenceGameManager : MonoBehaviour
     bool isPlaying = false;
 
     //½Ì±ÛÅæ
-    public static DefenceGameManager instance = null;
-    public static DefenceGameManager Instance
-    {
-        get
-        {
-            if (instance == null)
-            {
-                return null;
-            }
-
-            return instance;
-        }
-    }
+    public static DefenceGameManager Instance { get; private set; }
 
     void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
-
-            // ¾À ÀüÈ¯µÇ´õ¶óµµ ÆÄ±«µÇÁö ¾Ê°Ô ÇÔ
-            //DontDestroyOnLoad(this.gameObject);
+            Instance = this;
+        }
+        else if (Instance != null)
+        {
+            Destroy(this.gameObject);
         }
     }
 
@@ -115,6 +104,6 @@ public class DefenceGameManager : MonoBehaviour
         PlayerData.instance.AddGold((int)(score * 0.5f));
         PlayerData.instance.AddItemData("Ax");
         //SceneManager.LoadScene("WorldMap");
-        LoadingSceneManager.instance.StartLoadScene("WorldMap");
+        LoadingSceneManager.Instance.StartLoadScene("WorldMap");
     }
 }

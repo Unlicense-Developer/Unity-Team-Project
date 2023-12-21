@@ -10,30 +10,17 @@ public class LoadingSceneManager : MonoBehaviour
     [SerializeField] GameObject loadingSceneUI;
     [SerializeField] Image progressBar;
 
-    public static LoadingSceneManager instance = null;
-
-    public static LoadingSceneManager Instance
-    {
-        get
-        {
-            if (instance == null)
-            {
-                return null;
-            }
-
-            return instance;
-        }
-    }
+    public static LoadingSceneManager Instance { get; private set; }
 
     void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
 
             DontDestroyOnLoad(gameObject);
         }
-        else if (instance != null)
+        else if (Instance != null)
         {
             Destroy(this.gameObject);
         }

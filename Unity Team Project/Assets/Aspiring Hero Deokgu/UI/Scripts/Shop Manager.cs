@@ -82,8 +82,8 @@ public class ShopManager : MonoBehaviour
         if (select_Shopitem == null)
             return;
 
-        InventoryManager.instance.AddItem(select_Shopitem);
-        InventoryManager.instance.UpdateInven();
-        InventoryManager.instance.gold -= ItemDataManager.instance.GetItem(select_Shopitem.transform.Find("Image_item").GetComponent<Image>().sprite.name).value;
+        InventoryManager.Instance.AddItem(select_Shopitem);
+        InventoryManager.Instance.UpdateInven();
+        InventoryManager.Instance.gold -= ItemDataManager.Instance.GetItem(select_Shopitem.transform.Find("Image_item").GetComponent<Image>().sprite.name).value;
     }
 }

@@ -17,7 +17,7 @@ public class InventoryUI : MonoBehaviour
         if (WinInput.GetKeyDown(KeyCode.I))
         {
             if (!invenPanel.activeSelf)
-                InventoryManager.instance.UpdateInven();
+                InventoryManager.Instance.UpdateInven();
 
             invenPanel.SetActive(!invenPanel.activeSelf);
         }
