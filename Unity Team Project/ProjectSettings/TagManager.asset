@@ -12,6 +12,10 @@ TagManager:
   - Door
   - Chest
   - FieldItem
+  - Enemy
+  - Button
+  - EventCamera
+  - EnemyInBattle
   layers:
   - Default
   - TransparentFX

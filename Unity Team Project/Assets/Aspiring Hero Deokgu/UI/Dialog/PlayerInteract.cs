@@ -1,4 +1,6 @@
 using UnityEngine;
+using DungeonBattle;
+using System.Threading;
 
 public class PlayerInteract : MonoBehaviour
 {
@@ -17,7 +19,19 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            BattleManager battleManager = FindObjectOfType<BattleManager>();
+            if (battleManager != null)
+            {
+                // Collider의 게임 오브젝트를 SetUpBattle 메소드에 전달
+                battleManager.SetUpBattle(other.gameObject);
+                Debug.Log("PlayerInteract: 적 조우");
+            }
+        }
+
         interactUiGroup.SetActive(true); // 모든 상호작용이 시작될 때 UI 그룹 활성화
+
         if (other.CompareTag("NPC"))
         {
             currentInteractable = other.gameObject;

@@ -11,7 +11,6 @@ public class InventoryUI : MonoBehaviour
     void Start()
     {
         invenPanel.SetActive(false);//처음 닫은상태
-
     }
     void ToggleInventory() //인벤토리 열기,닫기
     {

@@ -10,9 +10,9 @@ public class GobsMoveAgent : MonoBehaviour
 
     NavMeshAgent nav;
     Transform tr;
-    readonly float patrolSpeed = 1.5f;
-    readonly float chaseSpeed = 4f;
-    float damping = 1f;     //회전할떄 속도 변수(계수)
+    readonly float patrolSpeed = 0.5f;
+    readonly float chaseSpeed = 1.2f;
+    float damping = 1f;     //회전할때 속도 변수(계수)
     bool isPatrol;
 
     public bool IsPatrol
@@ -27,6 +27,7 @@ public class GobsMoveAgent : MonoBehaviour
             {
                 nav.speed = patrolSpeed;
                 damping = 1f;
+                MoveWaypoints();
             }
         }
     }
@@ -53,7 +54,7 @@ public class GobsMoveAgent : MonoBehaviour
     {
         tr = GetComponent<Transform>();
         nav = GetComponent<NavMeshAgent>();
-        nav.autoBraking = true;
+        nav.autoBraking = false;
         nav.updateRotation = false;
         nav.speed = patrolSpeed;
 
@@ -81,7 +82,7 @@ public class GobsMoveAgent : MonoBehaviour
     }
 
     public void MoveWaypoints()
-    {   
+    {
         if (nav.isPathStale) return;   // 목적지까지 경로 계산
         if (waypoints == null || waypoints.Length == 0) return; //배열이 비어있는지 체크
         nav.destination = waypoints[nextIndex].position;
@@ -105,12 +106,13 @@ public class GobsMoveAgent : MonoBehaviour
 
     void Update()
     {
-        if (nav.isStopped == false)
+        if (nav.isStopped == false && nav.desiredVelocity != Vector3.zero)
         {   // NavMesh가 이동하는 방향 vector를 quaternion 타입이 angle로 변환시켜줌.
             Quaternion rot = Quaternion.LookRotation(nav.desiredVelocity);
             tr.rotation = Quaternion.Slerp(tr.rotation, rot, Time.deltaTime * damping);
         }
-        if (!isPatrol) return;  //순찰모드가 아니면 초기화
+
+        //if (!isPatrol) return;  //순찰모드가 아니면 초기화
 
         if (nav.velocity.sqrMagnitude >= 0.2f * 0.2f && nav.remainingDistance <= 0.5f)
         {
