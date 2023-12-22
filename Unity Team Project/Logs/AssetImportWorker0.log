@@ -1,23 +1,23 @@
 Using pre-set license
 Built from '2022.3/staging' branch; Version is '2022.3.14f1 (eff2de9070d8) revision 15725278'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'ko' Physical Memory: 48985 MB
+OS: 'Windows 10  (10.0.19042) 64bit Core' Language: 'ko' Physical Memory: 32628 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-D:\Unity\2022.3.14f1\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-D:/Unity/Projects/Unity Team Project Develope 0.1
+D:/Git/Unity-Team-Project/Unity Team Project
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-49750
-Successfully changed project path to: D:/Unity/Projects/Unity Team Project Develope 0.1
-D:/Unity/Projects/Unity Team Project Develope 0.1
+64700
+Successfully changed project path to: D:/Git/Unity-Team-Project/Unity Team Project
+D:/Git/Unity-Team-Project/Unity Team Project
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,68 +49,65 @@ D:/Unity/Projects/Unity Team Project Develope 0.1
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [19532] Host "[IP] 192.168.0.2 [Port] 0 [Flags] 2 [Guid] 4073270457 [EditorId] 4073270457 [Version] 1048832 [Id] WindowsEditor(7,null) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [8488] Host "[IP] 172.16.133.7 [Port] 0 [Flags] 2 [Guid] 4040410178 [EditorId] 4040410178 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-A2JQ7D9) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [19532] Host "[IP] 192.168.0.2 [Port] 0 [Flags] 2 [Guid] 4073270457 [EditorId] 4073270457 [Version] 1048832 [Id] WindowsEditor(7,null) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [8488] Host "[IP] 172.16.133.7 [Port] 0 [Flags] 2 [Guid] 4040410178 [EditorId] 4040410178 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-A2JQ7D9) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-[Physics::Module] Initialized MultithreadedJobDispatcher with 19 workers.
-Refreshing native plugins compatible for Editor in 3.77 ms, found 3 plugins.
+[Physics::Module] Initialized MultithreadedJobDispatcher with 3 workers.
+Refreshing native plugins compatible for Editor in 13.97 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.14f1 (eff2de9070d8)
-[Subsystems] Discovering subsystems at path D:/Unity/2022.3.14f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/Unity/Projects/Unity Team Project Develope 0.1/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.14f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Git/Unity-Team-Project/Unity Team Project/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 4070 Ti (ID=0x2782)
-    Vendor:   NVIDIA
-    VRAM:     12010 MB
-    Driver:   31.0.15.4592
+    Renderer: Intel(R) HD Graphics 530 (ID=0x1912)
+    Vendor:   Intel
+    VRAM:     16314 MB
+    Driver:   27.20.100.8935
 Initialize mono
-Mono path[0] = 'D:/Unity/2022.3.14f1/Editor/Data/Managed'
-Mono path[1] = 'D:/Unity/2022.3.14f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'D:/Unity/2022.3.14f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56892
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.14f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.14f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.14f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56368
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: D:/Unity/2022.3.14f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Register platform support module: D:/Unity/2022.3.14f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001780 seconds.
-- Loaded All Assemblies, in  0.275 seconds
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.14f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.010313 seconds.
+- Loaded All Assemblies, in  0.550 seconds
 Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 200 ms
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.425 seconds
-Domain Reload Profiling: 700ms
-	BeginReloadAssembly (101ms)
+- Finished resetting the current domain, in  0.435 seconds
+Domain Reload Profiling: 985ms
+	BeginReloadAssembly (176ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (0ms)
-	RebuildCommonClasses (25ms)
-	RebuildNativeTypeToScriptingClass (6ms)
-	initialDomainReloadingComplete (32ms)
-	LoadAllAssembliesAndSetupDomain (110ms)
-		LoadAssemblies (102ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (55ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (85ms)
+	LoadAllAssembliesAndSetupDomain (217ms)
+		LoadAssemblies (173ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (108ms)
-			TypeCache.Refresh (106ms)
-				TypeCache.ScanAssembly (93ms)
+		AnalyzeDomain (214ms)
+			TypeCache.Refresh (212ms)
+				TypeCache.ScanAssembly (191ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (425ms)
+	FinalizeReload (436ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (381ms)
+		SetupLoadedEditorAssemblies (331ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (268ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (17ms)
+			SetLoadedEditorAssemblies (14ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (75ms)
-			ProcessInitializeOnLoadMethodAttributes (33ms)
+			BeforeProcessingInitializeOnLoad (4ms)
+			ProcessInitializeOnLoadAttributes (214ms)
+			ProcessInitializeOnLoadMethodAttributes (81ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -118,106 +115,58 @@ Domain Reload Profiling: 700ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.534 seconds
-Refreshing native plugins compatible for Editor in 1.24 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.095 seconds
+Refreshing native plugins compatible for Editor in 3.03 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
-Native extension for Android target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.544 seconds
-Domain Reload Profiling: 1078ms
-	BeginReloadAssembly (94ms)
+- Finished resetting the current domain, in  1.085 seconds
+Domain Reload Profiling: 2178ms
+	BeginReloadAssembly (228ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
+		DisableScriptedObjects (10ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (13ms)
-	RebuildCommonClasses (24ms)
-	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (23ms)
-	LoadAllAssembliesAndSetupDomain (386ms)
-		LoadAssemblies (274ms)
+		CreateAndSetChildDomain (31ms)
+	RebuildCommonClasses (53ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (64ms)
+	LoadAllAssembliesAndSetupDomain (729ms)
+		LoadAssemblies (538ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (164ms)
-			TypeCache.Refresh (138ms)
-				TypeCache.ScanAssembly (125ms)
-			ScanForSourceGeneratedMonoScriptInfo (21ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (545ms)
+		AnalyzeDomain (322ms)
+			TypeCache.Refresh (277ms)
+				TypeCache.ScanAssembly (255ms)
+			ScanForSourceGeneratedMonoScriptInfo (31ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1087ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (429ms)
+		SetupLoadedEditorAssemblies (828ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (15ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (8ms)
+			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (65ms)
-			ProcessInitializeOnLoadAttributes (326ms)
-			ProcessInitializeOnLoadMethodAttributes (19ms)
-			AfterProcessingInitializeOnLoad (1ms)
+			BeforeProcessingInitializeOnLoad (121ms)
+			ProcessInitializeOnLoadAttributes (655ms)
+			ProcessInitializeOnLoadMethodAttributes (28ms)
+			AfterProcessingInitializeOnLoad (8ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (4ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 1.20 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (8ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 2.41 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3850 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 61 unused Assets / (131.4 KB). Loaded Objects now: 4350.
-Memory consumption went from 240.6 MB to 240.4 MB.
-Total: 2.213100 ms (FindLiveObjects: 0.294200 ms CreateObjectMapping: 0.060500 ms MarkObjects: 1.756700 ms  DeleteObjects: 0.100700 ms)
+Unloading 3851 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (131.1 KB). Loaded Objects now: 4347.
+Memory consumption went from 240.8 MB to 240.7 MB.
+Total: 3.204600 ms (FindLiveObjects: 0.307000 ms CreateObjectMapping: 0.272400 ms MarkObjects: 2.487500 ms  DeleteObjects: 0.136600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 286576.915952 seconds.
-  path: Assets/Aspiring Hero Deokgu/Dungeon/Battle/Prefabs/Player.prefab
-  artifactKey: Guid(bace40d7cbe264641b4b3d9000ce5f49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Dungeon/Battle/Prefabs/Player.prefab using Guid(bace40d7cbe264641b4b3d9000ce5f49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60c60560c244ca0277c1f503b3419a3a') in 0.199407 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 476
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Aspiring Hero Deokgu/Dungeon/Battle/Animations/Player/Player Battle.controller
-  artifactKey: Guid(939ce54e9d738fb45b91dd9aa9f9c31b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Dungeon/Battle/Animations/Player/Player Battle.controller using Guid(939ce54e9d738fb45b91dd9aa9f9c31b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec6772e781fd3d54416878aea6f47653') in 0.092605 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 51
-========================================================================
-Received Import Request.
-  Time since last request: 7.200135 seconds.
-  path: Assets/Aspiring Hero Deokgu/Dungeon/Battle/Animations/Player/ARPG_Warrior_Attack_Combo1.anim
-  artifactKey: Guid(273e2b68157b11044b85b7a487182c16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Dungeon/Battle/Animations/Player/ARPG_Warrior_Attack_Combo1.anim using Guid(273e2b68157b11044b85b7a487182c16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83d3a49b911d769d8d273a36fe0df318') in 0.008306 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.92 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 2 unused Assets / (74.3 KB). Loaded Objects now: 4359.
-Memory consumption went from 175.1 MB to 175.0 MB.
-Total: 4.060000 ms (FindLiveObjects: 0.281700 ms CreateObjectMapping: 0.092300 ms MarkObjects: 3.649400 ms  DeleteObjects: 0.035700 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
@@ -231,145 +180,436 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 1235.185489 seconds.
-  path: Assets/Aspiring Hero Deokgu/Alchemy/Audio/BGM.wav
-  artifactKey: Guid(d74cd6c6b6d71844b900c3a5dbc6d737) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Alchemy/Audio/BGM.wav using Guid(d74cd6c6b6d71844b900c3a5dbc6d737) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c63fed3d35b2dc75fdde1fb9c00540c') in 0.425988 seconds
+  Time since last request: 2171760.986484 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Battle/Prefabs/Player.prefab
+  artifactKey: Guid(bace40d7cbe264641b4b3d9000ce5f49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Battle/Prefabs/Player.prefab using Guid(bace40d7cbe264641b4b3d9000ce5f49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec8e443ed1841afdc17d005d7b6d7625') in 0.288683 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 476
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Aspiring Hero Deokgu/Vegan Knight/Sounds/Bomb Explode.wav
-  artifactKey: Guid(4f383d9fac32eaf479d8b7ba36c03726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Vegan Knight/Sounds/Bomb Explode.wav using Guid(4f383d9fac32eaf479d8b7ba36c03726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efe028281932ba4d30b2277a8058b0e4') in 0.011398 seconds
+  Time since last request: 0.000031 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Battle/Prefabs/SM_Wep_Straightsword_01.prefab
+  artifactKey: Guid(d0d3b89ed1c15fa49b0534afd3124921) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Battle/Prefabs/SM_Wep_Straightsword_01.prefab using Guid(d0d3b89ed1c15fa49b0534afd3124921) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f3c7c38167a1c08808d182d443fbe0b') in 0.019579 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 13
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Aspiring Hero Deokgu/Alchemy/Audio/Cute_Game_SFX_Pop_Up_01.wav
-  artifactKey: Guid(64aa6c4079eba9a47b40ce0e320c2d06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Alchemy/Audio/Cute_Game_SFX_Pop_Up_01.wav using Guid(64aa6c4079eba9a47b40ce0e320c2d06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f28b62c69160a61993aeb528e8fcefa') in 0.016156 seconds
+  Time since last request: 0.000016 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Battle/Resources/ActionText_Victory.png
+  artifactKey: Guid(1f9bd1162659c7b4a8310d24a6a98210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Battle/Resources/ActionText_Victory.png using Guid(1f9bd1162659c7b4a8310d24a6a98210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa2ec14ea034f077c01f2213433b0cf8') in 0.043852 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Aspiring Hero Deokgu/Dungeon/Battle/Audio/BoneBreak(6).wav
-  artifactKey: Guid(0d80bffc966321346aa0e7e8ccaac156) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Dungeon/Battle/Audio/BoneBreak(6).wav using Guid(0d80bffc966321346aa0e7e8ccaac156) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6ec5aa820ce29558e575bd795789e29') in 0.013484 seconds
+  Time since last request: 0.000037 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Battle/Resources/BattleStart.png
+  artifactKey: Guid(2af9969244c216e4c95d06873a227a81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Battle/Resources/BattleStart.png using Guid(2af9969244c216e4c95d06873a227a81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b848ddf0922342c402b3397789e8fe3c') in 0.026088 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/Aspiring Hero Deokgu/Vegan Knight/Sounds/Blade 3.wav
-  artifactKey: Guid(bf0101e1d98115e43b25e02b9f1fd71b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Vegan Knight/Sounds/Blade 3.wav using Guid(bf0101e1d98115e43b25e02b9f1fd71b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a158bdac488be3b986d7160781ae97d8') in 0.017719 seconds
+  Time since last request: 0.000017 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Battle/Prefabs/Battle Manager.prefab
+  artifactKey: Guid(20bc6b3debc0a59478c4bc19ad08ae4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Battle/Prefabs/Battle Manager.prefab using Guid(20bc6b3debc0a59478c4bc19ad08ae4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22ceb3aea6191b8c8908216a3c0f7eb1') in 0.006255 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Aspiring Hero Deokgu/FishingGame/Sound/Catch.mp3
-  artifactKey: Guid(c5c5224ddb2b2954faf3f3adf33deff7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/FishingGame/Sound/Catch.mp3 using Guid(c5c5224ddb2b2954faf3f3adf33deff7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f1c2f27acd3ec6919c2caa7805ce89c') in 0.016392 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 15
 ========================================================================
 Received Import Request.
   Time since last request: 0.000013 seconds.
-  path: Assets/Aspiring Hero Deokgu/Dungeon/Battle/Audio/BoneBreak(2).wav
-  artifactKey: Guid(ad3f25b94f4e1a747964103e5d9fb63d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Dungeon/Battle/Audio/BoneBreak(2).wav using Guid(ad3f25b94f4e1a747964103e5d9fb63d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1fe1dd011541973fb1396faa724669c') in 0.012030 seconds
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Battle/Resources/ActionText_LevelUp_Icon1.png
+  artifactKey: Guid(4a7548e99df00af478af7330812ece36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Battle/Resources/ActionText_LevelUp_Icon1.png using Guid(4a7548e99df00af478af7330812ece36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f74ada1cb8d320961a0c2186aa5cd4ec') in 0.014910 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/Aspiring Hero Deokgu/Vegan Knight/Sounds/Blade 1.wav
-  artifactKey: Guid(5d2f6653a741e2144978201e44106b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Vegan Knight/Sounds/Blade 1.wav using Guid(5d2f6653a741e2144978201e44106b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4a0743ca95bc401e1b50077af58f579') in 0.008431 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/Aspiring Hero Deokgu/Alchemy/Audio/Ambient Wonderlust Main.wav
-  artifactKey: Guid(e7852d977a4a26342bf4e8130ab0ca1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Alchemy/Audio/Ambient Wonderlust Main.wav using Guid(e7852d977a4a26342bf4e8130ab0ca1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '404e3f5978f0e2eddfc0c2c011dfd20f') in 0.010455 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Aspiring Hero Deokgu/Alchemy/Audio/Attach.wav
-  artifactKey: Guid(b2dc0d6caf293254fbc6c145df87c9b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Alchemy/Audio/Attach.wav using Guid(b2dc0d6caf293254fbc6c145df87c9b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af9c848c8deb86a1e1aa5a63f9aea9c0') in 0.018574 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Aspiring Hero Deokgu/Alchemy/Audio/Button.wav
-  artifactKey: Guid(f6fa03999a0597a4fa8cdf6619791c13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Alchemy/Audio/Button.wav using Guid(f6fa03999a0597a4fa8cdf6619791c13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93a05914508a3364873b47d7dcb75b9d') in 0.016685 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
   Time since last request: 0.000015 seconds.
-  path: Assets/Aspiring Hero Deokgu/Dungeon/Battle/Audio/BoneBreak(5).wav
-  artifactKey: Guid(8324562e162c5f84fa9852109287397b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Dungeon/Battle/Audio/BoneBreak(5).wav using Guid(8324562e162c5f84fa9852109287397b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd09a1c5ff0809aa9f076e8ad4c0b074c') in 0.014930 seconds
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Battle/Resources/Slider02_Frame.png
+  artifactKey: Guid(abf6cae212ca70740ab9e2cb39922437) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Battle/Resources/Slider02_Frame.png using Guid(abf6cae212ca70740ab9e2cb39922437) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d919a48bf7648013d06837c8503c45f') in 0.013148 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Aspiring Hero Deokgu/FishingGame/Sound/Cast.wav
-  artifactKey: Guid(ec19250cb535aa146bb2454d5e4bc5a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/FishingGame/Sound/Cast.wav using Guid(ec19250cb535aa146bb2454d5e4bc5a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c430233528f0278ce192aa8a53363264') in 0.014510 seconds
+  Time since last request: 0.000014 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Battle/Resources/Slider01_Frame.png
+  artifactKey: Guid(cce6f72f9769cf04f98278e7eb3fcb28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Battle/Resources/Slider01_Frame.png using Guid(cce6f72f9769cf04f98278e7eb3fcb28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c013742297ab9c861eb144d991038d0') in 0.012951 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Aspiring Hero Deokgu/Alchemy/Audio/Cute_Game_SFX_Coins_03.wav
-  artifactKey: Guid(3257dbc4561fd16409d6ca30c629aded) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Alchemy/Audio/Cute_Game_SFX_Coins_03.wav using Guid(3257dbc4561fd16409d6ca30c629aded) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f03346756112e94bc0222048053b218') in 0.014521 seconds
+  Time since last request: 0.000015 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Battle/Resources/ActionText_LevelUp_Icon2.png
+  artifactKey: Guid(5fc6940212a2630409712423616f9082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Battle/Resources/ActionText_LevelUp_Icon2.png using Guid(5fc6940212a2630409712423616f9082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a6a0550b5c9ebfd6fbd65e25140d9d2') in 0.013981 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/Aspiring Hero Deokgu/Vegan Knight/Sounds/Blade 2.wav
-  artifactKey: Guid(c192366b1f354f64f98aceab4e6bc003) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Vegan Knight/Sounds/Blade 2.wav using Guid(c192366b1f354f64f98aceab4e6bc003) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ad437ea59573bc20b45cce6a89555eb') in 0.010566 seconds
+  Time since last request: 0.000018 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Battle/Prefabs/Enemy.prefab
+  artifactKey: Guid(7611f6f345970454090955cea30291db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Battle/Prefabs/Enemy.prefab using Guid(7611f6f345970454090955cea30291db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81d9a63617db1a93b0c5e103fa315955') in 0.707277 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 353
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/Aspiring Hero Deokgu/Dungeon/Battle/Audio/BoneBreak(3).wav
-  artifactKey: Guid(ef99e62e0b36046419f089676fdc9141) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Dungeon/Battle/Audio/BoneBreak(3).wav using Guid(ef99e62e0b36046419f089676fdc9141) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b601b42707cdd4d2f34bb45fb7bbfa8') in 0.011868 seconds
+  Time since last request: 0.000023 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Battle/Prefabs/SM_Wep_Sword_10.prefab
+  artifactKey: Guid(021a05531abbbfa4587dbcdedcefffb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Battle/Prefabs/SM_Wep_Sword_10.prefab using Guid(021a05531abbbfa4587dbcdedcefffb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87bd3dc92c438b99b2a5daec2bce023d') in 0.044238 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 13
 ========================================================================
 Received Import Request.
   Time since last request: 0.000024 seconds.
-  path: Assets/Aspiring Hero Deokgu/Vegan Knight/Sounds/Bomb Fuse.wav
-  artifactKey: Guid(6321eea295db1a94f84640456d466fdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Vegan Knight/Sounds/Bomb Fuse.wav using Guid(6321eea295db1a94f84640456d466fdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6962e32ac87523b521f239952d0342e') in 0.010762 seconds
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Battle/Resources/ActionText_Defeat.png
+  artifactKey: Guid(36522803d9d28de46844ebda5ad4cb15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Battle/Resources/ActionText_Defeat.png using Guid(36522803d9d28de46844ebda5ad4cb15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aea53e1d8065183151838ef85a025b3d') in 0.024145 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 498.624917 seconds.
-  path: Assets/Aspiring Hero Deokgu/Alchemy/Alchemy.unity
-  artifactKey: Guid(5430f63be9014604798f2ba9c4b8f49a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Alchemy/Alchemy.unity using Guid(5430f63be9014604798f2ba9c4b8f49a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75aadc89ecd322707dde617aa9b616da') in 0.000623 seconds
+  Time since last request: 0.000037 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Battle/Prefabs/SM_Wep_Shield_Heater_02.prefab
+  artifactKey: Guid(da1971baa1c68124eb1eb5e24b394ce4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Battle/Prefabs/SM_Wep_Shield_Heater_02.prefab using Guid(da1971baa1c68124eb1eb5e24b394ce4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9424479b33898f5e8572af302e98b1f') in 0.020985 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Battle/Resources/Slider02_Fill_Orange.png
+  artifactKey: Guid(9a1eec260ae86704893592c1c48b65e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Battle/Resources/Slider02_Fill_Orange.png using Guid(9a1eec260ae86704893592c1c48b65e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ed6947753ebe717b2872f23a1facb53') in 0.028935 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000421 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Battle/Resources/ActionText_Victory_Icon.png
+  artifactKey: Guid(9b7e06079fb944e4691585aa59efc00c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Battle/Resources/ActionText_Victory_Icon.png using Guid(9b7e06079fb944e4691585aa59efc00c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57982469023df55a35db6163da266c3b') in 0.028258 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Battle/Resources/Slider02_Fill_Green.png
+  artifactKey: Guid(381d9492cb48a3d4a8a8defd7636b51c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Battle/Resources/Slider02_Fill_Green.png using Guid(381d9492cb48a3d4a8a8defd7636b51c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97a6b16496acbc29b7910f83950ac160') in 0.025735 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 19.687497 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Barracks.prefab
+  artifactKey: Guid(b216902ce9bbc3945b53ca1bf6ede90a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Barracks.prefab using Guid(b216902ce9bbc3945b53ca1bf6ede90a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a9c79742ab0ba3669d87dc56e532352') in 0.119564 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1007
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Long_Hall.prefab
+  artifactKey: Guid(50910888da48a5144ae3aadd1765f826) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Long_Hall.prefab using Guid(50910888da48a5144ae3aadd1765f826) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5908b5377432772feb22a031835d55e') in 0.298618 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5193
+========================================================================
+Received Import Request.
+  Time since last request: 0.000083 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Furnace.prefab
+  artifactKey: Guid(f5d5295d318142e449fa3ff770c5b903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Furnace.prefab using Guid(f5d5295d318142e449fa3ff770c5b903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03df9c3bf5463a1ab1cf6687bb307a08') in 0.078666 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 452
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Ritual.prefab
+  artifactKey: Guid(79a4ee9406dcbcc4a898ca8955b1d206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Ritual.prefab using Guid(79a4ee9406dcbcc4a898ca8955b1d206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fb9410b9c273448bffa545d02b016ee') in 0.052714 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 247
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/RunePads.prefab
+  artifactKey: Guid(784c9f8d4e6cc3440bfd49fbc3697577) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/RunePads.prefab using Guid(784c9f8d4e6cc3440bfd49fbc3697577) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fd8593892435caaa7288a7d5dad1026') in 0.031369 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 68
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Lighting.prefab
+  artifactKey: Guid(94fdbfb4894cd784f964a7df8d31e8bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Lighting.prefab using Guid(94fdbfb4894cd784f964a7df8d31e8bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5b32b675c94e5656142c84747b15bd5') in 0.005915 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 392
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/FogPlanes.prefab
+  artifactKey: Guid(5379e8e38ba30e044ae1652f6084f80f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/FogPlanes.prefab using Guid(5379e8e38ba30e044ae1652f6084f80f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd799a4baf6e4945d930adddd92c0b0a') in 0.026567 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 69
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/EventTextGroup.prefab
+  artifactKey: Guid(9f722da747c247147886a8c341e2f545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/EventTextGroup.prefab using Guid(9f722da747c247147886a8c341e2f545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84e28ef7b9d2a8a63b592aaa6569f4d1') in 0.013725 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 19
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Goblin_Cave.prefab
+  artifactKey: Guid(a6fbaafce6a426c41a9c91854acad7df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Goblin_Cave.prefab using Guid(a6fbaafce6a426c41a9c91854acad7df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52f9088ee5a274b5eaf7bcd9d4d56f24') in 0.266956 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2783
+========================================================================
+Received Import Request.
+  Time since last request: 0.000120 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Center_Hall.prefab
+  artifactKey: Guid(52e637ae41758f143a0de6d63e6f297d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Center_Hall.prefab using Guid(52e637ae41758f143a0de6d63e6f297d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '340a5346668a773498402b34603fa13c') in 0.250402 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3711
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/ChestGroup.prefab
+  artifactKey: Guid(99c60cd81d439f44c8901f1ae8823e19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/ChestGroup.prefab using Guid(99c60cd81d439f44c8901f1ae8823e19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68894d51437ee6572c452083b947217f') in 0.041927 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 143
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Caves.prefab
+  artifactKey: Guid(cead9e224a1fc4e4a9620b88b4cf66a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Caves.prefab using Guid(cead9e224a1fc4e4a9620b88b4cf66a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92d15be13ea021ff3b0bd0d167164604') in 0.127421 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1277
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Dungeon Sound Manager.prefab
+  artifactKey: Guid(375fbe725edcad04faaa9f34ef486b13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Dungeon Sound Manager.prefab using Guid(375fbe725edcad04faaa9f34ef486b13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c676afe85c65cfe0b8374ff960d57c5e') in 0.015099 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 39
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Laboratory.prefab
+  artifactKey: Guid(4b7c3bd29a9a4014296804b967fa3884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Laboratory.prefab using Guid(4b7c3bd29a9a4014296804b967fa3884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5221c0c003f094aac22d9b3c0b2d90f7') in 0.108842 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 853
+========================================================================
+Received Import Request.
+  Time since last request: 0.000110 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Outside.prefab
+  artifactKey: Guid(17f41fcca7f564543adfb242df408799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Outside.prefab using Guid(17f41fcca7f564543adfb242df408799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e88d480e4e3e39e4b27d1db3f17626f4') in 0.353889 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4799
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Pentagram_Trigger.prefab
+  artifactKey: Guid(8e2da7ec1d996be46948066675cfcedd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Pentagram_Trigger.prefab using Guid(8e2da7ec1d996be46948066675cfcedd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccbd02b60c57bdd92a7e99c88be4eddc') in 0.029700 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 19
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/BossObj.prefab
+  artifactKey: Guid(09ae8b9934b7a15498141b2d4f102ca3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/BossObj.prefab using Guid(09ae8b9934b7a15498141b2d4f102ca3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0000559eea5f4264f0f6786734a09bc5') in 0.795051 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 608
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Battle Manager.prefab
+  artifactKey: Guid(1876c85f0ebe6e243a32e0800b99a77a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Battle Manager.prefab using Guid(1876c85f0ebe6e243a32e0800b99a77a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8368db8600615f2356d7cd3fbcd2016e') in 0.005310 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/ClearShot Camera.prefab
+  artifactKey: Guid(95dccf996f151e84ba9322810668d329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/ClearShot Camera.prefab using Guid(95dccf996f151e84ba9322810668d329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88b3a819182e76ac93d080afd9bdc4bc') in 0.014457 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 390
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/RuneButton.prefab
+  artifactKey: Guid(e13535b44f2ca5c4d98f7f8079e08408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/RuneButton.prefab using Guid(e13535b44f2ca5c4d98f7f8079e08408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98d4dc89dd60b5296d7140889d4fa009') in 0.103563 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 142
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/EventCameraGroup.prefab
+  artifactKey: Guid(be1ae82f85e669940bca4ea65598ce51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/EventCameraGroup.prefab using Guid(be1ae82f85e669940bca4ea65598ce51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bb750c25592ba7e01458111ba65f500') in 0.003235 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Cellar.prefab
+  artifactKey: Guid(dc8efc5123b4bc143b65abddc2a1724b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Cellar.prefab using Guid(dc8efc5123b4bc143b65abddc2a1724b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '680fa18f88ab2bdf3e86e014d7f6118d') in 0.098079 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 706
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Crystal_Caves.prefab
+  artifactKey: Guid(3326f041c4b861d4e972a064c57e3cf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Crystal_Caves.prefab using Guid(3326f041c4b861d4e972a064c57e3cf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19a550da4b6a4bee6f0f7b82e3660aa5') in 0.241207 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3236
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/OutSideOfDungeon.prefab
+  artifactKey: Guid(b9ade0f5f9490e041b688bd4e1102048) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/OutSideOfDungeon.prefab using Guid(b9ade0f5f9490e041b688bd4e1102048) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b024db53c1182be0492aeaa30c14251') in 0.098179 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1069
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Cells.prefab
+  artifactKey: Guid(6f86f364cbb0eb247b55212816b84dfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Cells.prefab using Guid(6f86f364cbb0eb247b55212816b84dfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2623c53a4afa55d041a4bdb3a2702ff2') in 0.140457 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1164
+========================================================================
+Received Import Request.
+  Time since last request: 1.351217 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Sanctuary.prefab
+  artifactKey: Guid(dc1dc997dc087984b8b38952607b9540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Sanctuary.prefab using Guid(dc1dc997dc087984b8b38952607b9540) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64b709ee1655ba8d4f49835707cf0a93') in 0.049562 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 174
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/WaypointGroup.prefab
+  artifactKey: Guid(120977c37ce47914995bc3289ea786cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/WaypointGroup.prefab using Guid(120977c37ce47914995bc3289ea786cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '960fd7d037fe33d7a4e592d39279434f') in 0.004851 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 43
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/UI.prefab
+  artifactKey: Guid(8383163b35f25ac49be9249c1dd0a303) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/UI.prefab using Guid(8383163b35f25ac49be9249c1dd0a303) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a77680c11802f4f030b6ac6f0856ec01') in 0.378544 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1027
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Torture_Room.prefab
+  artifactKey: Guid(1947e4b36f3866840a46d602af5ec92b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/Torture_Room.prefab using Guid(1947e4b36f3866840a46d602af5ec92b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98338a24b7ea30e3e348bb1393fc6198') in 0.163974 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1550
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/StartPoint.prefab
+  artifactKey: Guid(6820bcbfd8da668488d29708ee93e1c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/Dungeon/Prefabs/StartPoint.prefab using Guid(6820bcbfd8da668488d29708ee93e1c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c5f541236e3d4d0019aff057227b6b1') in 0.012695 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.595 seconds
+Refreshing native plugins compatible for Editor in 2.75 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.116 seconds
+Domain Reload Profiling: 1709ms
+	BeginReloadAssembly (191ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (43ms)
+	RebuildCommonClasses (40ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (42ms)
+	LoadAllAssembliesAndSetupDomain (306ms)
+		LoadAssemblies (392ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (18ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (10ms)
+	FinalizeReload (1116ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (704ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (119ms)
+			ProcessInitializeOnLoadAttributes (538ms)
+			ProcessInitializeOnLoadMethodAttributes (26ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Refreshing native plugins compatible for Editor in 5.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3823 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 39 unused Assets / (105.8 KB). Loaded Objects now: 4394.
+Memory consumption went from 243.9 MB to 243.8 MB.
+Total: 10.043300 ms (FindLiveObjects: 1.045500 ms CreateObjectMapping: 2.310500 ms MarkObjects: 6.303200 ms  DeleteObjects: 0.382700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+TcpMessagingSession - receive error
+AssetImportWorkerClient::OnTransportError - code=10054 error=현재 연결은 원격 호스트에 의해 강제로 끊겼습니다.
