@@ -71,6 +71,6 @@ public class DialogNPC : MonoBehaviour
     public void LoadTargetScene()
     {
         //SceneManager.LoadScene(sceneTargetName);
-        LoadingSceneManager.instance.StartLoadScene(sceneTargetName);
+        LoadingSceneManager.Instance.StartLoadScene(sceneTargetName);
     }
 }
