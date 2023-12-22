@@ -4,7 +4,7 @@ using TMPro;
 using DG.Tweening;
 
 
-namespace DungeonBattle
+namespace Dungeon
 {
     public class UIManager : MonoBehaviour
     {
@@ -23,19 +23,24 @@ namespace DungeonBattle
         public TextMeshProUGUI playerHealthText;
         public TextMeshProUGUI enemyHealthText;
         public TextMeshProUGUI enemyBreakPointText;
-        public TextMeshProUGUI shieldCountText;
+        public TextMeshProUGUI potionCountText;
 
-        public Button evadeButton;
+        public Slider playerHealthSlider;
+        public Slider enemyHealthSlider;
+        public Slider enemyBreakPointSlider;
+
         public Button counterAttackButton;
-        public Button shieldButton;
+        public Button shieldAttackButton;
+        public Button guardButton;
+        public Button potionButton;
 
         private BattleManager battleManager;
-        private PlayerStatus player;
+        private PlayerStatus playerStatus;
 
         void Start()
         {
             battleManager = FindObjectOfType<BattleManager>();
-            player = FindObjectOfType<PlayerStatus>();
+            playerStatus = FindObjectOfType<PlayerStatus>();
         }
 
         void Update()
@@ -90,34 +95,50 @@ namespace DungeonBattle
 
         public void UpdateUI()
         {
-            playerHealthText.text = "Player Health: " + player.Health;
-            enemyHealthText.text = "Enemy Health: " + battleManager.currentEnemyStatus.Health;
+            playerHealthText.text = "Player Health: " + playerStatus.CurrentHealth;
+            enemyHealthText.text = "Enemy Health: " + battleManager.currentEnemyStatus.CurrentHealth;
             enemyBreakPointText.text = "Break Point: " + battleManager.currentEnemyStatus.BreakPoint;
-            shieldCountText.text = "Shields: " + player.ShieldCount;
-        }
+            potionCountText.text = "" + playerStatus.PotionCount;
 
-        public void OnShieldButtonClicked()
-        {
-            player.UseShield();
-            UpdateUI();
+            // 최대 체력 대비 현재 체력의 비율 계산
+            float playerHealthRatio = (float)playerStatus.CurrentHealth / playerStatus.Health;
+            float enemyHealthRatio = (float)battleManager.currentEnemyStatus.CurrentHealth / battleManager.currentEnemyStatus.Health;
+            float enemyBreakPointRatio = (float)battleManager.currentEnemyStatus.CurrentBreakPoint / battleManager.currentEnemyStatus.BreakPoint;
+
+            // Slider 값 업데이트
+            playerHealthSlider.value = playerHealthRatio;
+            enemyHealthSlider.value = enemyHealthRatio;
+            enemyBreakPointSlider.value = enemyBreakPointRatio;
         }
 
         public void UpdatePlayerHealth(int health)
         {
             if (health <= 0) health = 0;
             playerHealthText.text = "Player Health: " + health;
+            float playerHealthRatio = (float)health / playerStatus.Health;
+            playerHealthSlider.value = playerHealthRatio;
         }
 
         public void UpdateEnemyHealth(int health)
         {
-            if (health <= 0) health = 0;
-            enemyHealthText.text = "Enemy Health: " + health;
+            if (battleManager.currentEnemyStatus != null)
+            {
+                if (health <= 0) health = 0;
+                enemyHealthText.text = "Enemy Health: " + health;
+                float enemyHealthRatio = (float)health / battleManager.currentEnemyStatus.Health;
+                enemyHealthSlider.value = enemyHealthRatio;
+            }
         }
 
         public void UpdateEnemyBreakPoint(int breakPoint)
         {
-            if (breakPoint <= 0) breakPoint = 0;
-            enemyBreakPointText.text = "Break Point: " + breakPoint;
+            if (battleManager.currentEnemyStatus != null)
+            {
+                if (breakPoint <= 0) breakPoint = 0;
+                enemyBreakPointText.text = "Break Point: " + breakPoint;
+                float enemyBreakPointRatio = (float)breakPoint / battleManager.currentEnemyStatus.BreakPoint;
+                enemyBreakPointSlider.value = enemyBreakPointRatio;
+            }
         }
 
         // 페이드 아웃 효과 시작

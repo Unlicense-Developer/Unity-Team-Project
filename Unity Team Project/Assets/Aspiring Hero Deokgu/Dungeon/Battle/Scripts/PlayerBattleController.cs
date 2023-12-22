@@ -2,7 +2,7 @@ using PlayerController;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace DungeonBattle
+namespace Dungeon
 {
     public class PlayerBattleController : MonoBehaviour
     {
@@ -71,6 +71,9 @@ namespace DungeonBattle
                 }
 
                 // 공통 로직을 별도의 메소드로 처리
+                int attackVariant = Random.Range(1, 4); // 랜덤 공격 사운드 재생
+                string attackSoundName = $"MaleAttack({attackVariant})";
+                DungeonSoundManager.Instance.PlaySFX(attackSoundName);
                 battleManager.playerTurn = false; // 플레이어가 공격을 수행했으므로 다음 행동을 방지
             }
             else
@@ -79,24 +82,30 @@ namespace DungeonBattle
             }
         }
 
-        public void CounterAttackButtonClicked()
+        public void OnCounterAttackButtonClicked()
         {
             ProcessPlayerReaction("CounterAttack");
         }
 
-        public void ShieldAttackButtonClicked()
+        public void OnShieldAttackButtonClicked()
         {
             ProcessPlayerReaction("ShieldAttack");
         }
 
-        public void GuardButtonClicked()
+        public void OnGuardButtonClicked()
         {
             ProcessPlayerReaction("Guard");
         }
 
-        public void ComboAttackButtonClicked()
+        /*public void OnComboAttackButtonClicked()
         {
             ProcessPlayerReaction("ComboAttack");
+        }*/
+
+        public void OnPotionButtonClicked()
+        {
+            battleManager.playerStatus.UsePotion();
+            uiManager.UpdateUI();
         }
 
         public void OnAnimationEnd()
@@ -149,6 +158,10 @@ namespace DungeonBattle
 
                 // 피격 이펙트 활성화
                 hittedEffectParticleSystem.Play();
+
+                // 랜덤 피격 사운드 재생
+                string hitSoundName = $"MaleHitted({hitVariant})";
+                DungeonSoundManager.Instance.PlaySFX(hitSoundName);
 
                 // 피격 데미지 적용
                 battleManager.playerStatus.ReceiveDamage(battleManager.currentEnemyStatus.AttackDamage);
@@ -205,15 +218,10 @@ namespace DungeonBattle
         {
             if (battleManager.currentEnemyBattleController != null)
             {
-                if (Input.GetKeyDown(KeyCode.A))
-                    CounterAttackButtonClicked();
-
-                if (Input.GetKeyDown(KeyCode.S))
-                    ShieldAttackButtonClicked();
-
-                if (Input.GetKeyDown(KeyCode.D))
-                    GuardButtonClicked();
-
+                if (Input.GetKeyDown(KeyCode.A)) OnCounterAttackButtonClicked();
+                if (Input.GetKeyDown(KeyCode.S)) OnShieldAttackButtonClicked();
+                if (Input.GetKeyDown(KeyCode.D)) OnGuardButtonClicked();
+                if (Input.GetKeyDown(KeyCode.H)) OnPotionButtonClicked();
                 if (Input.GetKeyDown(KeyCode.F) && battleManager.currentEnemyBattleController.isBreak)
                     PlayComboAttack();
             }

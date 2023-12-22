@@ -1,10 +1,11 @@
 using UnityEngine;
 
-namespace DungeonBattle
+namespace Dungeon
 {
     public class EnemyStatus : MonoBehaviour
     {
         public int Health;
+        public int CurrentHealth;
         public int BreakPoint;
         public int CurrentBreakPoint { get; private set; }
         public int AttackDamage;
@@ -14,21 +15,23 @@ namespace DungeonBattle
 
         void Start()
         {
+            CurrentHealth = Health;
+
             CurrentBreakPoint = BreakPoint;
 
             uiManager = FindObjectOfType<UIManager>();
 
-            uiManager.UpdateEnemyHealth(Health); // 초기 체력 UI 업데이트
+            uiManager.UpdateEnemyHealth(CurrentHealth); // 초기 체력 UI 업데이트
         }
 
         public void ReceiveDamage(int damage)
         {
             if (!isDeath)
             {
-                Health -= damage;
-                uiManager.UpdateEnemyHealth(Health); // 체력 변경 시 UI 업데이트
+                CurrentHealth -= damage;
+                uiManager.UpdateEnemyHealth(CurrentHealth); // 체력 변경 시 UI 업데이트
 
-                if (Health <= 0)
+                if (CurrentHealth <= 0)
                 {
                     isDeath = true;
                     // 사망 모션 재생

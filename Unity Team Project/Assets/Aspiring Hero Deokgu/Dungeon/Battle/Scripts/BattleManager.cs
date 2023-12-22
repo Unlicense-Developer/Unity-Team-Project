@@ -4,7 +4,7 @@ using System.Threading;
 using UnityEngine;
 using Cinemachine;
 
-namespace DungeonBattle
+namespace Dungeon
 {
     public class BattleManager : MonoBehaviour
     {
@@ -80,6 +80,9 @@ namespace DungeonBattle
 
             // 적 조우 UI 애니메이션 재생
             uiManager.BattleStartEffect();
+
+            // 전투 BGM 활성화
+            DungeonSoundManager.Instance.StartBattleMode();
 
             // 적 태그 변경
             currentEnemy.tag = "EnemyInBattle";
@@ -188,16 +191,12 @@ namespace DungeonBattle
             {
                 // 성공적인 대응
                 SuccessfulReaction();
-                // 몬스터 HP 감소 로직
             }
             else
             {
                 // 실패한 대응
                 FailedReaction();
-                // 플레이어 HP 감소 로직
             }
-
-            // 다음 턴으로 진행하는 로직
         }
 
         public void SuccessfulReaction()
@@ -205,6 +204,10 @@ namespace DungeonBattle
             paturnCount = 1;
             paturnSuccess = true;
             Debug.Log("BattleManager: 패턴 판정 성공");
+            // 랜덤 패링 사운드 선택 및 재생
+            int parryVariant = Random.Range(1, 4); // 1부터 3까지 랜덤 숫자 생성
+            string parrySoundName = $"Parrying({parryVariant})";
+            DungeonSoundManager.Instance.PlaySFX(parrySoundName);
             // 무력화 체크
             currentEnemyStatus.ReceiveBreak(playerStatus.TotalBreakDamage);
             currentEnemyBattleController.CheckBreak();
@@ -234,7 +237,7 @@ namespace DungeonBattle
         // 전투 상태 확인 및 종료
         public void CheckEndBattle()
         {
-            if (playerStatus.Health <= 0 || (currentEnemyStatus != null && currentEnemyStatus.Health <= 0))
+            if (playerStatus.CurrentHealth <= 0 || (currentEnemyStatus != null && currentEnemyStatus.CurrentHealth <= 0))
             {
                 EndBattle();
             }
@@ -243,9 +246,10 @@ namespace DungeonBattle
         // 전투 종료 처리
         private void EndBattle()
         {
-            if (playerStatus.Health <= 0)
+            if (playerStatus.CurrentHealth <= 0)
             {
                 state = BattleState.Lost;
+                DungeonSoundManager.Instance.PlaySFX("GameOver");
             }
             else
             {
@@ -254,6 +258,8 @@ namespace DungeonBattle
 
             // 배틀 UI 비활성화
             uiManager.BattleOver();
+            // 배틀 BGM 비활성화
+            DungeonSoundManager.Instance.EndBattleMode();
             // 가상 카메라 비활성화
             Invoke("CameraReset", 2.0f);
 

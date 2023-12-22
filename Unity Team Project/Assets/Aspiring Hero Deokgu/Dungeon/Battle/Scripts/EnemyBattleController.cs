@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEditor;
 
-namespace DungeonBattle
+namespace Dungeon
 {
     public class EnemyBattleController : MonoBehaviour
     {
@@ -60,7 +60,7 @@ namespace DungeonBattle
             if (battleManager.enemyTurn && battleManager.playerStatus.isDeath == false)
             {
                 // 첫 번째 특수 공격 조건 검사: 체력 30% 이하 또는 turnCount 10 이상
-                if (!specialAttackPerformed && (enemy.Health <= 30 || battleManager.turnCount >= 10))
+                if (!specialAttackPerformed && (enemy.CurrentHealth <= 30 || battleManager.turnCount >= 10))
                 {
                     PerformSpecialAttack();
                     specialAttackPerformed = true; // 특수 공격 실행 표시
@@ -204,6 +204,12 @@ namespace DungeonBattle
 
                 // 피격 데미지 적용
                 battleManager.currentEnemyStatus.ReceiveDamage(battleManager.playerStatus.TotalAttackDamage);
+
+                // 피격 사운드 재생
+                int hittedVariant = Random.Range(1, 9); // 랜덤 공격 사운드 재생
+                string hittedSoundName = $"SwordSlashImpact({hittedVariant})";
+                DungeonSoundManager.Instance.PlaySFX(hittedSoundName);
+                DungeonSoundManager.Instance.PlaySFX("BoneBreak(5)");
 
                 battleManager.paturnCount = 0;
 

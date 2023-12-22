@@ -1,5 +1,5 @@
 using UnityEngine;
-using DungeonBattle;
+using Dungeon;
 using System.Threading;
 
 public class PlayerInteract : MonoBehaviour
