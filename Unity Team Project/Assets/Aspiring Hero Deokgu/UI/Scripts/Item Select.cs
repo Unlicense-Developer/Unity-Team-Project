@@ -7,8 +7,8 @@ public class ItemSelect : MonoBehaviour
     public void Click(string type)
     {
         if ( type == "Shop")
-            ShopManager.Instance.SelectItem(gameObject);
+            ShopManager.instance.SelectItem(gameObject);
         else if ( type == "Inventory" )
-            InventoryManager.Instance.SelectItem(gameObject);
+            InventoryManager.instance.SelectItem(gameObject);
     }
 }

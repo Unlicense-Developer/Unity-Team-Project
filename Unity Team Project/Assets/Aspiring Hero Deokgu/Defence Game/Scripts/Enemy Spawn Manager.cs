@@ -27,7 +27,7 @@ public class EnemySpawnManager : MonoBehaviour
     
     void SpawnEnemy()
     {
-        if (!DefenceGameManager.Instance.IsPlaying())
+        if (!DefenceGameManager.instance.IsPlaying())
             return;
 
         gameTime += Time.deltaTime;

@@ -107,27 +107,27 @@ public class VeganNinjaManager : MonoBehaviour
     {
         if( score >= 500)
         {
-            awardImage.sprite = ItemDataManager.Instance.GetItem("Apple").icon;
+            awardImage.sprite = ItemDataManager.instance.GetItem("Apple").icon;
             PlayerData.instance.AddItemData("Apple");
         }
         else if (score >= 200)
         {
-            awardImage.sprite = ItemDataManager.Instance.GetItem("Watermelon").icon;
+            awardImage.sprite = ItemDataManager.instance.GetItem("Watermelon").icon;
             PlayerData.instance.AddItemData("Watermelon");
         }
         else if (score >= 100)
         {
-            awardImage.sprite = ItemDataManager.Instance.GetItem("Avocado").icon;
+            awardImage.sprite = ItemDataManager.instance.GetItem("Avocado").icon;
             PlayerData.instance.AddItemData("Avocado");
         }
         else if (score >= 30)
         {
-            awardImage.sprite = ItemDataManager.Instance.GetItem("Grape").icon;
+            awardImage.sprite = ItemDataManager.instance.GetItem("Grape").icon;
             PlayerData.instance.AddItemData("Grape");
         }
         else
         {
-            awardImage.sprite = ItemDataManager.Instance.GetItem("Orange").icon;
+            awardImage.sprite = ItemDataManager.instance.GetItem("Orange").icon;
             PlayerData.instance.AddItemData("Orange");
         }
     }

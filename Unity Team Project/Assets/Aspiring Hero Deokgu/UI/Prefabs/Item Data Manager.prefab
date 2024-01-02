@@ -52,11 +52,11 @@ MonoBehaviour:
       Value: {fileID: 11400000, guid: 78de82c8d914fc94c8d9eebdd5e4b2a1, type: 2}
     - Key: Bass
       Value: {fileID: 11400000, guid: 6e34e511b09bf0843a9864cca14e678b, type: 2}
-    - Key: Potion
+    - Key: Blue Potion
       Value: {fileID: 11400000, guid: d9d84dd01fb37514d9bb3571d6d7bacc, type: 2}
     - Key: Bow
       Value: {fileID: 11400000, guid: 175ff2b87a34f8942bfa6d91c9558cde, type: 2}
-    - Key: High Potion
+    - Key: Red Potion
       Value: {fileID: 11400000, guid: 0f867c5530b001f45a6ec5c8ee7b86b0, type: 2}
     - Key: Ruby
       Value: {fileID: 11400000, guid: 7a074f69b4ce543468e5f3071c6af048, type: 2}
@@ -76,5 +76,3 @@ MonoBehaviour:
       Value: {fileID: 11400000, guid: 8ec5280027e8015419ed82b237953f08, type: 2}
     - Key: Watermelon
       Value: {fileID: 11400000, guid: 4f6a6e056b9fb5d478f5551f3b6cb6a0, type: 2}
-    - Key: Full Potion
-      Value: {fileID: 11400000, guid: c263976c028dea24c8bb769d15fb4b0d, type: 2}

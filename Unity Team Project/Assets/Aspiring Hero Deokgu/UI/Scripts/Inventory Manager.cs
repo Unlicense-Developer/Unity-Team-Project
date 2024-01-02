@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using TMPro;
 using WindowsInput;
 
@@ -21,27 +20,38 @@ public class InventoryManager : MonoBehaviour
     List<Item> inven = new List<Item>();
 
     //ΩÃ±€≈Ê
-    public static InventoryManager Instance { get; private set; }
+    public static InventoryManager instance = null;
+    public static InventoryManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                return null;
+            }
+
+            return instance;
+        }
+    }
 
     void Awake()
     {
-        if (Instance == null)
+        if (instance == null)
         {
-            Instance = this;
-
-            DontDestroyOnLoad(gameObject);
+            instance = this;
         }
-        else if (Instance != null)
+        else if (instance != null)
         {
             Destroy(this.gameObject);
         }
 
+        inven = PlayerData.instance.GetInvenData();
+        gold = PlayerData.instance.GetGold();
     }
     // Start is called before the first frame update
     void Start()
     {
-        inven = PlayerData.Instance.GetInvenData();
-        gold = PlayerData.Instance.GetGold();
+
     }
 
     // Update is called once per frame
@@ -53,30 +63,25 @@ public class InventoryManager : MonoBehaviour
             select_Frame.transform.position = select_Item.transform.position;
     }
 
-    private void OnEnable()
+    void OnDestroy()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        PlayerData.Instance.SaveInvenData(inven);
-        PlayerData.Instance.SaveGold(gold);
+        PlayerData.instance.SaveInvenData(inven);
+        PlayerData.instance.SaveGold(gold);
     }
 
     public void AddItem(string item)
     {
-        inven.Add(ItemDataManager.Instance.GetItem(item));
+        inven.Add(ItemDataManager.instance.GetItem(item));
     }
 
     public void AddItem(GameObject item)
     {
-        inven.Add(ItemDataManager.Instance.GetItem(item.transform.Find("Image_item").GetComponent<Image>().sprite.name));
+        inven.Add(ItemDataManager.instance.GetItem(item.transform.Find("Image_item").GetComponent<Image>().sprite.name));
     }
 
     public void RemoveItem(string item)
     {
-        inven.Remove(ItemDataManager.Instance.GetItem(item));
+        inven.Remove(ItemDataManager.instance.GetItem(item));
     }
 
     public void UpdateInven()
@@ -103,13 +108,13 @@ public class InventoryManager : MonoBehaviour
         //select_Item = ItemDataManager.instance.GetItem(item.transform.Find("Image_item").GetComponent<Image>().sprite.name);
         select_Item = item;
         Debug.Log(select_Item.transform.Find("Image_item").GetComponent<Image>().sprite.name + " º±≈√");
-        sellPriceText.text = ( GetSelectItem().value / 2 ).ToString();
+        sellPriceText.text = GetSelectItem().value.ToString();
         select_Frame.SetActive(true);
     }
 
     public Item GetSelectItem()
     {
-        return ItemDataManager.Instance.GetItem(select_Item.transform.Find("Image_item").GetComponent<Image>().sprite.name);
+        return ItemDataManager.instance.GetItem(select_Item.transform.Find("Image_item").GetComponent<Image>().sprite.name);
     }
 
     public void UseSelectItem()

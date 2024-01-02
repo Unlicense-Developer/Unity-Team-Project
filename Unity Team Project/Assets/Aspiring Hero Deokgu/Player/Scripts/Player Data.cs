@@ -86,7 +86,7 @@ public class PlayerData : MonoBehaviour
 
     public void AddItemData(string itemName)
     {
-        invenData.Add(ItemDataManager.Instance.GetItem(itemName));
+        invenData.Add(ItemDataManager.instance.GetItem(itemName));
     }
 
     public void AddGold(int gold)

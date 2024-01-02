@@ -8,17 +8,29 @@ public class ItemDataManager : MonoBehaviour
     SerializableDictionary<string, Item> itemDatas;
 
     //ΩÃ±€≈Ê
-    public static ItemDataManager Instance { get; private set; }
+    public static ItemDataManager instance = null;
+    public static ItemDataManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                return null;
+            }
+
+            return instance;
+        }
+    }
 
     void Awake()
     {
-        if (Instance == null)
+        if (instance == null)
         {
-            Instance = this;
+            instance = this;
 
             DontDestroyOnLoad(gameObject);
         }
-        else if (Instance != null)
+        else if (instance != null)
         {
             Destroy(this.gameObject);
         }

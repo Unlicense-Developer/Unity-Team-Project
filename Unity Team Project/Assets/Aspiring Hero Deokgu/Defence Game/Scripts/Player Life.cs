@@ -30,7 +30,7 @@ public class PlayerLife : MonoBehaviour
     {
         playerLife = new List<Image>();
 
-        for (int i = 0; i < DefenceGameManager.Instance.GetLifeCount(); i++)
+        for (int i = 0; i < DefenceGameManager.instance.GetLifeCount(); i++)
         {
             Image temp = Instantiate(lifePrefab, lifeObjects);
             temp.GetComponent<RectTransform>().anchoredPosition = lifePos + new Vector2(xPosPreset * i, 0);
@@ -41,13 +41,13 @@ public class PlayerLife : MonoBehaviour
 
     public void IncreaseLife()
     {
-        playerLife[DefenceGameManager.Instance.GetLifeCount()].sprite = lifeOn;
-        DefenceGameManager.Instance.CalculateLife(1);
+        playerLife[DefenceGameManager.instance.GetLifeCount()].sprite = lifeOn;
+        DefenceGameManager.instance.CalculateLife(1);
     }
 
     public void DecreaseLife()
     {
-        DefenceGameManager.Instance.CalculateLife(-1);
-        playerLife[DefenceGameManager.Instance.GetLifeCount()].sprite = lifeOff;
+        DefenceGameManager.instance.CalculateLife(-1);
+        playerLife[DefenceGameManager.instance.GetLifeCount()].sprite = lifeOff;
     }
 }

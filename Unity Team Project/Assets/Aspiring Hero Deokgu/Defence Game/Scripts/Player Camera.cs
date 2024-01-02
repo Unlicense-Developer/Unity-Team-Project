@@ -17,7 +17,7 @@ public class PlayerCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!DefenceGameManager.Instance.IsPlaying())
+        if (!DefenceGameManager.instance.IsPlaying())
             return;
 
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensitivity;

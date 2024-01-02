@@ -3228,10 +3228,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gold: 100
-  sellPriceText: {fileID: 0}
   goldText: {fileID: 3305097103384459057}
   content: {fileID: 4815951457141496528}
   select_Frame: {fileID: 6172395272954972100}
+  select_Item: {fileID: 0}
   invenSlotPrefab: {fileID: 1985606802136885429, guid: 104b84ff5ae8a5345b13d553efb0b18b, type: 3}
 --- !u!1 &1923424466589072909
 GameObject:
@@ -4676,6 +4676,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9075792775238600518}
   - component: {fileID: 7139258387228696674}
+  - component: {fileID: 7680455543435814065}
   - component: {fileID: 5610179217985400418}
   - component: {fileID: 567268023600698152}
   - component: {fileID: 1222308512833545810}
@@ -4723,6 +4724,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyGuideUi: {fileID: 3101606712790157240}
+--- !u!114 &7680455543435814065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2763343423786076794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a796796e36b63143b741dbef298adbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invenPanel: {fileID: 8884334690070802068}
 --- !u!114 &5610179217985400418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15149,6 +15163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopContent: {fileID: 4049839103167176825}
   select_Frame: {fileID: 2327897393535072936}
+  select_Shopitem: {fileID: 0}
   shopSlotPrefab: {fileID: 8383583935993132893, guid: 02e50734103baa3408953f8eac402c97, type: 3}
   shopItems:
   - {fileID: 11400000, guid: 653da69acd7ab4a4bbc47ef1ba3c4bca, type: 2}
