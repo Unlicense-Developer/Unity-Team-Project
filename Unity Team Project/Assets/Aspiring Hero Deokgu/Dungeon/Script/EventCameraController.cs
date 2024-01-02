@@ -29,11 +29,13 @@ public class EventCameraController : MonoBehaviour
     public void EventOn()
     {
         StartCoroutine(EvnetCamera1Effect());
+        TextGUIManager.instance.EventCameraTextA();
     }
 
     public void OtherEvnetOn()
     {
         StartCoroutine(EvnetCamera2Effect());
+        TextGUIManager.instance.EventCameraTextB();
     }
 
 
