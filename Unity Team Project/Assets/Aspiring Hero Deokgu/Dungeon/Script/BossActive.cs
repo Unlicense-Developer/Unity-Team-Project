@@ -20,7 +20,7 @@ public class BossActive : MonoBehaviour
     {
         sitBoss.SetActive(true);
         stendBoss.SetActive(false);
-        ActiveEffect.SetActive(false);
+        //ActiveEffect.SetActive(false);
     }
 
     public void DeviceActivated()
@@ -34,7 +34,7 @@ public class BossActive : MonoBehaviour
         if (ActivatedDevices >= 2)
         {
             sitBoss.SetActive(false);
-            EventCameraController.instacne.OtherEvnetOn();
+            EventCameraController.Instacne.OtherEvnetOn();
             stendBoss.SetActive(true);
             StartCoroutine(SummonEffect());
         }

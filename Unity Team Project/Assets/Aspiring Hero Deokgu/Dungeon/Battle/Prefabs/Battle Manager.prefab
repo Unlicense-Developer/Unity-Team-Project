@@ -78,15 +78,22 @@ MonoBehaviour:
   battleStartGroup: {fileID: 0}
   battleWonGroup: {fileID: 0}
   battleLostGroup: {fileID: 0}
-  PressF: {fileID: 0}
+  tutorial: {fileID: 0}
+  pressF: {fileID: 0}
   fadeDuration: 3
+  currentButton: {fileID: 0}
   playerHealthText: {fileID: 0}
   enemyHealthText: {fileID: 0}
   enemyBreakPointText: {fileID: 0}
-  shieldCountText: {fileID: 0}
-  evadeButton: {fileID: 0}
+  potionCountText: {fileID: 0}
+  playerHealthSlider: {fileID: 0}
+  enemyHealthSlider: {fileID: 0}
+  enemyBreakPointSlider: {fileID: 0}
   counterAttackButton: {fileID: 0}
-  shieldButton: {fileID: 0}
+  shieldAttackButton: {fileID: 0}
+  guardButton: {fileID: 0}
+  potionButton: {fileID: 0}
+  retryButton: {fileID: 0}
 --- !u!114 &135347347123393141
 MonoBehaviour:
   m_ObjectHideFlags: 0

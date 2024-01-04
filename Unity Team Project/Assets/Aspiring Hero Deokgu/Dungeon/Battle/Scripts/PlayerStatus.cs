@@ -25,8 +25,9 @@ namespace Dungeon
             CurrentHealth = Health;
             BaseAttackDamage = 10;
             BaseBreakDamage = 10;
-            PotionCount = 100; // 포션 횟수 설정
             Defense = 0; // 방어력 설정
+
+            UpdatePotionCount();
 
             uiManager = FindObjectOfType<UIManager>();
         }
@@ -61,15 +62,24 @@ namespace Dungeon
             }
         }
 
+        public void UpdatePotionCount()
+        {
+            PotionCount = InventoryManager.Instance.GetItemCount("Red Potion");
+            uiManager.UpdateUI(); // UI에 포션 수량을 업데이트하는 함수 호출
+        }
+
         public void UsePotion()
         {
             if (PotionCount > 0 && !isDeath)
             {
-                PotionCount--;
+                // 인벤토리 내의 포션 소모
+                InventoryManager.Instance.RemoveItem("Red Potion");
                 // 포션 사용 로직
                 CurrentHealth = Health;
                 // 사운드 재생
                 WorldSoundManager.Instance.PlaySFX("Drink");
+                // 포션 사용 후 PotionCount 업데이트
+                UpdatePotionCount();
             }
         }
 

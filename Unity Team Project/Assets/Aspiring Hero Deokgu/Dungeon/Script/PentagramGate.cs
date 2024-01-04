@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Dungeon;
 
 public class PentagramGate : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class PentagramGate : MonoBehaviour
     public void DeviceTriggered()
     {
         ActivatedDevices++;
+        Debug.Log(ActivatedDevices);
         CheckAndOpenGate();
     }
 
@@ -34,7 +36,8 @@ public class PentagramGate : MonoBehaviour
         if (ActivatedDevices >= 4)
         {
             GateMoveUp();
-            EventCameraController.instacne.EventOn();
+            EventCameraController.Instacne.EventOn();
+            StartCoroutine(SFX());
             StartCoroutine(DustFall());
         }
     }
@@ -47,6 +50,14 @@ public class PentagramGate : MonoBehaviour
 
         dust.SetActive(false);
     }
+
+    IEnumerator SFX()
+    {
+        yield return new WaitForSeconds(0.5f);
+        DungeonSoundManager.Instance.PlaySFX("GateOpenSound");
+    }
+
+
 
     private void GateMoveUp()
     {

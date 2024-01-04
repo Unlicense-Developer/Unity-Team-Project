@@ -16,6 +16,14 @@ TagManager:
   - Button
   - EventCamera
   - EnemyInBattle
+  - Floor
+  - MediumLarge
+  - Small
+  - SmallMedium
+  - Large
+  - Medium
+  - GameClearZone
+  - River
   layers:
   - Default
   - TransparentFX
@@ -25,11 +33,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Floor
+  - Box
+  - Box2
+  - Props
+  - Fish
   - 
   - 
   - 

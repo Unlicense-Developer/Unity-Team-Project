@@ -26,5 +26,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Aspiring Hero Deokgu/Dungeon/Scene/Dungeon.unity
     guid: 720f0b728bf580e47b16ce0a6185014e
+  - enabled: 1
+    path: Assets/Aspiring Hero Deokgu/CartDelivery/Scenes/CartDelivery_240103.unity
+    guid: 2bbad518021352542904d75145aa8bd9
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: ee772ebdac200ff489f2c4d74260eae2, type: 2}
