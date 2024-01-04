@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Dungeon;
 
 
 public class ButtonController : MonoBehaviour
@@ -11,7 +12,6 @@ public class ButtonController : MonoBehaviour
     private void Start()
     {
         buttonManager = GetComponentInParent<ButtonManager>();
-
     }
 
     public void Enter()
@@ -24,10 +24,10 @@ public class ButtonController : MonoBehaviour
             if (playerInteract != null)
             {
                 buttonManager.ButtonActivated();
-                gameObject.SetActive(false);
+                this.gameObject.SetActive(false);
                 playerInteract.DisableAllInteractUIs();
             }
         }
-        
+
     }
 }

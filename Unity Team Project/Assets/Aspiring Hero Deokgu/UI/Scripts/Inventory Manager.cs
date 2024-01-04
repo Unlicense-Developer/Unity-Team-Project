@@ -147,4 +147,17 @@ public class InventoryManager : MonoBehaviour
         DeleteSelectItem();
         gold += GetSelectItem().value / 2;
     }
+
+    public int GetItemCount(string itemName)
+    {
+        int count = 0;
+        foreach (Item item in inven)
+        {
+            if (item.name == itemName)
+            {
+                count++;
+            }
+        }
+        return count;
+    }
 }
