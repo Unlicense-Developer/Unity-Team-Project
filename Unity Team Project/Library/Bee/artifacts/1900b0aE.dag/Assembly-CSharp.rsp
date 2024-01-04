@@ -109,6 +109,7 @@
 -define:ENABLE_UNITY_COLLECTIONS_CHECKS
 -define:ENABLE_BURST_AOT
 -define:UNITY_TEAM_LICENSE
+-define:UNITY_PRO_LICENSE
 -define:ENABLE_CUSTOM_RENDER_TEXTURE
 -define:ENABLE_DIRECTOR
 -define:ENABLE_LOCALIZATION
@@ -469,6 +470,9 @@
 "Assets/Aspiring Hero Deokgu/UI/Dialog/NPCController.cs"
 "Assets/Aspiring Hero Deokgu/UI/Dialog/NPCInteractionManager.cs"
 "Assets/Aspiring Hero Deokgu/UI/Dialog/PlayerInteract.cs"
+"Assets/Aspiring Hero Deokgu/UI/Scripts/Achievement Base.cs"
+"Assets/Aspiring Hero Deokgu/UI/Scripts/Achievement Manager.cs"
+"Assets/Aspiring Hero Deokgu/UI/Scripts/AchievementUI.cs"
 "Assets/Aspiring Hero Deokgu/UI/Scripts/GameExit.cs"
 "Assets/Aspiring Hero Deokgu/UI/Scripts/Inventory Manager.cs"
 "Assets/Aspiring Hero Deokgu/UI/Scripts/InventoryUI.cs"

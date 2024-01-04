@@ -64,7 +64,7 @@ namespace Dungeon
 
         public void UpdatePotionCount()
         {
-            PotionCount = InventoryManager.Instance.GetItemCount("Red Potion");
+            PotionCount = InventoryManager.Instance.GetItemCount("Potion");
             uiManager.UpdateUI(); // UI에 포션 수량을 업데이트하는 함수 호출
         }
 

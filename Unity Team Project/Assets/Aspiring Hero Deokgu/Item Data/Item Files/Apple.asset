@@ -17,4 +17,6 @@ MonoBehaviour:
   value: 1000
   atk: 0
   def: 0
-  icon: {fileID: 1847463989, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  icon: {fileID: 1847463989, guid: c2690c7ae5bc82f41ada15c417d18719, type: 3}
+  itemInfo: "\uC0AC\uACFC. \uC0C1\uC810\uC5D0 \uAC16\uB2E4\uD314\uBA74 \uB9CE\uC740
+    \uACE8\uB4DC\uB97C \uC5BB\uC744 \uC218 \uC788\uB2E4."
