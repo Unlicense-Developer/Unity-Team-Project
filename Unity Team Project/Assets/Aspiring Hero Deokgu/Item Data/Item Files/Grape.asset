@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b0d9cd176f8f2468ec7f5af62446f3, type: 3}
   m_Name: Grape
   m_EditorClassIdentifier: 
+  type: 2
   itemName: Grape
   value: 200
-  icon: {fileID: 828239227, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  atk: 0
+  def: 0
+  icon: {fileID: 828239227, guid: c2690c7ae5bc82f41ada15c417d18719, type: 3}
+  itemInfo: "\uD3EC\uB3C4. \uC0C1\uC810\uC5D0 \uAC16\uB2E4\uD314\uBA74 \uC57D\uAC04\uC758
+    \uACE8\uB4DC\uB97C \uC5BB\uC744 \uC218 \uC788\uB2E4."

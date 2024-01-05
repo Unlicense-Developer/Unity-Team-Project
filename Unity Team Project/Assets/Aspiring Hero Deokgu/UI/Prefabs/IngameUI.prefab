@@ -4019,7 +4019,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9086646597537935740}
   - component: {fileID: 8375030153883432831}
-  - component: {fileID: 8455817836901699331}
   - component: {fileID: 3585699064601767109}
   - component: {fileID: 1450525563159363776}
   - component: {fileID: 2876179639622140376}
@@ -4068,19 +4067,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyGuideUi: {fileID: 680684238809211175}
---- !u!114 &8455817836901699331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3307211722798293798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a796796e36b63143b741dbef298adbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  invenPanel: {fileID: 2222808740465650187}
 --- !u!114 &3585699064601767109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9416,12 +9402,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebab20b2cf368d240bdb18f9e2068659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gold: 100
   sellPriceText: {fileID: 3788748001119515317}
   goldText: {fileID: 4531915229565969777}
+  selectItemInfoName: {fileID: 0}
+  selectItemInfoText: {fileID: 0}
+  selectItemSellPrice: {fileID: 0}
   content: {fileID: 4245197229711223718}
+  selectItemInfoImage: {fileID: 0}
   select_Frame: {fileID: 8939023550737243624}
   invenSlotPrefab: {fileID: 1985606802136885429, guid: 104b84ff5ae8a5345b13d553efb0b18b, type: 3}
+  selectItemInfo: {fileID: 0}
 --- !u!1 &7954189820548082722
 GameObject:
   m_ObjectHideFlags: 0

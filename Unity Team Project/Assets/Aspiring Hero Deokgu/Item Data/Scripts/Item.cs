@@ -16,4 +16,5 @@ public class Item : ScriptableObject
     public int atk;
     public int def;
     public Sprite icon;
+    public string itemInfo;
 }

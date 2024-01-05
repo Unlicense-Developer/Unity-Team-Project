@@ -19,6 +19,17 @@ namespace Dungeon
 
         private UIManager uiManager;
 
+        private void Awake()
+        {
+            uiManager = FindObjectOfType<UIManager>();
+
+            if (uiManager == null)
+            {
+                Debug.LogError("UIManager not found in the scene.");
+                return; // UIManager가 없으면 함수를 종료합니다.
+            }
+        }
+
         void Start()
         {
             Health = 100; // 초기 체력 설정
@@ -27,9 +38,7 @@ namespace Dungeon
             BaseBreakDamage = 10;
             Defense = 0; // 방어력 설정
 
-            UpdatePotionCount();
-
-            uiManager = FindObjectOfType<UIManager>();
+            UpdatePotionCount(); // 이제 UIManager가 null이 아니라고 확신할 수 있습니다.
         }
 
         // 총 공격력 계산
@@ -64,7 +73,7 @@ namespace Dungeon
 
         public void UpdatePotionCount()
         {
-            PotionCount = InventoryManager.Instance.GetItemCount("Red Potion");
+            PotionCount = InventoryManager.Instance.GetItemCount("Potion");
             uiManager.UpdateUI(); // UI에 포션 수량을 업데이트하는 함수 호출
         }
 
@@ -73,7 +82,7 @@ namespace Dungeon
             if (PotionCount > 0 && !isDeath)
             {
                 // 인벤토리 내의 포션 소모
-                InventoryManager.Instance.RemoveItem("Red Potion");
+                InventoryManager.Instance.RemoveItem("Potion");
                 // 포션 사용 로직
                 CurrentHealth = Health;
                 // 사운드 재생

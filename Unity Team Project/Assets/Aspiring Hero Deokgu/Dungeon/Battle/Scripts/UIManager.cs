@@ -44,10 +44,15 @@ namespace Dungeon
         private BattleManager battleManager;
         private PlayerStatus playerStatus;
 
-        void Start()
+        private void Awake()
         {
             battleManager = FindObjectOfType<BattleManager>();
             playerStatus = FindObjectOfType<PlayerStatus>();
+        }
+
+        void Start()
+        {
+
         }
 
         void Update()
@@ -102,6 +107,13 @@ namespace Dungeon
 
         public void UpdateUI()
         {
+            // null 체크 추가
+            if (playerStatus == null || battleManager == null || battleManager.currentEnemyStatus == null)
+            {
+                Debug.LogError("One or more references are null in UIManager.UpdateUI");
+                return; // 필요한 참조 중 하나라도 null이면 함수를 종료합니다.
+            }
+
             playerHealthText.text = "Player Health: " + playerStatus.CurrentHealth;
             enemyHealthText.text = "Enemy Health: " + battleManager.currentEnemyStatus.CurrentHealth;
             enemyBreakPointText.text = "Break Point: " + battleManager.currentEnemyStatus.BreakPoint;
