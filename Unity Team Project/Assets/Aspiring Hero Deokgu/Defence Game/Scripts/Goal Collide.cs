@@ -6,7 +6,7 @@ public class GoalCollide : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        DefenceGameManager.instance.playerLife.DecreaseLife();
+        DefenceGameManager.Instance.playerLife.DecreaseLife();
         Destroy(other.gameObject);
     }
 }

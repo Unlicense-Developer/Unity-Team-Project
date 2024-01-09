@@ -49,7 +49,7 @@ public class PlayerAttack : MonoBehaviour
 
     void Fire()
     {
-        if ( !DefenceGameManager.instance.IsPlaying() )
+        if ( !DefenceGameManager.Instance.IsPlaying() )
             return;
 
         readyToFire = false;

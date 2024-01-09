@@ -85,7 +85,7 @@ public class EnemyBase : MonoBehaviour
     public void PlayDead()
     {
         sound.PlayDeathSound();
-        DefenceGameManager.instance.AddScore(killScore);
+        DefenceGameManager.Instance.AddScore(killScore);
         StartCoroutine(DeleteAfterSeconds());
     }
 

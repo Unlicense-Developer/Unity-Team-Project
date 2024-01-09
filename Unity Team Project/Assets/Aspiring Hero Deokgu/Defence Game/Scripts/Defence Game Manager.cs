@@ -20,25 +20,13 @@ public class DefenceGameManager : MonoBehaviour
     bool isPlaying = false;
 
     //½Ì±ÛÅæ
-    public static DefenceGameManager instance = null;
-    public static DefenceGameManager Instance
-    {
-        get
-        {
-            if (instance == null)
-            {
-                return null;
-            }
-
-            return instance;
-        }
-    }
+    public static DefenceGameManager Instance { get; private set; }
 
     void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
 
             // ¾À ÀüÈ¯µÇ´õ¶óµµ ÆÄ±«µÇÁö ¾Ê°Ô ÇÔ
             //DontDestroyOnLoad(this.gameObject);
