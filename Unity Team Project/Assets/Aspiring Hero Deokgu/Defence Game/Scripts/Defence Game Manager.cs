@@ -6,38 +6,27 @@ using UnityEngine.SceneManagement;
 
 public class DefenceGameManager : MonoBehaviour
 {
-    public int score = 0;
-    public Text scoreText;
-    public Text gameOverScore;
-    public Text scoreGoldText;
+    [SerializeField] private Text scoreText;
+    [SerializeField] private Text gameOverScore;
+    [SerializeField] private Text scoreGoldText;
+    [SerializeField] private GameObject goal;
+    [SerializeField] private GameObject gameOverUI;
+    [SerializeField] private GameObject gameStartUI;
 
-    int life = 5;
-    public bool isPlaying = true;
-    public GameObject goal;
     public PlayerLife playerLife;
-    public GameObject gameOverUI;
-    public GameObject gameStartUI;
+
+    int score = 0;
+    int life = 5;
+    bool isPlaying = false;
 
     //½Ì±ÛÅæ
-    public static DefenceGameManager instance = null;
-    public static DefenceGameManager Instance
-    {
-        get
-        {
-            if (instance == null)
-            {
-                return null;
-            }
-
-            return instance;
-        }
-    }
+    public static DefenceGameManager Instance { get; private set; }
 
     void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
 
             // ¾À ÀüÈ¯µÇ´õ¶óµµ ÆÄ±«µÇÁö ¾Ê°Ô ÇÔ
             //DontDestroyOnLoad(this.gameObject);
@@ -47,6 +36,7 @@ public class DefenceGameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        WorldSoundManager.Instance.PlayBGM("DefenceGame Start Menu BGM");
         playerLife = GetComponent<PlayerLife>();
     }
 
@@ -63,6 +53,21 @@ public class DefenceGameManager : MonoBehaviour
         Time.timeScale = 1.0f;
     }
 
+    public bool IsPlaying()
+    {
+        return isPlaying;
+    }
+
+    public int GetScore()
+    {
+        return score;
+    }
+
+    public void AddScore(int addScore)
+    {
+        score += addScore;
+    }
+
     public int GetLifeCount()
     {
         return life;
@@ -73,6 +78,15 @@ public class DefenceGameManager : MonoBehaviour
         life += value;
     }
 
+    public void GameStart()
+    {
+        isPlaying = true;
+        gameStartUI.SetActive(false);
+        Camera.main.transform.rotation = Quaternion.Euler(new Vector3(50.0f, 90.0f, 0.0f));
+        Cursor.lockState = CursorLockMode.Locked;
+        WorldSoundManager.Instance.PlayBGM("DefenceGame Battle BGM");
+    }
+
     void CheckGameOver()
     {
         if (life <= 0)
@@ -80,7 +94,7 @@ public class DefenceGameManager : MonoBehaviour
             isPlaying = false;
             Cursor.lockState = CursorLockMode.None;
             gameOverScore.text = "´Þ¼º Á¡¼ö : " + score.ToString();
-            scoreGoldText.text = "È¹µæ °ñµå : " + (score / 2).ToString();
+            scoreGoldText.text = "È¹µæ °ñµå : " + ((int)(score * 0.5f)).ToString();
             gameOverUI.SetActive(true);
             Time.timeScale = 0.0f;
         }
@@ -88,8 +102,8 @@ public class DefenceGameManager : MonoBehaviour
 
     public void ReturnWorldScene()
     {
-        PlayerData.instance.AddGold(score / 2);
+        PlayerData.instance.SetGold((int)(score * 0.5f));
         PlayerData.instance.AddItemData("Ax");
-        SceneManager.LoadScene("WorldMap");
+        LoadingSceneManager.Instance.StartLoadScene("WorldMap");
     }
 }

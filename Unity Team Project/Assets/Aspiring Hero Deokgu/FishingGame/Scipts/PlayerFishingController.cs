@@ -3,28 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-// 실수로 컴포넌트를 삭제하는 것을 방지하기 위한 설정
-/*
-[RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(CapsuleCollider))]
-[RequireComponent(typeof(Animator))]
-*/
 public class PlayerFishingController : MonoBehaviour
 {
-    /*
-    Rigidbody player; // 플레이어 리지드바디
-    public float speed = 7f; // 이동 속도
-    Vector3 moveDirection; // 이동 방향
-    */
-
     PlayerController.ThirdPersonController Controller;
-    AudioManager1 AudioM;
     Animator anim; // 애니메이터
-
 
     private bool canFishA; // 낚시 가능 여부 판단을 위한 변수
     private bool canFishB;
 
+    public int FishingResult;
     public float timerToCatch; // 낚시 시간
     public float timeBeforeBite; // 물고기 물어듦 시간
     public bool isFishing; // 플레이어가 낚시 중 인지 판단을 위한 변수
@@ -81,7 +68,6 @@ public class PlayerFishingController : MonoBehaviour
     //낚시지역 판별을 위한 변수
     private string zonTag = "";
 
-
     private bool isPlayingSound = false;
 
     void Start()
@@ -89,7 +75,6 @@ public class PlayerFishingController : MonoBehaviour
         //player = GetComponent<Rigidbody>(); // 리지드바디 컴포넌트 할당
         anim = GetComponent<Animator>(); // 애니메이터 컴포넌트 할당.
         Controller = GetComponent<PlayerController.ThirdPersonController>();
-        AudioM = GetComponent<AudioManager1>();
 
         fishingPole.SetActive(false); // 낚싯대 비활성화
     }
@@ -102,9 +87,7 @@ public class PlayerFishingController : MonoBehaviour
         // 키를 누르면 낚시 시도
         if (!functionTriggered && Input.GetKeyDown(KeyCode.K))
         {
-            AudioM.SfxPlay(AudioManager1.Sfx.Cast);
             functionTriggered = true;   //동작실행
-            fishingPole.SetActive(true);
             FishCheck();
             functionTriggered = false;  //동작 재실행을 위해 리셋
         }
@@ -120,7 +103,7 @@ public class PlayerFishingController : MonoBehaviour
         // 정해지는 시간이 지나면 물고기가 미끼를 물음
         if (timerToCatch > timeBeforeBite && isFishing && !Controller._isMoving)
         {
-            Debug.Log("Hit!!!");
+            //Debug.Log("Hit!!!");
             FishingZoneEntered(zonTag);
             if(!isFishingActive)
                 isFishingActive = true;
@@ -131,6 +114,13 @@ public class PlayerFishingController : MonoBehaviour
             isPlayingSound = false;
         }
     }
+
+    IEnumerator CastSound()
+    {
+        yield return new WaitForSeconds(2f);
+        WorldSoundManager.Instance.PlaySFX("Cast");
+    }
+
 
     void DisableFishingPole()
     {
@@ -144,17 +134,21 @@ public class PlayerFishingController : MonoBehaviour
 
         if (canFishA || canFishB)
         {
+            fishingPole.SetActive(true);
             Fish(); // 낚시 시작
             Debug.Log("낚시 중입니다!");
         }
         else
         {
             Debug.Log("이곳에서는 낚시할 수 없습니다!");
+            fishingPole.SetActive(false);
         }
     }
 
     void Fish()
     {
+        FishingResult = Random.Range(1, 3);
+        Debug.Log(FishingResult);
         timerToCatch = 0f;
         timeBeforeBite = 0f;
         System.Random random = new System.Random();
@@ -166,6 +160,7 @@ public class PlayerFishingController : MonoBehaviour
         Debug.Log(timeBeforeBite);
         isFishing = true;
         anim.SetBool("IsFishing", true);
+        StartCoroutine(CastSound());
     }
 
     void OnTriggerEnter(Collider other)
@@ -196,7 +191,6 @@ public class PlayerFishingController : MonoBehaviour
 
     void HitQTE()
     {
-        AudioM.SfxPlay(AudioManager1.Sfx.ReelIn);
         anim.SetBool("ReelIn", true);  //릴을 감는 애니메이션을 동작
 
         qtePanel.SetActive(true);   //QTE페널 활성화
@@ -208,21 +202,30 @@ public class PlayerFishingController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.J))
             {
                 anim.SetBool("ReelIn", true);
-                currentPresses++; // 입력될 연타 횟수 증가
-                Debug.Log(currentPresses);
+                currentPresses++;
                 HitqteSlider.value = (float)currentPresses / requiredPresses; // 연타 횟수에 비례하여 슬라이더 값 조절
-                print("c : " + currentPresses + " r : " + requiredPresses);
+                //print("c : " + currentPresses + " r : " + requiredPresses);
                 // 필요한 연타 횟수에 도달하면 성공
                 if (currentPresses >= requiredPresses)
                 {
                     anim.SetBool("ReelIn", false);
                     anim.SetInteger("Catch", 0);
+                    StartCoroutine(SuccessSound());
                     hideHitQTEPanel(); // QTE 성공 후 패널 숨김
                     ResetHitQTE(); // QTE 초기화
                     Debug.Log("물고기를 잡았습니다!");
                     isFishing = false;
                     anim.SetBool("IsFishing", false);
                     Invoke("DisableFishingPole", 2.0f);
+
+                    if (FishingResult <= 1)
+                    {
+                        InventoryManager.Instance.AddItem("Bass");
+                    }
+                    else
+                    {
+                        InventoryManager.Instance.AddItem("Trout");
+                    }
                 }
             }
 
@@ -231,6 +234,7 @@ public class PlayerFishingController : MonoBehaviour
             if (qteTimer <= 0)
             {
                 Debug.Log("시간 초과 - QTE 실패!");
+                StartCoroutine(FailSound());
                 ResetHitQTE(); // 시간 초과 시 QTE 초기화
                 hideHitQTEPanel();
                 hideSlider();
@@ -268,7 +272,7 @@ public class PlayerFishingController : MonoBehaviour
 
     void pullingQTE()   //낚시 미니게임에 관련된 함수
     {
-        AudioM.SfxPlay(AudioManager1.Sfx.ReelIn);
+
         anim.SetBool("ReelIn", true);
 
         if (isFishingActive)
@@ -340,8 +344,7 @@ public class PlayerFishingController : MonoBehaviour
 
     void Catch()
     {
-        AudioM.SfxPlay(AudioManager1.Sfx.Catch);
-        AudioM.SfxPlay(AudioManager1.Sfx.Success);
+        StartCoroutine(SuccessSound());
         anim.SetBool("ReelIn", false); ;
         anim.SetInteger("Catch", 0);
         Debug.Log("물고기를 잡았다!");
@@ -349,13 +352,22 @@ public class PlayerFishingController : MonoBehaviour
         hideMinigame();
         isFishing = false;
         Invoke("DisableFishingPole", 2.0f);
+
+        if (FishingResult <= 1)
+        {
+            InventoryManager.Instance.AddItem("Salmon");
+        }
+        else
+        {
+            InventoryManager.Instance.AddItem("Tuna");
+        }
     }
 
     void LoseFish()
     {
-        AudioM.SfxPlay(AudioManager1.Sfx.Fail);
         anim.SetBool("ReelIn", false); ;
         anim.SetInteger("Catch", 1);
+        StartCoroutine(FailSound());
         Debug.Log("물고기를 놓쳤다!");
         ResetMinigame(); // 시간 초과 시 QTE 초기화
         hideMinigame();
@@ -379,6 +391,25 @@ public class PlayerFishingController : MonoBehaviour
     {
         //미니게임 페널 숨김
         MinigamePanel.SetActive(false);
+    }
+
+    IEnumerator SuccessSound()
+    {
+        yield return new WaitForSeconds(0.8f);
+        WorldSoundManager.Instance.PlaySFX("Catch");
+        yield return new WaitForSeconds(1.5f);
+        WorldSoundManager.Instance.PlaySFX("Success");
+    }
+
+    IEnumerator FailSound()
+    {
+        yield return new WaitForSeconds(2f);
+        WorldSoundManager.Instance.PlaySFX("Fail");
+    }
+
+    void PlayReelIn()
+    {
+        WorldSoundManager.Instance.PlaySFX("ReelIn");
     }
 
 }

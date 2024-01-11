@@ -78,7 +78,7 @@ namespace Alchemy
 
         private void Start()
         {
-            bgmPlayer.Play(); // 배경음악 재생
+            WorldSoundManager.Instance.PlayBGM("AlchemyBGM"); // 배경음악 재생
         }
 
         // 게임 시작 함수
@@ -272,15 +272,15 @@ namespace Alchemy
 
         public void ToggleBGM()
         {
-            if (bgmPlayer.isPlaying)
+            if (WorldSoundManager.Instance.bgmSource.isPlaying)
             {
-                bgmPlayer.Pause(); // BGM 정지
+                WorldSoundManager.Instance.bgmSource.Pause(); // BGM 정지
                 ui_BgmOn.gameObject.SetActive(false);
                 ui_BgmOff.gameObject.SetActive(true);
             }
             else
             {
-                bgmPlayer.Play(); // BGM 재생
+                WorldSoundManager.Instance.bgmSource.Play(); // BGM 재생
                 ui_BgmOn.gameObject.SetActive(true);
                 ui_BgmOff.gameObject.SetActive(false);
             }

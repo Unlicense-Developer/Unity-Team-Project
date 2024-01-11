@@ -27,6 +27,9 @@ public class EnemySpawnManager : MonoBehaviour
     
     void SpawnEnemy()
     {
+        if (!DefenceGameManager.Instance.IsPlaying())
+            return;
+
         gameTime += Time.deltaTime;
 
         if( gameTime >= spawnTime )
@@ -52,7 +55,7 @@ public class EnemySpawnManager : MonoBehaviour
             }
 
             gameTime = 0.0f;
-            spawnTime = Random.Range(0.5f, 2.0f);
+            spawnTime = Random.Range(0.5f, 3.0f);
         }
 
     }

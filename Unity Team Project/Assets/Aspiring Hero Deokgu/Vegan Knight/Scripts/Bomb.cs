@@ -11,7 +11,6 @@ public class Bomb : MonoBehaviour
     private void Start()
     {
         bombSound = GetComponent<AudioSource>();
-        bombSound.volume = 0.5f;
         bombSound.clip = fuzeSound;
         bombSound.Play();
     }
@@ -24,7 +23,17 @@ public class Bomb : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (VeganNinjaManager.Instance.isImmune)
+            return;
+
+        if (PlayerData.Instance.GetInvenData().Contains(ItemDataManager.Instance.GetItem("Armor")))
+        {
+            VeganNinjaManager.Instance.SetImmuneState();
+            PlayerData.Instance.DeleteItemData("Armor");
+            return;
+        }
+
+            if (other.CompareTag("Player"))
         {
             GetComponent<Collider>().enabled = false;
             bombSound.clip = explodeSound;

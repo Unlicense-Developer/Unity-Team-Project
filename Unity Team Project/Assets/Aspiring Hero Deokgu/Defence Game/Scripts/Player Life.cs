@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class PlayerLife : MonoBehaviour
 {
-    public Canvas uiCanvas;
-    public Image lifePrefab;
-    public Sprite lifeOn;
-    public Sprite lifeOff;
+    [SerializeField] private Transform lifeObjects;
+    [SerializeField] private Image lifePrefab;
+    [SerializeField] private Sprite lifeOn;
+    [SerializeField] private Sprite lifeOff;
+
     List<Image> playerLife;
-    Vector2 lifePos = new Vector2(-357.0f, -190.0f);
-    float xPosPreset = 60.0f;
+    Vector2 lifePos = new Vector2(-830.0f, -440.0f);
+    float xPosPreset = 110.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -29,10 +30,9 @@ public class PlayerLife : MonoBehaviour
     {
         playerLife = new List<Image>();
 
-        for (int i = 0; i < DefenceGameManager.instance.GetLifeCount(); i++)
+        for (int i = 0; i < DefenceGameManager.Instance.GetLifeCount(); i++)
         {
-            Image temp = Instantiate(lifePrefab);
-            temp.transform.SetParent(uiCanvas.transform);
+            Image temp = Instantiate(lifePrefab, lifeObjects);
             temp.GetComponent<RectTransform>().anchoredPosition = lifePos + new Vector2(xPosPreset * i, 0);
             temp.GetComponent<RectTransform>().localScale = Vector3.one;
             playerLife.Add(temp);
@@ -41,13 +41,13 @@ public class PlayerLife : MonoBehaviour
 
     public void IncreaseLife()
     {
-        playerLife[DefenceGameManager.instance.GetLifeCount()].sprite = lifeOn;
-        DefenceGameManager.instance.CalculateLife(1);
+        playerLife[DefenceGameManager.Instance.GetLifeCount()].sprite = lifeOn;
+        DefenceGameManager.Instance.CalculateLife(1);
     }
 
     public void DecreaseLife()
     {
-        DefenceGameManager.instance.CalculateLife(-1);
-        playerLife[DefenceGameManager.instance.GetLifeCount()].sprite = lifeOff;
+        DefenceGameManager.Instance.CalculateLife(-1);
+        playerLife[DefenceGameManager.Instance.GetLifeCount()].sprite = lifeOff;
     }
 }

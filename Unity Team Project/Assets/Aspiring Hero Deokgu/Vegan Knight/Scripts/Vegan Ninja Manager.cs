@@ -3,25 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class VeganNinjaManager : MonoBehaviour
 {
     public static VeganNinjaManager Instance { get; private set; }
 
     [SerializeField] private Blade blade;
-    [SerializeField] private Spawner spawner;
-    [SerializeField] private Text scoreText;
-    [SerializeField] private Text gameOverScoreText;
+    [SerializeField] private SpawnManager spawnManager;
+
+    [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private TMP_Text gameOverScoreText;
+
     [SerializeField] private Image fadeImage;
     [SerializeField] private Image awardImage;
-    [SerializeField] private GameObject gameOverUI;
 
-    public List<AudioClip> sliceSounds;
+    [SerializeField] private GameObject gameStartUI;
+    [SerializeField] private GameObject gameOverUI;
+    [SerializeField] private GameObject useItemPanel;
+
+    [SerializeField] private List<AudioClip> sliceSounds;
+    [SerializeField] private AudioClip gameoverSound;
+
     AudioSource sliceSound;
 
-    private int score;
-    public int playerLife = 5;
+    public bool isImmune = false;
     public bool isSliceFruit = false;
+    bool isPlaying = false;
+    int score;
 
     public int Score => score;
 
@@ -38,6 +47,9 @@ public class VeganNinjaManager : MonoBehaviour
     {
         NewGame();
         sliceSound = GetComponent<AudioSource>();
+
+        gameStartUI.SetActive(true);
+        WorldSoundManager.Instance.PlayBGM("VeganKnight Start Menu BGM");
     }
 
     private void Update()
@@ -52,9 +64,28 @@ public class VeganNinjaManager : MonoBehaviour
         ClearScene();
 
         blade.enabled = true;
-        spawner.enabled = true;
+        spawnManager.enabled = true;
 
         score = 0;
+    }
+
+    public bool IsPlaying()
+    {
+        return isPlaying;
+    }
+
+    public void SetImmuneState()
+    {
+        isImmune = true;
+        useItemPanel.SetActive(true);
+        StartCoroutine(ReturnFromImmune());
+    }
+
+    IEnumerator ReturnFromImmune()
+    {
+        yield return new WaitForSeconds(2.0f);
+        useItemPanel.SetActive(false);
+        isImmune = false;
     }
 
     private void ClearScene()
@@ -91,7 +122,7 @@ public class VeganNinjaManager : MonoBehaviour
     public void Explode()
     {
         blade.enabled = false;
-        spawner.enabled = false;
+        spawnManager.enabled = false;
 
         StartCoroutine(ExplodeSequence());
     }
@@ -100,34 +131,39 @@ public class VeganNinjaManager : MonoBehaviour
     {
         if( score >= 500)
         {
-            awardImage.sprite = ItemDataManager.instance.GetItem("Apple").icon;
-            PlayerData.instance.AddItemData("Apple");
+            awardImage.sprite = ItemDataManager.Instance.GetItem("Apple").icon;
+            PlayerData.Instance.AddItemData("Apple");
         }
         else if (score >= 200)
         {
-            awardImage.sprite = ItemDataManager.instance.GetItem("Watermelon").icon;
-            PlayerData.instance.AddItemData("Watermelon");
+            awardImage.sprite = ItemDataManager.Instance.GetItem("Watermelon").icon;
+            PlayerData.Instance.AddItemData("Watermelon");
         }
         else if (score >= 100)
         {
-            awardImage.sprite = ItemDataManager.instance.GetItem("Avocado").icon;
-            PlayerData.instance.AddItemData("Avocado");
+            awardImage.sprite = ItemDataManager.Instance.GetItem("Avocado").icon;
+            PlayerData.Instance.AddItemData("Avocado");
         }
         else if (score >= 30)
         {
-            awardImage.sprite = ItemDataManager.instance.GetItem("Grape").icon;
-            PlayerData.instance.AddItemData("Grape");
+            awardImage.sprite = ItemDataManager.Instance.GetItem("Grape").icon;
+            PlayerData.Instance.AddItemData("Grape");
         }
         else
         {
-            awardImage.sprite = ItemDataManager.instance.GetItem("Orange").icon;
-            PlayerData.instance.AddItemData("Orange");
+            awardImage.sprite = ItemDataManager.Instance.GetItem("Orange").icon;
+            PlayerData.Instance.AddItemData("Orange");
         }
     }
 
     public void ReturnWorldScene()
     {
-        SceneManager.LoadScene("WorldMap");
+        if( score != 0)
+        {
+            AchievementManager.Instance.SetAchieveValue("VeganKnight", 1);
+        }
+
+        LoadingSceneManager.Instance.StartLoadScene("WorldMap");
         Time.timeScale = 1.0f;
     }
 
@@ -148,26 +184,13 @@ public class VeganNinjaManager : MonoBehaviour
             yield return null;
         }
 
-        yield return new WaitForSecondsRealtime(1f);
+        yield return new WaitForSecondsRealtime(2.0f);
 
+        sliceSound.clip = gameoverSound;
+        sliceSound.Play();
         CheckScoreAward();
         gameOverScoreText.text = "달성 점수 : " + score.ToString();
         gameOverUI.SetActive(true);
-
-        //NewGame();
-
-        //elapsed = 0f;
-
-        //// Fade back in
-        //while (elapsed < duration)
-        //{
-        //    float t = Mathf.Clamp01(elapsed / duration);
-        //    fadeImage.color = Color.Lerp(Color.white, Color.clear, t);
-
-        //    elapsed += Time.unscaledDeltaTime;
-
-        //    yield return null;
-        //}
     }
 
 }

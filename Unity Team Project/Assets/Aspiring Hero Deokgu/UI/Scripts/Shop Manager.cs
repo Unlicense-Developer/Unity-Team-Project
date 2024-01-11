@@ -56,18 +56,27 @@ public class ShopManager : MonoBehaviour
 
     public void UpdateShopItem()
     {
+        foreach (Transform item in shopContent)
+        {
+            Destroy(item.gameObject);
+        }
+
+        select_Shopitem = null;
+        select_Frame.SetActive(false);
+
         foreach (Item item in shopItems)
         {
             GameObject itemSlot = Instantiate(shopSlotPrefab, shopContent.transform);
 
             itemSlot.transform.Find("Image_item").GetComponent<Image>().sprite = item.icon;
-            Transform test = itemSlot.transform.Find("Item Name");
             itemSlot.transform.Find("Item Name").GetComponent<TMP_Text>().text = item.itemName;
             itemSlot.transform.Find("Item Value").Find("Gold Text").GetComponent<TMP_Text>().text = item.value.ToString();
         }
+    }
 
-        select_Shopitem = null;
-        select_Frame.SetActive(false);
+    public Item GetSelectItem()
+    {
+        return ItemDataManager.Instance.GetItem(select_Shopitem.transform.Find("Image_item").GetComponent<Image>().sprite.name);
     }
 
     public void SelectItem(GameObject item)
@@ -79,11 +88,14 @@ public class ShopManager : MonoBehaviour
 
     public void BuyItem()
     {
+        if (InventoryManager.Instance.GetGold() < GetSelectItem().value)
+            return;
+
         if (select_Shopitem == null)
             return;
 
-        InventoryManager.instance.AddItem(select_Shopitem);
-        InventoryManager.instance.UpdateInven();
-        InventoryManager.instance.gold -= ItemDataManager.instance.GetItem(select_Shopitem.transform.Find("Image_item").GetComponent<Image>().sprite.name).value;
+        InventoryManager.Instance.AddItem(select_Shopitem);
+        InventoryManager.Instance.UpdateInven();
+        InventoryManager.Instance.AddGold(-GetSelectItem().value);
     }
 }

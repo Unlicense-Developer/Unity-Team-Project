@@ -20,7 +20,8 @@ public class GameExit : MonoBehaviour
         gameTitle.SetActive(false);//닫기
 
         //월드 인게임 씬 진입
-        SceneManager.LoadScene("WorldMap");
+        //SceneManager.LoadScene("WorldMap");
+        LoadingSceneManager.Instance.StartLoadScene("WorldMap");
 
     }
     public void Quit() //게임 나가기

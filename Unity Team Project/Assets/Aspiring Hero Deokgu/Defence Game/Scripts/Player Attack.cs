@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public Transform attackPoint;
-    public GameObject arrow;
+    [SerializeField] private Transform attackPoint;
+    [SerializeField] private GameObject arrow;
+    [SerializeField] private GameObject arrowGauge;
 
-    float fireTime = 0.1f;
+    AudioSource attackSound;
 
+    float time = 0.0f;
+    float fireTime = 2.0f;
     float fireForce = 70.0f;
     float throwUpwardForce;
 
@@ -17,12 +21,26 @@ public class PlayerAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        attackSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        UpdateArrowGauge();
+
+        if ( !readyToFire)
+        {
+            time += Time.deltaTime;
+
+            if (time >= fireTime)
+            {
+                readyToFire = true;
+                arrowGauge.SetActive(false);
+                time = 0.0f;
+            }
+        }
+
         if( Input.GetMouseButtonDown(0) && readyToFire)
         {
             Fire();
@@ -31,10 +49,12 @@ public class PlayerAttack : MonoBehaviour
 
     void Fire()
     {
-        if ( !DefenceGameManager.instance.isPlaying )
+        if ( !DefenceGameManager.Instance.IsPlaying() )
             return;
 
         readyToFire = false;
+        arrowGauge.SetActive(true);
+        attackSound.Play();
 
         Quaternion arrowQuat = Quaternion.Euler(new Vector3(0, Camera.main.transform.rotation.eulerAngles.y - 90.0f, -Camera.main.transform.rotation.eulerAngles.x - 90.0f));
 
@@ -57,12 +77,10 @@ public class PlayerAttack : MonoBehaviour
 
         //화살의 Rigidbody에 물리 연산
         arrowRigid.AddForce(forceToAdd, ForceMode.Impulse);
-
-        Invoke(nameof(ResetFire), fireTime);
     }
 
-    void ResetFire()
+    void UpdateArrowGauge()
     {
-        readyToFire = true;
+        arrowGauge.transform.Find("Fill").GetComponent<Image>().fillAmount = time / fireTime;
     }
 }
