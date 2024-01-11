@@ -12,20 +12,7 @@ public class PlayerData : MonoBehaviour
     int goldData = 1000;
     List<Item> invenData = new List<Item>();
 
-    public static PlayerData instance = null;
-
-    public static PlayerData Instance
-    {
-        get
-        {
-            if (instance == null)
-            {
-                return null;
-            }
-
-            return instance;
-        }
-    }
+    public static PlayerData Instance { get; private set; }
 
     // 플레이어 상태 저장을 위한 클래스
     public class PlayerStatusData
@@ -40,14 +27,14 @@ public class PlayerData : MonoBehaviour
 
     void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
 
             // 씬 전환되더라도 파괴되지 않게 함
             DontDestroyOnLoad(gameObject);
         }
-        else if (instance != null)
+        else if (Instance != null)
         {
             Destroy(this.gameObject);
         }
