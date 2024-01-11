@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 154
+  controlID: 157
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -522,23 +522,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 805c0100
-      m_LastClickedID: 89216
-      m_ExpandedIDs: 3219feff6e3bfeff7a3bfeff10fbffff26bb0000dc580100aa5b0100925e0100
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 7c0bfaff6411faff3e1ffcff2039fcff3efafdffaafdfdffe037feff10fbffff1e2701002489020082a20200ccc30200227b0300cc7c03007ebf0700e6bf0700
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: 'Game Over '
+        m_OriginalName: 'Game Over '
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 166008
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -891,9 +891,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1619.7434, y: 723.0669, z: 3730.9324}
+    m_Target: {x: 1047.9941, y: 719.41003, z: 8328.843}
     speed: 2
-    m_Value: {x: 1619.7434, y: 723.0669, z: 3730.9324}
+    m_Value: {x: 1047.9941, y: 719.41003, z: 8328.843}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -943,9 +943,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 314.98157
+    m_Target: 816.0546
     speed: 2
-    m_Value: 314.98157
+    m_Value: 816.0546
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -963,7 +963,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.30950835, y: 0.18859254, z: -0.06277225, w: -0.92989194}
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -1015,7 +1015,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Aspiring Hero Deokgu/UI/Scripts
+    - Assets/Aspiring Hero Deokgu/Scripts
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1023,16 +1023,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Aspiring Hero Deokgu/UI/Scripts
+  - Assets/Aspiring Hero Deokgu/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Hyunjun Github\Unity-Team-Project\Unity Team Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 714}
-    m_SelectedIDs: 18b30100
-    m_LastClickedID: 111384
-    m_ExpandedIDs: 00000000c4b00100c6b00100c8b00100cab00100ccb00100ceb00100d0b00100d2b00100d4b00100d6b00100d8b00100dab00100dcb00100deb00100e0b00100e2b00100e4b001003ab1010088b10100a4b1010000ca9a3b
+    scrollPos: {x: 0, y: 810}
+    m_SelectedIDs: e4b20100
+    m_LastClickedID: 111332
+    m_ExpandedIDs: 00000000f4b10100f6b10100f8b10100fab10100fcb10100feb1010000b2010002b2010004b2010006b2010008b201000ab201000cb201000eb2010010b2010012b2010014b2010068b20100b2b20100ccb20100ceb20100f8b2010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1060,7 +1060,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c4b00100c6b00100c8b00100cab00100ccb00100ceb00100d0b00100d2b00100d4b00100d6b00100d8b00100dab00100dcb00100deb00100e0b00100e2b00100e4b00100
+    m_ExpandedIDs: 00000000f4b10100f6b10100f8b10100fab10100fcb10100feb1010000b2010002b2010004b2010006b2010008b201000ab201000cb201000eb2010010b2010012b2010014b20100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1112,7 +1112,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 58.5}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207

@@ -6977,7 +6977,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000038148, y: 60.67}
+  m_AnchoredPosition: {x: -0.0000038148, y: 33.7}
   m_SizeDelta: {x: 627.8649, y: 121.34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &372252966
@@ -19546,7 +19546,7 @@ GameObject:
   - component: {fileID: 924819594}
   - component: {fileID: 924819593}
   m_Layer: 5
-  m_Name: UI Canvas
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28958,7 +28958,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000076292, y: 211}
+  m_AnchoredPosition: {x: 0.0000076292, y: 220}
   m_SizeDelta: {x: 706.6857, y: 148.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1356423417
@@ -28983,7 +28983,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8cc22745c983cbb48924b5b53b9c2196, type: 3}
-    m_FontSize: 70
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
