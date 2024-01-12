@@ -9,7 +9,7 @@ using WindowsInput;
 
 public class InventoryManager : MonoBehaviour
 {
-    int gold;
+    public int gold;
     GameObject select_Item;
 
     [SerializeField] private TMP_Text sellPriceText;
@@ -41,16 +41,8 @@ public class InventoryManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
-        //inven = PlayerData.Instance.GetInvenData();
-        //gold = PlayerData.Instance.GetGold();
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
     }
 
-    // Update is called once per frame
     void Update()
     {
         goldText.text = gold.ToString();
@@ -61,17 +53,9 @@ public class InventoryManager : MonoBehaviour
 
     private void OnEnable()
     {
-        inven = PlayerData.Instance.GetInvenData();
-        gold = PlayerData.Instance.GetGold();
-
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        LoadData();
     }
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        PlayerData.Instance.SaveInvenData(inven);
-        PlayerData.Instance.SaveGold(gold);
-    }
 
     public void AddItem(string item)
     {
@@ -105,7 +89,7 @@ public class InventoryManager : MonoBehaviour
 
     public void UpdateInven()
     {
-        foreach( Transform item in content)
+        foreach (Transform item in content)
         {
             Destroy(item.gameObject);
         }
@@ -123,12 +107,12 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void SelectItem( GameObject item)
+    public void SelectItem(GameObject item)
     {
         //select_Item = ItemDataManager.instance.GetItem(item.transform.Find("Image_item").GetComponent<Image>().sprite.name);
         select_Item = item;
         Debug.Log(select_Item.transform.Find("Image_item").GetComponent<Image>().sprite.name + " 선택");
-        sellPriceText.text = ( GetSelectItem().value / 2 ).ToString();
+        sellPriceText.text = (GetSelectItem().value / 2).ToString();
         select_Frame.SetActive(true);
 
         ActiveSelectItemInfo();
@@ -154,7 +138,7 @@ public class InventoryManager : MonoBehaviour
 
     public void DeleteSelectItem()
     {
-        if (select_Item == null) 
+        if (select_Item == null)
             return;
 
         RemoveItem(select_Item.transform.Find("Image_item").GetComponent<Image>().sprite.name);
@@ -210,7 +194,7 @@ public class InventoryManager : MonoBehaviour
 
     void ActiveSelectItemInfo()
     {
-        if( select_Frame.activeSelf)
+        if (select_Frame.activeSelf)
         {
             selectItemInfo.SetActive(true);
             selectItemInfoName.text = GetSelectItem().itemName;
@@ -218,5 +202,17 @@ public class InventoryManager : MonoBehaviour
             selectItemInfoText.text = GetSelectItem().itemInfo;
             selectItemSellPrice.text = "상점판매가 : " + (GetSelectItem().value / 2).ToString() + "골드";
         }
+    }
+
+    public void SaveData()
+    {
+        PlayerData.Instance.SaveInvenData(inven);
+        PlayerData.Instance.SaveGold(gold);
+    }
+
+    public void LoadData()
+    {
+        inven = PlayerData.Instance.GetInvenData();
+        gold = PlayerData.Instance.GetGold();
     }
 }

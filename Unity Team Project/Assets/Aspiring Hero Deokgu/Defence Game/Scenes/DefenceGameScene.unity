@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: a7949530307aedb4eb8fadf167f0ab1d, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 5afc66094afe34244a34399bd0dc91e7, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -7001,7 +7001,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8cc22745c983cbb48924b5b53b9c2196, type: 3}
+    m_Font: {fileID: 12800000, guid: 320f972370b68e84fb868b4800647dd7, type: 3}
     m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
@@ -12953,7 +12953,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8cc22745c983cbb48924b5b53b9c2196, type: 3}
+    m_Font: {fileID: 12800000, guid: 320f972370b68e84fb868b4800647dd7, type: 3}
     m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
@@ -14990,7 +14990,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8cc22745c983cbb48924b5b53b9c2196, type: 3}
+    m_Font: {fileID: 12800000, guid: 320f972370b68e84fb868b4800647dd7, type: 3}
     m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
@@ -17107,7 +17107,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &811419160
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26145,7 +26145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1227927576
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28982,7 +28982,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8cc22745c983cbb48924b5b53b9c2196, type: 3}
+    m_Font: {fileID: 12800000, guid: 320f972370b68e84fb868b4800647dd7, type: 3}
     m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
@@ -34346,7 +34346,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8cc22745c983cbb48924b5b53b9c2196, type: 3}
+    m_Font: {fileID: 12800000, guid: 320f972370b68e84fb868b4800647dd7, type: 3}
     m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
@@ -36671,8 +36671,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 70
+    m_Font: {fileID: 12800000, guid: 320f972370b68e84fb868b4800647dd7, type: 3}
+    m_FontSize: 55
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -36710,8 +36710,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 700, y: 400}
-  m_SizeDelta: {x: 400, y: 90}
+  m_AnchoredPosition: {x: 689.0841, y: 392.72278}
+  m_SizeDelta: {x: 421.8318, y: 104.5545}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1673390547
 PrefabInstance:
