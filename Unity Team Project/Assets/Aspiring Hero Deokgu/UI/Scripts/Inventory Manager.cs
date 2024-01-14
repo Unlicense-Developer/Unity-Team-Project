@@ -19,6 +19,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private TMP_Text selectItemSellPrice;
 
     [SerializeField] private Transform content;
+    [SerializeField] private GameObject inven_UI;
     [SerializeField] private GameObject selectItemInfoImage;
     [SerializeField] private GameObject select_Frame;
     [SerializeField] private GameObject invenSlotPrefab;
@@ -70,6 +71,11 @@ public class InventoryManager : MonoBehaviour
     public void RemoveItem(string item)
     {
         inven.Remove(ItemDataManager.Instance.GetItem(item));
+    }
+
+    public void ActivateUI()
+    {
+        inven_UI.SetActive(true);
     }
 
     public int GetGold()
