@@ -24,7 +24,7 @@ public class EnemySpawnManager : MonoBehaviour
     {
         SpawnEnemy();
     }
-    
+
     void SpawnEnemy()
     {
         if (!DefenceGameManager.Instance.IsPlaying())
@@ -32,30 +32,28 @@ public class EnemySpawnManager : MonoBehaviour
 
         gameTime += Time.deltaTime;
 
-        if( gameTime >= spawnTime )
+        if (gameTime >= spawnTime)
         {
-            int randomEnemy = Random.Range(1, 4);
+            float randomEnemy = Random.Range(0.0f, 1.0f);
 
             int randomspawnPos = Random.Range(0, 5);
             Quaternion quat = Quaternion.Euler(new Vector3(0, -90.0f, 0));
 
-            switch (randomEnemy)
+            if (randomEnemy >= 0.4f)
             {
-                case 1:
-                    Instantiate(goblin, spawnPosList[randomspawnPos].position, quat);
-                    break;
-                case 2:
-                    Instantiate(orc, spawnPosList[randomspawnPos].position, quat);
-                    break;
-                case 3:
-                    Instantiate(troll, spawnPosList[randomspawnPos].position, quat);
-                    break;
-                default:
-                    break;
+                Instantiate(goblin, spawnPosList[randomspawnPos].position, quat);
+            }
+            else if (randomEnemy >= 0.1f)
+            {
+                Instantiate(orc, spawnPosList[randomspawnPos].position, quat);
+            }
+            else if (randomEnemy >= 0.0f)
+            {
+                Instantiate(troll, spawnPosList[randomspawnPos].position, quat);
             }
 
             gameTime = 0.0f;
-            spawnTime = Random.Range(0.5f, 3.0f);
+            spawnTime = Random.Range(0.5f, 3.5f);
         }
 
     }

@@ -7,17 +7,20 @@ public class VolumeSetting : MonoBehaviour
 {
     [SerializeField] private Slider volumeSlider;
     [SerializeField] private AudioSource audioSource;
-        
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        volumeSlider.onValueChanged.AddListener(delegate { OnValueChanged(); });
     }
 
     // Update is called once per frame
     void Update()
     {
-        audioSource.volume = volumeSlider.value;
     }
 
+    void OnValueChanged()
+    {
+        WorldSoundManager.Instance.SetBGMVolume(volumeSlider.value);
+    }
 }

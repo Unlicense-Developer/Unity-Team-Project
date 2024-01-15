@@ -27,10 +27,12 @@ public class DefenceGameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-
-            // 씬 전환되더라도 파괴되지 않게 함
-            //DontDestroyOnLoad(this.gameObject);
         }
+        else if (Instance != null)
+        {
+            Destroy(this.gameObject);
+        }
+
     }
 
     // Start is called before the first frame update
@@ -46,10 +48,6 @@ public class DefenceGameManager : MonoBehaviour
         scoreText.text = score.ToString();
 
         CheckGameOver();
-    }
-
-    void OnDestroy()
-    {
     }
 
     public bool IsPlaying()
