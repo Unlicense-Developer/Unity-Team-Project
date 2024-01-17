@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ChestController : MonoBehaviour
@@ -21,21 +23,35 @@ public class ChestController : MonoBehaviour
             
             if (playerInteract != null)
             {
-                if (!isOpen)
+                if (isOpen)
                 {
-                    // 보물 상자 열기 애니메이션 및 로직
-                    ani.SetBool("IsOpen", true);
-                    Debug.Log("상자가 열렸습니다.");
-                    isOpen = true;
-                }
-                else
-                {
-                    // 보물 상자 닫기 애니메이션 및 로직
-                    ani.SetBool("IsOpen", false);
-                    Debug.Log("상자가 닫혔습니다.");
-                    isOpen = !isOpen;
+                    
                 }
             }
-        }   
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            if (!isOpen)
+            {
+                WorldSoundManager.Instance.PlaySFX("ChestOpen");
+                ani.SetBool("IsOpen", true);
+                Debug.Log("상자가 열렸습니다.");
+                isOpen = true;
+            }
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            WorldSoundManager.Instance.PlaySFX("ChestClose");
+            ani.SetBool("IsOpen", false);
+            Debug.Log("상자가 닫혔습니다.");
+            isOpen = !isOpen;
+        }
     }
 }

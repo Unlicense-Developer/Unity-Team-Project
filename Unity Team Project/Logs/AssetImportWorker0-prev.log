@@ -1,23 +1,23 @@
 Using pre-set license
 Built from '2022.3/staging' branch; Version is '2022.3.14f1 (eff2de9070d8) revision 15725278'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19042) 64bit Core' Language: 'ko' Physical Memory: 32439 MB
+OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'ko' Physical Memory: 48985 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Unity.exe
+D:\Unity\2022.3.14f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-D:/Hyunjun Github/Unity-Team-Project/Unity Team Project
+D:/Unity/Projects/Unity Team Project 0.9
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-61279
-Successfully changed project path to: D:/Hyunjun Github/Unity-Team-Project/Unity Team Project
-D:/Hyunjun Github/Unity-Team-Project/Unity Team Project
+62510
+Successfully changed project path to: D:/Unity/Projects/Unity Team Project 0.9
+D:/Unity/Projects/Unity Team Project 0.9
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,65 +49,68 @@ D:/Hyunjun Github/Unity-Team-Project/Unity Team Project
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [8684] Host "[IP] 172.16.133.14 [Port] 0 [Flags] 2 [Guid] 2117392370 [EditorId] 2117392370 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-5AO2MO1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [36408] Host "[IP] 192.168.35.121 [Port] 0 [Flags] 2 [Guid] 1211129509 [EditorId] 1211129509 [Version] 1048832 [Id] WindowsEditor(7,null) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [8684] Host "[IP] 172.16.133.14 [Port] 0 [Flags] 2 [Guid] 2117392370 [EditorId] 2117392370 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-5AO2MO1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [36408] Host "[IP] 192.168.35.121 [Port] 0 [Flags] 2 [Guid] 1211129509 [EditorId] 1211129509 [Version] 1048832 [Id] WindowsEditor(7,null) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-[Physics::Module] Initialized MultithreadedJobDispatcher with 3 workers.
-Refreshing native plugins compatible for Editor in 50.23 ms, found 3 plugins.
+[Physics::Module] Initialized MultithreadedJobDispatcher with 19 workers.
+Refreshing native plugins compatible for Editor in 4.69 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.14f1 (eff2de9070d8)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.14f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/Hyunjun Github/Unity-Team-Project/Unity Team Project/Assets
+[Subsystems] Discovering subsystems at path D:/Unity/2022.3.14f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Unity/Projects/Unity Team Project 0.9/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Intel(R) HD Graphics 530 (ID=0x1912)
-    Vendor:   Intel
-    VRAM:     16219 MB
-    Driver:   27.20.100.8935
+    Renderer: NVIDIA GeForce RTX 4070 Ti (ID=0x2782)
+    Vendor:   NVIDIA
+    VRAM:     12010 MB
+    Driver:   31.0.15.4592
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.14f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.14f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.14f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56656
+Mono path[0] = 'D:/Unity/2022.3.14f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/2022.3.14f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/2022.3.14f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56728
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.14f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.048662 seconds.
-- Loaded All Assemblies, in  1.834 seconds
+Register platform support module: D:/Unity/2022.3.14f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: D:/Unity/2022.3.14f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002002 seconds.
+- Loaded All Assemblies, in  0.221 seconds
 Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 272 ms
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  4.771 seconds
-Domain Reload Profiling: 6600ms
-	BeginReloadAssembly (684ms)
+- Finished resetting the current domain, in  0.489 seconds
+Domain Reload Profiling: 710ms
+	BeginReloadAssembly (66ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (2ms)
-	RebuildCommonClasses (179ms)
-	RebuildNativeTypeToScriptingClass (43ms)
-	initialDomainReloadingComplete (298ms)
-	LoadAllAssembliesAndSetupDomain (624ms)
-		LoadAssemblies (677ms)
+		CreateAndSetChildDomain (0ms)
+	RebuildCommonClasses (21ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (32ms)
+	LoadAllAssembliesAndSetupDomain (94ms)
+		LoadAssemblies (66ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (617ms)
-			TypeCache.Refresh (615ms)
-				TypeCache.ScanAssembly (557ms)
+		AnalyzeDomain (92ms)
+			TypeCache.Refresh (91ms)
+				TypeCache.ScanAssembly (83ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (4772ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (490ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2365ms)
+		SetupLoadedEditorAssemblies (447ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (107ms)
-			SetLoadedEditorAssemblies (107ms)
+			InitializePlatformSupportModulesInManaged (342ms)
+			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (5ms)
-			ProcessInitializeOnLoadAttributes (1747ms)
-			ProcessInitializeOnLoadMethodAttributes (398ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (68ms)
+			ProcessInitializeOnLoadMethodAttributes (33ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -115,131 +118,274 @@ Domain Reload Profiling: 6600ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.039 seconds
-Refreshing native plugins compatible for Editor in 6.63 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.465 seconds
+Refreshing native plugins compatible for Editor in 1.89 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
+Native extension for Android target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.873 seconds
-Domain Reload Profiling: 1907ms
-	BeginReloadAssembly (227ms)
+- Finished resetting the current domain, in  0.540 seconds
+Domain Reload Profiling: 1004ms
+	BeginReloadAssembly (96ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (7ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (15ms)
+	RebuildCommonClasses (23ms)
+	RebuildNativeTypeToScriptingClass (6ms)
+	initialDomainReloadingComplete (24ms)
+	LoadAllAssembliesAndSetupDomain (315ms)
+		LoadAssemblies (228ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (141ms)
+			TypeCache.Refresh (121ms)
+				TypeCache.ScanAssembly (111ms)
+			ScanForSourceGeneratedMonoScriptInfo (14ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (540ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (426ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (15ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (62ms)
+			ProcessInitializeOnLoadAttributes (327ms)
+			ProcessInitializeOnLoadMethodAttributes (16ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 1.15 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3869 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (131.3 KB). Loaded Objects now: 4369.
+Memory consumption went from 244.7 MB to 244.6 MB.
+Total: 1.947300 ms (FindLiveObjects: 0.148200 ms CreateObjectMapping: 0.046100 ms MarkObjects: 1.661300 ms  DeleteObjects: 0.091100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 394555.679342 seconds.
+  path: Assets/Aspiring Hero Deokgu/FishingGame/Prefab/pre/JumpingFish 1.prefab
+  artifactKey: Guid(325b06d8e0c8c374ca69f209b414d229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/FishingGame/Prefab/pre/JumpingFish 1.prefab using Guid(325b06d8e0c8c374ca69f209b414d229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c6010c598adcd33b01751dc8ddc5877') in 0.018787 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Aspiring Hero Deokgu/FishingGame/Scipts/JumpingFish.cs
+  artifactKey: Guid(300c93a9b908f594f9013b383c0b3376) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/FishingGame/Scipts/JumpingFish.cs using Guid(300c93a9b908f594f9013b383c0b3376) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '446cdacb9c81f18cd9a0d6d1e08d7f74') in 0.000271 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.475128 seconds.
+  path: Assets/Aspiring Hero Deokgu/FishingGame/Prefab/pre/JumpingFish 2.prefab
+  artifactKey: Guid(2c405d3ca1817944e9e2ad84128db5b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/FishingGame/Prefab/pre/JumpingFish 2.prefab using Guid(2c405d3ca1817944e9e2ad84128db5b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fc57ea84bac4c36e34e41efe6d7bb3c') in 0.001790 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 0.581878 seconds.
+  path: Assets/Aspiring Hero Deokgu/FishingGame/Prefab/pre/JumpingFish 3.prefab
+  artifactKey: Guid(8b30b8e1603b11546835bb1375c1f094) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/FishingGame/Prefab/pre/JumpingFish 3.prefab using Guid(8b30b8e1603b11546835bb1375c1f094) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23769093ec6ee45c5e65da5962d5b03c') in 0.002589 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 13.807914 seconds.
+  path: Assets/Aspiring Hero Deokgu/FishingGame/Prefab/JumpingFishs.prefab
+  artifactKey: Guid(33d5521f41b32a54c8076a004e4a3529) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/FishingGame/Prefab/JumpingFishs.prefab using Guid(33d5521f41b32a54c8076a004e4a3529) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b3020cb1079ce94a5de02fbfdec86d9') in 0.002788 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 46
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.294 seconds
+Refreshing native plugins compatible for Editor in 1.20 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.570 seconds
+Domain Reload Profiling: 865ms
+	BeginReloadAssembly (96ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (23ms)
+	RebuildCommonClasses (20ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (16ms)
+	LoadAllAssembliesAndSetupDomain (155ms)
+		LoadAssemblies (192ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (10ms)
+			TypeCache.Refresh (4ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (571ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (350ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (15ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (64ms)
+			ProcessInitializeOnLoadAttributes (253ms)
+			ProcessInitializeOnLoadMethodAttributes (12ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Refreshing native plugins compatible for Editor in 1.22 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3838 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 34 unused Assets / (102.8 KB). Loaded Objects now: 4385.
+Memory consumption went from 236.0 MB to 235.9 MB.
+Total: 1.865200 ms (FindLiveObjects: 0.169400 ms CreateObjectMapping: 0.055800 ms MarkObjects: 1.591400 ms  DeleteObjects: 0.048000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 198.167484 seconds.
+  path: Assets/Aspiring Hero Deokgu
+  artifactKey: Guid(68732da3d16a01642ae9a449a311d984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu using Guid(68732da3d16a01642ae9a449a311d984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '178eb62e18e9bc2f503da438500e1776') in 0.003508 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 2.667835 seconds.
+  path: Assets/Aspiring Hero Deokgu/FishingGame
+  artifactKey: Guid(6f493fd610bf99b44b375d6406e7bd08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/FishingGame using Guid(6f493fd610bf99b44b375d6406e7bd08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72b8a79becf4b0269e39cb6749202021') in 0.000328 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.809817 seconds.
+  path: Assets/Aspiring Hero Deokgu/FishingGame/Prefab
+  artifactKey: Guid(9e577fea13091ec4e9ec16bcce513e34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/FishingGame/Prefab using Guid(9e577fea13091ec4e9ec16bcce513e34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '197196329bc570ec9d20984eccea5099') in 0.000718 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 15.740538 seconds.
+  path: Assets/Aspiring Hero Deokgu/FishingGame/Prefab/JumpingFishs.prefab
+  artifactKey: Guid(33d5521f41b32a54c8076a004e4a3529) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/FishingGame/Prefab/JumpingFishs.prefab using Guid(33d5521f41b32a54c8076a004e4a3529) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd416aaa4811a4b7c03df11473974dec4') in 0.025131 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 46
+========================================================================
+Received Import Request.
+  Time since last request: 66.262897 seconds.
+  path: Assets/Aspiring Hero Deokgu/FishingGame/Scipts/JumpingFishTest.cs
+  artifactKey: Guid(0c8b49b710ac77b44b1203b6149ada0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Aspiring Hero Deokgu/FishingGame/Scipts/JumpingFishTest.cs using Guid(0c8b49b710ac77b44b1203b6149ada0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f65734ffd43521e384bc49ad3330f922') in 0.000392 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.331 seconds
+Refreshing native plugins compatible for Editor in 1.40 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.652 seconds
+Domain Reload Profiling: 983ms
+	BeginReloadAssembly (100ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (27ms)
-	RebuildCommonClasses (47ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (67ms)
-	LoadAllAssembliesAndSetupDomain (677ms)
-		LoadAssemblies (530ms)
+	RebuildCommonClasses (21ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (16ms)
+	LoadAllAssembliesAndSetupDomain (186ms)
+		LoadAssemblies (211ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (293ms)
-			TypeCache.Refresh (253ms)
-				TypeCache.ScanAssembly (232ms)
-			ScanForSourceGeneratedMonoScriptInfo (27ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (874ms)
+		AnalyzeDomain (22ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (8ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (652ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (672ms)
+		SetupLoadedEditorAssemblies (382ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (11ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (18ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (87ms)
-			ProcessInitializeOnLoadAttributes (526ms)
-			ProcessInitializeOnLoadMethodAttributes (26ms)
-			AfterProcessingInitializeOnLoad (17ms)
+			BeforeProcessingInitializeOnLoad (68ms)
+			ProcessInitializeOnLoadAttributes (278ms)
+			ProcessInitializeOnLoadMethodAttributes (13ms)
+			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (9ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 5.89 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (3ms)
+Refreshing native plugins compatible for Editor in 1.31 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3875 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 61 unused Assets / (131.4 KB). Loaded Objects now: 4371.
-Memory consumption went from 239.0 MB to 238.8 MB.
-Total: 3.626500 ms (FindLiveObjects: 0.319200 ms CreateObjectMapping: 0.327800 ms MarkObjects: 2.822600 ms  DeleteObjects: 0.155900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 3114454.388955 seconds.
-  path: Assets/Aspiring Hero Deokgu/Scripts/WorldDataManager.cs
-  artifactKey: Guid(ee889c0af48269d43ad0c4af5f4ab5fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Scripts/WorldDataManager.cs using Guid(ee889c0af48269d43ad0c4af5f4ab5fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df10ebf9fb87d283540ea421f9866ade') in 0.001838 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  2.417 seconds
-Refreshing native plugins compatible for Editor in 12.60 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  5.547 seconds
-Domain Reload Profiling: 7947ms
-	BeginReloadAssembly (726ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (16ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (134ms)
-	RebuildCommonClasses (125ms)
-	RebuildNativeTypeToScriptingClass (28ms)
-	initialDomainReloadingComplete (165ms)
-	LoadAllAssembliesAndSetupDomain (1354ms)
-		LoadAssemblies (1670ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (161ms)
-			TypeCache.Refresh (44ms)
-				TypeCache.ScanAssembly (5ms)
-			ScanForSourceGeneratedMonoScriptInfo (47ms)
-			ResolveRequiredComponents (34ms)
-	FinalizeReload (5549ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1688ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (26ms)
-			SetLoadedEditorAssemblies (16ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (224ms)
-			ProcessInitializeOnLoadAttributes (1315ms)
-			ProcessInitializeOnLoadMethodAttributes (69ms)
-			AfterProcessingInitializeOnLoad (36ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (19ms)
-Refreshing native plugins compatible for Editor in 58.40 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3844 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 34 unused Assets / (102.8 KB). Loaded Objects now: 4386.
-Memory consumption went from 230.9 MB to 230.8 MB.
-Total: 15.382100 ms (FindLiveObjects: 2.679000 ms CreateObjectMapping: 4.380900 ms MarkObjects: 7.850700 ms  DeleteObjects: 0.469900 ms)
+Unloading 3837 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 35 unused Assets / (103.4 KB). Loaded Objects now: 4399.
+Memory consumption went from 237.9 MB to 237.8 MB.
+Total: 1.847400 ms (FindLiveObjects: 0.158000 ms CreateObjectMapping: 0.052300 ms MarkObjects: 1.589700 ms  DeleteObjects: 0.046700 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
@@ -251,972 +397,3 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 313.796981 seconds.
-  path: Assets/Aspiring Hero Deokgu/Scripts/WorldDataManager.cs
-  artifactKey: Guid(ee889c0af48269d43ad0c4af5f4ab5fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Scripts/WorldDataManager.cs using Guid(ee889c0af48269d43ad0c4af5f4ab5fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '431852d82a0664f9b92531c739d302d7') in 0.005599 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  2.584 seconds
-Refreshing native plugins compatible for Editor in 60.15 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  4.553 seconds
-Domain Reload Profiling: 7125ms
-	BeginReloadAssembly (692ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (20ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (151ms)
-	RebuildCommonClasses (134ms)
-	RebuildNativeTypeToScriptingClass (94ms)
-	initialDomainReloadingComplete (131ms)
-	LoadAllAssembliesAndSetupDomain (1517ms)
-		LoadAssemblies (1886ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (72ms)
-			TypeCache.Refresh (11ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (58ms)
-	FinalizeReload (4556ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1797ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (39ms)
-			SetLoadedEditorAssemblies (6ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (225ms)
-			ProcessInitializeOnLoadAttributes (1349ms)
-			ProcessInitializeOnLoadMethodAttributes (135ms)
-			AfterProcessingInitializeOnLoad (41ms)
-			EditorAssembliesLoaded (2ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (23ms)
-Refreshing native plugins compatible for Editor in 13.51 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3844 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 34 unused Assets / (102.9 KB). Loaded Objects now: 4401.
-Memory consumption went from 232.8 MB to 232.7 MB.
-Total: 5.339300 ms (FindLiveObjects: 0.494800 ms CreateObjectMapping: 0.563000 ms MarkObjects: 4.184900 ms  DeleteObjects: 0.095400 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 153.068223 seconds.
-  path: Assets/Aspiring Hero Deokgu/Item Data
-  artifactKey: Guid(d05a3d0746b274944892a196a47f793b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Item Data using Guid(d05a3d0746b274944892a196a47f793b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c462745ebb259b616f409351a6aa163b') in 0.003610 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 1.060731 seconds.
-  path: Assets/Aspiring Hero Deokgu/Item Data/Item Icon
-  artifactKey: Guid(6bd94b9c7a3bdd44a80aaa99d41de4d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Item Data/Item Icon using Guid(6bd94b9c7a3bdd44a80aaa99d41de4d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27818c2675e5d31cc9c0917c2b480ffa') in 0.002145 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 4.550239 seconds.
-  path: Assets/Aspiring Hero Deokgu/Item Data/Item Icon/Fruits.png
-  artifactKey: Guid(c2690c7ae5bc82f41ada15c417d18719) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Item Data/Item Icon/Fruits.png using Guid(c2690c7ae5bc82f41ada15c417d18719) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9718876c08d394b29169f7895d6c41e3') in 0.602154 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 17
-========================================================================
-Received Import Request.
-  Time since last request: 1.263926 seconds.
-  path: Assets/Aspiring Hero Deokgu/Item Data/Item Icon/Grape2.asset
-  artifactKey: Guid(d65c13d3aaddecd47b35822d0ccb76ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Item Data/Item Icon/Grape2.asset using Guid(d65c13d3aaddecd47b35822d0ccb76ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b16c133d116131ba78b2471efd079b19') in 0.035122 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 1.594883 seconds.
-  path: Assets/Aspiring Hero Deokgu/Item Data/Item Icon/Grape.asset
-  artifactKey: Guid(d65c13d3aaddecd47b35822d0ccb76ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Item Data/Item Icon/Grape.asset using Guid(d65c13d3aaddecd47b35822d0ccb76ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23a97814eb8ca44cbeaa56b373706cb0') in 0.032108 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 2.078707 seconds.
-  path: Assets/Aspiring Hero Deokgu/Item Data/Item Files
-  artifactKey: Guid(e48fd9949343f494cb5efc2b9b7938c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Item Data/Item Files using Guid(e48fd9949343f494cb5efc2b9b7938c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '888fc00233a170ac839be4b35f490205') in 0.003265 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 1.495529 seconds.
-  path: Assets/Aspiring Hero Deokgu/Item Data/Item Files/Orange.asset
-  artifactKey: Guid(8ec5280027e8015419ed82b237953f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Item Data/Item Files/Orange.asset using Guid(8ec5280027e8015419ed82b237953f08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24ef223a9d5b7084539253f7f7e3a3cd') in 0.003207 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 3.732827 seconds.
-  path: Assets/Aspiring Hero Deokgu/Item Data/Item Files/New Item.asset
-  artifactKey: Guid(7de96abd8e4e4e944b68ac4a6b97145b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Item Data/Item Files/New Item.asset using Guid(7de96abd8e4e4e944b68ac4a6b97145b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ca6cc33ed1421d7ab4b35a6ef81bb02') in 0.002822 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 2.192861 seconds.
-  path: Assets/Aspiring Hero Deokgu/Item Data/Item Files/Grape.asset
-  artifactKey: Guid(b0f0dbfcdea138b4f9b8c43df95cd6de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Item Data/Item Files/Grape.asset using Guid(b0f0dbfcdea138b4f9b8c43df95cd6de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ba3d00236221134706327dc3bf51b00') in 0.003577 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 1.212026 seconds.
-  path: Assets/Aspiring Hero Deokgu/UI/Images/UI/Frame_setting_language_bg.png
-  artifactKey: Guid(4cdb971bf34fdaa4b80e38029e7184b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/UI/Images/UI/Frame_setting_language_bg.png using Guid(4cdb971bf34fdaa4b80e38029e7184b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '118384059a39537c1f7f201f67eed83d') in 0.078564 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_tabmenu_focus_01_l.png
-  artifactKey: Guid(dc11d60cbdbad4e0a9e10e7adc64a230) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_tabmenu_focus_01_l.png using Guid(dc11d60cbdbad4e0a9e10e7adc64a230) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48838dec08143d31d7629c61275b412d') in 0.073661 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Particles/Textures/fx_glow1.png
-  artifactKey: Guid(a14382567192c4fc98d48eaef7301e12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Particles/Textures/fx_glow1.png using Guid(a14382567192c4fc98d48eaef7301e12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a18c7f973e05c3296f5ed18f0859c19') in 0.079036 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.001249 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_01_n.png
-  artifactKey: Guid(8618db974c2d8471f8d4fbeec0f3697a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_01_n.png using Guid(8618db974c2d8471f8d4fbeec0f3697a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c159caf9bd572ea0f5570ede272dbeb1') in 0.079952 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_02_d.png
-  artifactKey: Guid(884626e8859d04a88b96686e12ba67e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_02_d.png using Guid(884626e8859d04a88b96686e12ba67e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c00b442aa9e1c2bad4095a2451a86b34') in 0.059813 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_04_n.png
-  artifactKey: Guid(0bbe4c5fd46914a3f864a975a935c256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_04_n.png using Guid(0bbe4c5fd46914a3f864a975a935c256) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c1e2230047fe9fdb962ce8103e0b8b4') in 0.081892 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000069 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_tableframe_01_2.png
-  artifactKey: Guid(889492f23e1004fb8b52471c179ea4c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_tableframe_01_2.png using Guid(889492f23e1004fb8b52471c179ea4c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b798508441208cfee8bd7ded7889355f') in 0.083353 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Play/group_image_roulette8.png
-  artifactKey: Guid(98b8f3607047f498fb874a9ca76c1718) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Play/group_image_roulette8.png using Guid(98b8f3607047f498fb874a9ca76c1718) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75756d38642343499c8d767bfd7020e7') in 0.118801 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_wingbadge1.png
-  artifactKey: Guid(132eca0feb55947e2afe9068162b62dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_wingbadge1.png using Guid(132eca0feb55947e2afe9068162b62dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be31f8b00339ee9e680e9837ca389650') in 0.113599 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_swordmark1.png
-  artifactKey: Guid(6512266a72b004805bfb8a021f341f70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_swordmark1.png using Guid(6512266a72b004805bfb8a021f341f70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dd84eabb4fb54e4f3b2bf1b77c2f2ed') in 0.141353 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000048 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Icon/icon_color_delete.png
-  artifactKey: Guid(bf49c0d72111d4b6fafcaf9c040921e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Icon/icon_color_delete.png using Guid(bf49c0d72111d4b6fafcaf9c040921e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc9cab2e101a4ec92727b8d94a3e21f0') in 0.159052 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/Aspiring Hero Deokgu/Alchemy/Textures/Gem 7.png
-  artifactKey: Guid(e58f6e44f993ff2428fcc1953d6fabad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Alchemy/Textures/Gem 7.png using Guid(e58f6e44f993ff2428fcc1953d6fabad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18a95f2adafa9bc115925b5c113d8e23') in 0.201056 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Icon/icon_color_ad_01.png
-  artifactKey: Guid(783887b3d02834345a4d58df4ea24d27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Icon/icon_color_ad_01.png using Guid(783887b3d02834345a4d58df4ea24d27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e6ed5b0304f42919441506db1dbf54e') in 0.129706 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000088 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_tabmenu_focus_01_s.png
-  artifactKey: Guid(43a71eab10fec48d9ba798863d1add5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_tabmenu_focus_01_s.png using Guid(43a71eab10fec48d9ba798863d1add5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de4d6cc98f689893fed98830d194a1b7') in 0.140304 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_wingbadge8.png
-  artifactKey: Guid(06f2d5e44ce8244e8850b2fb321371a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_wingbadge8.png using Guid(06f2d5e44ce8244e8850b2fb321371a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3d3b1324c7f127a9a568caf84775a16') in 0.145251 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_01_d.png
-  artifactKey: Guid(dea6e4236dd304760920e31bdb611802) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_01_d.png using Guid(dea6e4236dd304760920e31bdb611802) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3cbf40750c2dd9b732428562e1d4a2f') in 0.153792 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/Aspiring Hero Deokgu/UI/Images/UI/icon_coin.png
-  artifactKey: Guid(327b66d5755673a43adb6a109c656852) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/UI/Images/UI/icon_coin.png using Guid(327b66d5755673a43adb6a109c656852) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9b587bfb1dbcdfc55b4b93f9d8e84ed') in 0.168666 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Aspiring Hero Deokgu/Alchemy/Textures/Gem 4.png
-  artifactKey: Guid(deeae1b3d0761ce4e83c0362da557c61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Alchemy/Textures/Gem 4.png using Guid(deeae1b3d0761ce4e83c0362da557c61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccc9c371c9993af9393e6b47c33a0161') in 0.162842 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_wingbadge2.png
-  artifactKey: Guid(0a26da5dac66b45479efa3a2df4ef569) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_wingbadge2.png using Guid(0a26da5dac66b45479efa3a2df4ef569) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4052e621f2140845acb5a71fd159de9') in 0.151706 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000064 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Particles/Textures/fx_circle_line1.png
-  artifactKey: Guid(3d33bbf47918d4deca06bc016b4c945d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Particles/Textures/fx_circle_line1.png using Guid(3d33bbf47918d4deca06bc016b4c945d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08d5002cfa46f303d8476bda5eb3743b') in 0.160528 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000047 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_tableframe_02.png
-  artifactKey: Guid(f8c7caaf34089476494f49407ac1c4cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_tableframe_02.png using Guid(f8c7caaf34089476494f49407ac1c4cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50b9c66609322c3aac4b503696bcb79e') in 0.086122 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000080 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Particles/Textures/fx_star2.png
-  artifactKey: Guid(31cea93cb8c1f44f0aed5ca96ed9b764) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Particles/Textures/fx_star2.png using Guid(31cea93cb8c1f44f0aed5ca96ed9b764) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3172b812c236dd11f4106d8374382ba2') in 0.203386 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000060 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_04_s.png
-  artifactKey: Guid(67b77312d4981414296e738015a3fbf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_04_s.png using Guid(67b77312d4981414296e738015a3fbf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17997c3240207eac1216fd8f09a98a8d') in 0.133525 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000083 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_wingbadge4.png
-  artifactKey: Guid(cb99960ac6f744bdba007abf1dcbac2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_wingbadge4.png using Guid(cb99960ac6f744bdba007abf1dcbac2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef16b0b1730d246128f004c1bebd389b') in 0.121704 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000058 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_wingbadge6.png
-  artifactKey: Guid(2e16ff909ace4479e969b77eff6fa68e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_wingbadge6.png using Guid(2e16ff909ace4479e969b77eff6fa68e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5db96c62ac2db4eabd5ec19d031336e8') in 0.149636 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000169 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Play/group_image_roulette4.png
-  artifactKey: Guid(1cce6b725575d4e9985582bdf4631ce5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Play/group_image_roulette4.png using Guid(1cce6b725575d4e9985582bdf4631ce5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21f2174958fda2b3cedc6a301f4ddeb3') in 0.161596 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000090 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_02_s1.png
-  artifactKey: Guid(9a87219c06a9d420eab4b48d1f2d5728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_02_s1.png using Guid(9a87219c06a9d420eab4b48d1f2d5728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e07ca194069ad99cbae8b32e779ecff2') in 0.174811 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_00_d.png
-  artifactKey: Guid(775d51d2084c6436899c5981da7e484b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_00_d.png using Guid(775d51d2084c6436899c5981da7e484b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16a70680bcbde2ded2701e28ee65a0fc') in 0.144601 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_wingbadge7.png
-  artifactKey: Guid(6a1c62f311c094e6c86ad01e95ff5f1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_wingbadge7.png using Guid(6a1c62f311c094e6c86ad01e95ff5f1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '439996693e6c6250d49307ea822e36c4') in 0.128461 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000056 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_05_n.png
-  artifactKey: Guid(868659d5e863447479aecdbf0d270997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_05_n.png using Guid(868659d5e863447479aecdbf0d270997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cabafe1b620e39797200579c32249c0') in 0.113150 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000057 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_05_s_red.png
-  artifactKey: Guid(e296ebe14c40c44aa87079112beaada1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_05_s_red.png using Guid(e296ebe14c40c44aa87079112beaada1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ff330a55c73bf9ff978dafeea6eba50') in 0.107024 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000075 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Play/group_image_roulette3.png
-  artifactKey: Guid(892ca8f0e4fec49c799d994a8b4147f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Play/group_image_roulette3.png using Guid(892ca8f0e4fec49c799d994a8b4147f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c686d2bc0cf18bae3e3786b5de6a33c5') in 0.097695 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Icon/icon_color_check_02.png
-  artifactKey: Guid(09df08b90bba7486181a56adc6525dc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Icon/icon_color_check_02.png using Guid(09df08b90bba7486181a56adc6525dc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b89d59a47b6a0f7fd2044003803a481') in 0.066097 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000103 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Play/group_image_roulette6.png
-  artifactKey: Guid(df3348d2fa5a44f2da5dea047a7efc0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Play/group_image_roulette6.png using Guid(df3348d2fa5a44f2da5dea047a7efc0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7f1ccc9a803fe9c68eb55a2ee72333b') in 0.109905 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Aspiring Hero Deokgu/Defence Game/Textures/Green.png
-  artifactKey: Guid(1a58b0d755257d94cbb0dff23717daab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Defence Game/Textures/Green.png using Guid(1a58b0d755257d94cbb0dff23717daab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e81cefd68c385ecd63e922cd46ae9f4') in 0.112875 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/Aspiring Hero Deokgu/UI/Images/Item/icon_boots 1.png
-  artifactKey: Guid(35ede9b57886dd443a5e2b0c9f828b3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/UI/Images/Item/icon_boots 1.png using Guid(35ede9b57886dd443a5e2b0c9f828b3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbbd7277c310609c9fe2f4e21aebc887') in 0.125713 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.001408 seconds.
-  path: Assets/Aspiring Hero Deokgu/Alchemy/Textures/Gem 5.png
-  artifactKey: Guid(7d70d51b00efd374db090f15f9742eab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Alchemy/Textures/Gem 5.png using Guid(7d70d51b00efd374db090f15f9742eab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5130e364cb69de437d6300569e619d4') in 0.157855 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000052 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_02_n.png
-  artifactKey: Guid(ea20bb65163124847b01bc00d332b739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_02_n.png using Guid(ea20bb65163124847b01bc00d332b739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5de4f92582e9062133be78ce6a674b55') in 0.050421 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000051 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Icon/icon_color_ad_00.png
-  artifactKey: Guid(88e47bff8614d48ceaf860d69444b924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Icon/icon_color_ad_00.png using Guid(88e47bff8614d48ceaf860d69444b924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '851c190601620875a91755074e8868ec') in 0.116726 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000069 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_tabmenu_focus_00.png
-  artifactKey: Guid(122c6111ecdc74888bc78f3443751bf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_tabmenu_focus_00.png using Guid(122c6111ecdc74888bc78f3443751bf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35795359c943320d92adeb8b16f911e2') in 0.153010 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_tv1.png
-  artifactKey: Guid(f946ba5e930ed4df988d6df88a985508) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_tv1.png using Guid(f946ba5e930ed4df988d6df88a985508) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50e80cf02c2866358ee94e6ca02a59ea') in 0.079679 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000072 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_00_n.png
-  artifactKey: Guid(72f28ca191c2f4b18b6ace1d3a7ea55b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_00_n.png using Guid(72f28ca191c2f4b18b6ace1d3a7ea55b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c86a0a2251f6102e8f4039c15a7ca77') in 0.080948 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Particles/Textures/fx_circle_line2.png
-  artifactKey: Guid(472f66ba810b14ac484d18ee7316a974) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Particles/Textures/fx_circle_line2.png using Guid(472f66ba810b14ac484d18ee7316a974) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dd00ddc89c9e1abedede27b06843892') in 0.133226 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000764 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Icon/icon_color_arrow_prev.png
-  artifactKey: Guid(33769690961c5421bb028f13ba13d7bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Icon/icon_color_arrow_prev.png using Guid(33769690961c5421bb028f13ba13d7bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31e53486f746e1c68430ce8e3af09e78') in 0.080544 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.001508 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_04_d.png
-  artifactKey: Guid(9d3b67463bf7f4935a3aa15d2fe8453c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_04_d.png using Guid(9d3b67463bf7f4935a3aa15d2fe8453c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f5c4d44923d2efe36307aaf3e7b7ea9') in 0.113465 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_00_s2.png
-  artifactKey: Guid(b61d54ada442843bb81c0b4ae4c744fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_00_s2.png using Guid(b61d54ada442843bb81c0b4ae4c744fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4842b4ed607e6b4fdad52e6237ae9a7') in 0.115585 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000047 seconds.
-  path: Assets/Aspiring Hero Deokgu/Alchemy/Textures/Gem 3.png
-  artifactKey: Guid(ca1460461ea755346a7d12f669779cdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Alchemy/Textures/Gem 3.png using Guid(ca1460461ea755346a7d12f669779cdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b99e63218a9baa4474419c0f06c2d690') in 0.102986 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_01_s2.png
-  artifactKey: Guid(ccda1e9d0a91445b08abb3958530382a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_01_s2.png using Guid(ccda1e9d0a91445b08abb3958530382a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac40c22fca918c92414250ddce133920') in 0.107057 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000086 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_03_yellow.png
-  artifactKey: Guid(43e31fe6c0cbc48d3b2d7a0a2b478cf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_03_yellow.png using Guid(43e31fe6c0cbc48d3b2d7a0a2b478cf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba2eb6f635926885e833b5911f0cab9f') in 0.098781 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000067 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_tv2.png
-  artifactKey: Guid(dd8a5a2a8d169440181e87ff2c34f39c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_tv2.png using Guid(dd8a5a2a8d169440181e87ff2c34f39c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da7dd54c93962e576b5b1c9913d78204') in 0.115716 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000056 seconds.
-  path: Assets/Aspiring Hero Deokgu/UI/Images/Item/Icon_Calendar.png
-  artifactKey: Guid(693c712d5d6cfa44ebcfe2b34d49f92d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/UI/Images/Item/Icon_Calendar.png using Guid(693c712d5d6cfa44ebcfe2b34d49f92d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '465408110e1e70d05a2a8ee0dc3c8114') in 0.098078 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000056 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_03_purple.png
-  artifactKey: Guid(551085aaeb4a544a581ffba25cc47ee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_03_purple.png using Guid(551085aaeb4a544a581ffba25cc47ee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7b9f641ccfd015a051f09d986c9aa7c') in 0.137151 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Particles/Textures/fx_dust1.png
-  artifactKey: Guid(8aca5e8ea241b42858f3d9644e848b1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Particles/Textures/fx_dust1.png using Guid(8aca5e8ea241b42858f3d9644e848b1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '528c8ab7cb121ab7b73fdeda0abc9a6a') in 0.118288 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000060 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_05_s_blue.png
-  artifactKey: Guid(4a87d2863962d4f2bacd1abeb517ffd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_05_s_blue.png using Guid(4a87d2863962d4f2bacd1abeb517ffd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db5022b12f0d22938a0a2ef822056d7c') in 0.109048 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Particles/Textures/fx_star1.png
-  artifactKey: Guid(406bbad3262f641588ffe77b93d48b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Particles/Textures/fx_star1.png using Guid(406bbad3262f641588ffe77b93d48b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a95a90e973dfd7e6f032dda065c6372') in 0.074009 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_tableframe_00_1.png
-  artifactKey: Guid(8502cfba942ac4797b464e96847b06cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_tableframe_00_1.png using Guid(8502cfba942ac4797b464e96847b06cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23e1803f34e2ba2733794d3961ebbacc') in 0.119189 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000121 seconds.
-  path: Assets/Polycraft_Fishing/Textures/Eff/Fx_SquareRing00.png
-  artifactKey: Guid(a3edf546b53d61d49bff506403ddc5c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Polycraft_Fishing/Textures/Eff/Fx_SquareRing00.png using Guid(a3edf546b53d61d49bff506403ddc5c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96d88e33ff555005d98418e0d247bec8') in 0.098353 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000093 seconds.
-  path: Assets/Aspiring Hero Deokgu/Alchemy/Textures/Gem 0.png
-  artifactKey: Guid(cad766a33e8f83f4eb5ce6ef37d9b96d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Alchemy/Textures/Gem 0.png using Guid(cad766a33e8f83f4eb5ce6ef37d9b96d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c3ff1c8a79440b6cc3823267795691e') in 0.191305 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Particles/Textures/fx_circle_line3.png
-  artifactKey: Guid(bd709b9c9f1bf4c77a77678488b94d92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Particles/Textures/fx_circle_line3.png using Guid(bd709b9c9f1bf4c77a77678488b94d92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '593ead9ac0475ddb4b8420e330d919f6') in 0.151638 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Play/group_image_roulette7.png
-  artifactKey: Guid(804548f70ec1745f1bf08d7ef7b6115b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Play/group_image_roulette7.png using Guid(804548f70ec1745f1bf08d7ef7b6115b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '854568fab530bf0f01a65f64d18fbb8a') in 0.148656 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000085 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Icon/icon_color_arrow_next.png
-  artifactKey: Guid(f5ba7fce415b540a09aefd906d27fa19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Icon/icon_color_arrow_next.png using Guid(f5ba7fce415b540a09aefd906d27fa19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0d4df4bc6416cdfd61b1367b0b5c717') in 0.116083 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Aspiring Hero Deokgu/Alchemy/Textures/Gem 1.png
-  artifactKey: Guid(933766ae5d44f834f825e454107140cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Alchemy/Textures/Gem 1.png using Guid(933766ae5d44f834f825e454107140cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dcd645f7d56d38d6fcc8979a2315724') in 0.148193 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000138 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_05_glow.png
-  artifactKey: Guid(bc047c5c5c0d34d998a033530871a0cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_05_glow.png using Guid(bc047c5c5c0d34d998a033530871a0cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9309d8b36004ecfaaf4938640f648735') in 0.158300 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000086 seconds.
-  path: Assets/Aspiring Hero Deokgu/UI/Images/UI/Icon_Coin 1.png
-  artifactKey: Guid(0fb94258840f1ff4c98e3f0adedf750a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/UI/Images/UI/Icon_Coin 1.png using Guid(0fb94258840f1ff4c98e3f0adedf750a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82620ba58dbe41365cf7aee72a05a9ea') in 0.138927 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000076 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Particles/Textures/fx_glow3.png
-  artifactKey: Guid(01a509805ee1e4dbd956bc2c1960403c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Particles/Textures/fx_glow3.png using Guid(01a509805ee1e4dbd956bc2c1960403c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8374d3e91774aa1de7b896db750a3e27') in 0.095088 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Icon/icon_color_check_01_m.png
-  artifactKey: Guid(a2b73d690767b4761be7543e102d97e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Icon/icon_color_check_01_m.png using Guid(a2b73d690767b4761be7543e102d97e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84c37870b384855a62d1df27abbf44ab') in 0.135239 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000143 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_wingbadge3.png
-  artifactKey: Guid(8f6cc60260010454985b2e3cdb197fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_wingbadge3.png using Guid(8f6cc60260010454985b2e3cdb197fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3c7decc2e631ee97953d01a678b6cbb') in 0.109581 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_swordmark3.png
-  artifactKey: Guid(ffbe85a92706b437cada65ace0743ea4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_swordmark3.png using Guid(ffbe85a92706b437cada65ace0743ea4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03f4928bff240b086476bc869c34630b') in 0.184522 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_swordmark2.png
-  artifactKey: Guid(abdc84ff860314ed4b2401cc7a6224ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_swordmark2.png using Guid(abdc84ff860314ed4b2401cc7a6224ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5338543a6ed9572534a0c1bfaa517c2') in 0.127788 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_swordmark4.png
-  artifactKey: Guid(52a59ea2342d94e02be3dbaef87780cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_swordmark4.png using Guid(52a59ea2342d94e02be3dbaef87780cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da4ac8925d60f7b34b00909d38fc6282') in 0.129528 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_wingbadge11.png
-  artifactKey: Guid(18f9c5bcee76542cfad90467199206e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_wingbadge11.png using Guid(18f9c5bcee76542cfad90467199206e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '989ef8b8549133aa05466510c9bd59f5') in 0.120436 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000048 seconds.
-  path: Assets/Aspiring Hero Deokgu/Alchemy/Textures/Gem 2.png
-  artifactKey: Guid(aff385c538f36244c8f9c8f3c37037a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Alchemy/Textures/Gem 2.png using Guid(aff385c538f36244c8f9c8f3c37037a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bca607fb489c639b635642ce9fd1bd42') in 0.130628 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000048 seconds.
-  path: Assets/Aspiring Hero Deokgu/UI/Images/Item/icon_bomb.png
-  artifactKey: Guid(19334f2580d9e2c438ef5ffcb08b8bbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/UI/Images/Item/icon_bomb.png using Guid(19334f2580d9e2c438ef5ffcb08b8bbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9926b94aca823ffb537c2bc8f1f00ad') in 0.113837 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Aspiring Hero Deokgu/UI/Images/Item/Icon_Coin.png
-  artifactKey: Guid(5547fd6e5ae86cf42b7b9fe1ed42fbbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/UI/Images/Item/Icon_Coin.png using Guid(5547fd6e5ae86cf42b7b9fe1ed42fbbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d9ff6649e1fbf7702e9a81af9afd991') in 0.121404 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_tv3.png
-  artifactKey: Guid(7fc4532bfb290443a8aaaa779576c7b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_tv3.png using Guid(7fc4532bfb290443a8aaaa779576c7b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38ced56ef1b2c4eb901b7556bae8b4bc') in 0.112158 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Icon/icon_color_dungeon.png
-  artifactKey: Guid(7effad5cd0ddf4f3692773445504dd61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Icon/icon_color_dungeon.png using Guid(7effad5cd0ddf4f3692773445504dd61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3105a29991f378ad91bc558c062e25cb') in 0.155278 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Icon/icon_color_badge.png
-  artifactKey: Guid(9f5b683a446f34f5e86cb6e24f6691be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Icon/icon_color_badge.png using Guid(9f5b683a446f34f5e86cb6e24f6691be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aeab5137f082c0365b5e46a8383fe646') in 0.145176 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000053 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Particles/Textures/fx_glow2.png
-  artifactKey: Guid(4c6392db171184bb98d834e1fbd3769e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Particles/Textures/fx_glow2.png using Guid(4c6392db171184bb98d834e1fbd3769e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cebcdf72cd485ee791de0f14f3379c9c') in 0.115984 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000098 seconds.
-  path: Assets/Aspiring Hero Deokgu/UI/Images/Item/Icon_Boots01.png
-  artifactKey: Guid(1d9c484be018c32489d45c58e73e18f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/UI/Images/Item/Icon_Boots01.png using Guid(1d9c484be018c32489d45c58e73e18f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48dcdb9a049edc6babf74a9484ba8258') in 0.119180 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000049 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Icon/icon_color_check_01_s.png
-  artifactKey: Guid(58d0d9d3fd49f4e5b97a158cad0bb65a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Icon/icon_color_check_01_s.png using Guid(58d0d9d3fd49f4e5b97a158cad0bb65a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed28b05cdd3ace7921549c6c46bf8b1e') in 0.125139 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000073 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Play/group_image_roulette1.png
-  artifactKey: Guid(09840eb250de44abe9fff6f1b437f925) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Play/group_image_roulette1.png using Guid(09840eb250de44abe9fff6f1b437f925) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a329f09c38caeb1881c9caf92ced29d') in 0.128141 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_tableframe_01_1.png
-  artifactKey: Guid(89017a4beb74c4e928ec79a3fbb0463f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_tableframe_01_1.png using Guid(89017a4beb74c4e928ec79a3fbb0463f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9040183a48a7c16ba5509d80593728f') in 0.116724 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_wingbadge10.png
-  artifactKey: Guid(ae0c3dd1f02de49aebf112b99fa547f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_wingbadge10.png using Guid(ae0c3dd1f02de49aebf112b99fa547f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10835687430d9a02049ff7c24528cc0c') in 0.147943 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_01_s1.png
-  artifactKey: Guid(28e3013a5b0f0432b8ee9ab4588df7d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_01_s1.png using Guid(28e3013a5b0f0432b8ee9ab4588df7d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a028dc49b7dc57511f24be517c3cc5f5') in 0.136359 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/2D Pixel Art Icon/2D Pixel Art Icons Fruits/Sprites.png
-  artifactKey: Guid(a03c2610221b14940b818fb271b448fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/2D Pixel Art Icon/2D Pixel Art Icons Fruits/Sprites.png using Guid(a03c2610221b14940b818fb271b448fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd080abbf8863108b16ed714c40fe4c5d') in 0.303312 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 17
-========================================================================
-Received Import Request.
-  Time since last request: 0.000060 seconds.
-  path: Assets/Aspiring Hero Deokgu/UI/Images/Item/icon_boots.png
-  artifactKey: Guid(226c79768c38e98448aaaf30a72caf1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/UI/Images/Item/icon_boots.png using Guid(226c79768c38e98448aaaf30a72caf1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1059bf6743da018676bbd09325c455b') in 0.165135 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000059 seconds.
-  path: Assets/Aspiring Hero Deokgu/Vegan Knight/Textures/Game Title.png
-  artifactKey: Guid(6585e71544c258f4f8b3ab9e2e5eb9a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Vegan Knight/Textures/Game Title.png using Guid(6585e71544c258f4f8b3ab9e2e5eb9a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eaed9285aea040e1fa0b6b3fe5878bf4') in 0.146517 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_wingbadge5.png
-  artifactKey: Guid(444883cc39da34318b867469465acc77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_wingbadge5.png using Guid(444883cc39da34318b867469465acc77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbd05e12106b7561d688998f9559ab1b') in 0.120554 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_tableframe_00_2.png
-  artifactKey: Guid(8cf2d0b6679ba45b7ae8a3b9ee5a97de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_tableframe_00_2.png using Guid(8cf2d0b6679ba45b7ae8a3b9ee5a97de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6176d3f9f87a39b2011134be2471b220') in 0.123539 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Aspiring Hero Deokgu/Alchemy/Textures/Gem 6.png
-  artifactKey: Guid(352d0b867d1b1124dacd11632c2bba8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Alchemy/Textures/Gem 6.png using Guid(352d0b867d1b1124dacd11632c2bba8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d0f336efed8b538ca145729eb1b0148') in 0.120089 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Play/group_image_roulette5.png
-  artifactKey: Guid(86bfd05e9420e44b88cd4091106c5801) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Play/group_image_roulette5.png using Guid(86bfd05e9420e44b88cd4091106c5801) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3604f6573b00c115e5c73163312672c') in 0.145016 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000058 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_wingbadge9.png
-  artifactKey: Guid(f518a8c43d924428eb72aac498834882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Image/group_image_wingbadge9.png using Guid(f518a8c43d924428eb72aac498834882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f71fd89bb828436272e9f7503b82a2b') in 0.118153 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000103 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Icon/icon_color_check_01_l.png
-  artifactKey: Guid(0d36d47a534734e84a98ff2d1485e6d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Icon/icon_color_check_01_l.png using Guid(0d36d47a534734e84a98ff2d1485e6d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e676f6a9fb47364e1369333791dbfa8') in 0.121369 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_00_s1.png
-  artifactKey: Guid(e6f468f0f2317498fa03405a1517b00b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_00_s1.png using Guid(e6f468f0f2317498fa03405a1517b00b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8c5bc5a71c573bba533300f2fca3719') in 0.134785 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000095 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_02_s2.png
-  artifactKey: Guid(72fe1b22dc90347e8b2dff8609aee358) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Component/Frame/frame_stageframe_02_s2.png using Guid(72fe1b22dc90347e8b2dff8609aee358) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c50fa3299ba5c7b8ffe55b4a44c19217') in 0.122541 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000056 seconds.
-  path: Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Play/group_image_roulette2.png
-  artifactKey: Guid(fd6a8db56773045d3b7c40f63709a2b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GUI PRO Kit - Fantasy RPG/ResourcesData/Sprites/Demo/Demo_Play/group_image_roulette2.png using Guid(fd6a8db56773045d3b7c40f63709a2b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '162b13f384b1318315574e1767c2ebc6') in 0.156196 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 12.435023 seconds.
-  path: Assets/Aspiring Hero Deokgu/Defence Game
-  artifactKey: Guid(46800e61df5b78749b0ad23726617df7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Defence Game using Guid(46800e61df5b78749b0ad23726617df7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d2be9dfa2acb856193720c94694930a') in 0.000984 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 1.501538 seconds.
-  path: Assets/Aspiring Hero Deokgu/Defence Game/Scenes
-  artifactKey: Guid(6d66b31d4c45ca7469bdfeadb837ed26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Defence Game/Scenes using Guid(6d66b31d4c45ca7469bdfeadb837ed26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2030e1431917381fd5a71529c0f0d3cd') in 0.000859 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 1.725558 seconds.
-  path: Assets/Aspiring Hero Deokgu/Defence Game/Scenes/DefenceGameScene.unity
-  artifactKey: Guid(33d9a8fdb72297c4cbc68d8068324923) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Defence Game/Scenes/DefenceGameScene.unity using Guid(33d9a8fdb72297c4cbc68d8068324923) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8124a831acfb9f6f60ad044619f95f2') in 0.001077 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 70.665013 seconds.
-  path: Assets/Aspiring Hero Deokgu/Vegan Knight
-  artifactKey: Guid(ba868597ac9f72d44bc3087962ecf989) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Vegan Knight using Guid(ba868597ac9f72d44bc3087962ecf989) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e82c0529f94f7110600fdc12c395ceb') in 0.001193 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 1.660567 seconds.
-  path: Assets/Aspiring Hero Deokgu/Vegan Knight/Scripts
-  artifactKey: Guid(c520ed284718b4f47bf3593af56baf3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Vegan Knight/Scripts using Guid(c520ed284718b4f47bf3593af56baf3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8fb9dc215d4d9818e081855fdbd4c32') in 0.001183 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.460302 seconds.
-  path: Assets/Aspiring Hero Deokgu/Vegan Knight/Scenes
-  artifactKey: Guid(6c300ae0063765647bf9859c34d3da17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Vegan Knight/Scenes using Guid(6c300ae0063765647bf9859c34d3da17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a694d888dadbb0b305913deb9a3f5dfb') in 0.004689 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.593861 seconds.
-  path: Assets/Aspiring Hero Deokgu/Vegan Knight/Scenes/VeganKnightScene.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Aspiring Hero Deokgu/Vegan Knight/Scenes/VeganKnightScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '710d8a3134da1a7618a1702987ec0955') in 0.000869 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0

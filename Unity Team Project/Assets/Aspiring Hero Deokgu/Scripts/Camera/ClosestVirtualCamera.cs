@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
@@ -5,6 +7,8 @@ public class ClosestVirtualCamera : MonoBehaviour
 {
     public Transform playerTransform; // 플레이어 위치
     private CinemachineClearShot clearShotCamera;
+
+    public CharacterController controller;
 
     void Start()
     {
@@ -49,6 +53,20 @@ public class ClosestVirtualCamera : MonoBehaviour
             {
                 vcam.Priority = (vcam == closestCamera) ? 1 : 0;
             }
+        }
+    }
+    /*public void PlayerStop()
+    {
+        StartCoroutine(EnableCharacterController(0.5f));
+    }*/
+
+    IEnumerator EnableCharacterController(float duration)
+    {
+        if (controller != null)
+        {
+            controller.enabled = false;
+            yield return new WaitForSeconds(duration);
+            controller.enabled = true;
         }
     }
 }

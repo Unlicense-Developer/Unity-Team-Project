@@ -36,9 +36,12 @@ public class VeganNinjaManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null) {
+        if (Instance != null)
+        {
             DestroyImmediate(gameObject);
-        } else {
+        }
+        else
+        {
             Instance = this;
         }
     }
@@ -69,6 +72,11 @@ public class VeganNinjaManager : MonoBehaviour
         score = 0;
     }
 
+    public void SetPlaying(bool play)
+    {
+        isPlaying = play;
+    }
+
     public bool IsPlaying()
     {
         return isPlaying;
@@ -92,13 +100,15 @@ public class VeganNinjaManager : MonoBehaviour
     {
         Fruit[] fruits = FindObjectsOfType<Fruit>();
 
-        foreach (Fruit fruit in fruits) {
+        foreach (Fruit fruit in fruits)
+        {
             Destroy(fruit.gameObject);
         }
 
         Bomb[] bombs = FindObjectsOfType<Bomb>();
 
-        foreach (Bomb bomb in bombs) {
+        foreach (Bomb bomb in bombs)
+        {
             Destroy(bomb.gameObject);
         }
     }
@@ -123,13 +133,14 @@ public class VeganNinjaManager : MonoBehaviour
     {
         blade.enabled = false;
         spawnManager.enabled = false;
+        isPlaying = false;
 
         StartCoroutine(ExplodeSequence());
     }
 
     void CheckScoreAward()
     {
-        if( score >= 500)
+        if (score >= 500)
         {
             awardImage.sprite = ItemDataManager.Instance.GetItem("Apple").icon;
             PlayerData.Instance.AddItemData("Apple");
@@ -158,7 +169,7 @@ public class VeganNinjaManager : MonoBehaviour
 
     public void ReturnWorldScene()
     {
-        if( score != 0)
+        if (score != 0)
         {
             AchievementManager.Instance.SetAchieveValue("VeganKnight", 1);
         }

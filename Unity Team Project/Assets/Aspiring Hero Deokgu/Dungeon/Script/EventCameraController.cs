@@ -12,8 +12,16 @@ public class EventCameraController : MonoBehaviour
     public Camera mainCamera; // 원래 사용하던 카메라
     public Camera eventCamera; // 이벤트 카메라
     public Camera eventCamera_2; // 이벤트 카메라 2
+    public Camera eventCamera_3;
+    public Camera eventCamera_4;
+    public Camera eventCamera_5;
+    public Camera eventCamera_6;
 
     private bool isSpecialActive = false;
+    private float camDelay = 5f;
+
+    private bool IsActivated = false;
+
 
     private void Awake()
     {
@@ -24,6 +32,10 @@ public class EventCameraController : MonoBehaviour
     {
         eventCamera.gameObject.SetActive(false);
         eventCamera_2.gameObject.SetActive(false);
+        eventCamera_3.gameObject.SetActive(false);
+        eventCamera_4.gameObject.SetActive(false);
+        eventCamera_5.gameObject.SetActive(false);
+        eventCamera_6.gameObject.SetActive(false);
     }
 
     public void EventOn()
@@ -38,13 +50,17 @@ public class EventCameraController : MonoBehaviour
         TextGUIManager.Instance.EventCameraTextB();
     }
 
+    public void ActiveEventRoomCamera()
+    {
+        if (IsActivated == false)
+        {
+            StartCoroutine(ActiveCams());
+            IsActivated = true;
+        }
+    }
 
     IEnumerator EvnetCamera1Effect()
     {
-        // 움직임 막기
-        // 예시: PlayerController 스크립트에서 플레이어의 움직임을 막을 수 있습니다.
-        // playerController.DisableMovement();
-
         if (!isSpecialActive)
         {
             isSpecialActive = true;
@@ -61,19 +77,11 @@ public class EventCameraController : MonoBehaviour
             eventCamera.gameObject.SetActive(false);    //이벤트 카메라 비활성화
 
             isSpecialActive = false;
-
-
-            // 움직임 다시 허용
-            // 예시: playerController.EnableMovement();
         }
     }
 
     IEnumerator EvnetCamera2Effect()
     {
-        // 움직임 막기
-        // 예시: PlayerController 스크립트에서 플레이어의 움직임을 막을 수 있습니다.
-        // playerController.DisableMovement();
-
         if (!isSpecialActive)
         {
             isSpecialActive = true;
@@ -90,9 +98,43 @@ public class EventCameraController : MonoBehaviour
             eventCamera_2.gameObject.SetActive(false);    //이벤트 카메라 비활성화
 
             isSpecialActive = false;
-
-            // 움직임 다시 허용
-            // 예시: playerController.EnableMovement();
         }
     }
+
+
+    IEnumerator ActiveCams()
+    {
+        FadeController.instance.FadeOut();
+        yield return new WaitForSeconds(1f);
+
+        FadeController.instance.FadeIn();
+        eventCamera_3.gameObject.SetActive(true);
+        yield return new WaitForSeconds(camDelay);
+        FadeController.instance.FadeOut();
+        yield return new WaitForSeconds(1f);
+        eventCamera_3.gameObject.SetActive(false);
+
+        FadeController.instance.FadeIn();
+        eventCamera_4.gameObject.SetActive(true);
+        yield return new WaitForSeconds(camDelay);
+        FadeController.instance.FadeOut();
+        yield return new WaitForSeconds(1f);
+        eventCamera_4.gameObject.SetActive(false);
+
+        FadeController.instance.FadeIn();
+        eventCamera_5.gameObject.SetActive(true);
+        yield return new WaitForSeconds(camDelay);
+        FadeController.instance.FadeOut();
+        yield return new WaitForSeconds(1f);
+        eventCamera_5.gameObject.SetActive(false);
+
+        FadeController.instance.FadeIn();
+        eventCamera_6.gameObject.SetActive(true);
+        yield return new WaitForSeconds(camDelay);
+        FadeController.instance.FadeOut();
+        yield return new WaitForSeconds(1f);
+        eventCamera_6.gameObject.SetActive(false);
+        FadeController.instance.FadeIn();
+    }
+
 }
