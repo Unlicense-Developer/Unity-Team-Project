@@ -1,16 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Dungeon;
 
 public class ChestController : MonoBehaviour
 {
     public GameObject interactionUI;
+    public PlayerStatus playerStatus;
+
     Animator ani;
     public bool isOpen = false;
+    public bool isGet = false;
 
     private void Start()
     {
         ani = GetComponent<Animator>();
+        playerStatus = FindObjectOfType<PlayerStatus>();
     }
 
     public void ToggleChest()
@@ -21,12 +26,10 @@ public class ChestController : MonoBehaviour
         {
             PlayerInteract playerInteract = player.GetComponent<PlayerInteract>();
             
-            if (playerInteract != null)
+            if (playerInteract != null && isOpen == true)
             {
-                if (isOpen)
-                {
-                    
-                }
+                
+                playerInteract.DisableAllInteractUIs();
             }
         }
     }
@@ -35,12 +38,20 @@ public class ChestController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (!isOpen)
+            if (isOpen == false)
             {
                 WorldSoundManager.Instance.PlaySFX("ChestOpen");
                 ani.SetBool("IsOpen", true);
                 Debug.Log("상자가 열렸습니다.");
                 isOpen = true;
+
+                if (isGet == false)
+                {
+                    isGet = true;
+                    InventoryManager.Instance.AddMultipleItem("Potion", 6);
+                    playerStatus.UpdatePotionCount();
+                    PotionController.instance.GetPotions();
+                }
             }
         }
     }
@@ -51,7 +62,7 @@ public class ChestController : MonoBehaviour
             WorldSoundManager.Instance.PlaySFX("ChestClose");
             ani.SetBool("IsOpen", false);
             Debug.Log("상자가 닫혔습니다.");
-            isOpen = !isOpen;
+            isOpen = false;
         }
     }
 }

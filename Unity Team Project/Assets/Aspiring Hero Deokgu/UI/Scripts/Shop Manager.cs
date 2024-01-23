@@ -12,6 +12,7 @@ public class ShopManager : MonoBehaviour
     [SerializeField] private Transform shopContent;
     [SerializeField] private GameObject select_Frame;
     [SerializeField] private GameObject shopSlotPrefab;
+    [SerializeField] private TMP_Text sellPrice;
 
     public List<Item> shopItems = new List<Item>();
 
@@ -33,13 +34,13 @@ public class ShopManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        SetInvenSellPrice();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (select_Shopitem != null)
+        if ( select_Shopitem != null )
             select_Frame.transform.position = select_Shopitem.transform.position;
     }
 
@@ -73,6 +74,8 @@ public class ShopManager : MonoBehaviour
         select_Shopitem = item;
         Debug.Log(select_Shopitem.transform.Find("Image_item").GetComponent<Image>().sprite.name + " º±≈√");
         select_Frame.SetActive(true);
+
+        WorldSoundManager.Instance.PlaySFX("ItemDrop");
     }
 
     public void BuyItem()
@@ -86,6 +89,25 @@ public class ShopManager : MonoBehaviour
         InventoryManager.Instance.AddItem(select_Shopitem);
         InventoryManager.Instance.UpdateInven();
         InventoryManager.Instance.AddGold(-GetSelectItem().value);
+
+        WorldSoundManager.Instance.PlaySFX("Coin");
+    }
+
+    public void SellItem()
+    {
+        InventoryManager.Instance.SellItem();
+
+        WorldSoundManager.Instance.PlaySFX("Coin");
+    }
+
+    public void OpenShopInvenUI()
+    {
+        shop_UI.SetActive(true);
+        InventoryManager.Instance.GetUIState().SetActive(true);
+        UpdateShopItem();
+        InventoryManager.Instance.UpdateInven();
+
+        WorldSoundManager.Instance.PlaySFX("ItemDrop");
     }
 
     public void ActivateUI()
@@ -94,10 +116,17 @@ public class ShopManager : MonoBehaviour
             InventoryManager.Instance.GetUIState().SetActive(false);
 
         shop_UI.SetActive(!shop_UI.activeSelf);
+
+        WorldSoundManager.Instance.PlaySFX("ItemDrop");
     }
 
     public GameObject GetUIState()
     {
         return shop_UI;
+    }
+
+    void SetInvenSellPrice()
+    {
+        InventoryManager.Instance.SetSellPrice(sellPrice);
     }
 }

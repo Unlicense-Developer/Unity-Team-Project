@@ -17,7 +17,6 @@ public class ButtonManager : MonoBehaviour
         if (activeButtons >= 4)
         {
             BossActive.instance.DeviceActivated();
-
         }
     }
 }

@@ -228,7 +228,9 @@ namespace PlayerController
 
         private void Move()
         {
-         
+            if (InventoryManager.Instance.GetUIState().activeSelf)
+                return;
+
             // 이동 속도를 이동 속도, 스프린트 속도 및 스프린트가 눌렸는지 여부에 따라 설정합니다.
             float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
 

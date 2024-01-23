@@ -107,13 +107,21 @@ namespace Dungeon
 
         public void UpdateUI()
         {
-            // null 체크 추가
-            if (playerStatus == null || battleManager == null || battleManager.currentEnemyStatus == null)
+            // PlayerStatus, BattleManager 중 하나라도 null이면 로그 출력 후 함수 종료
+            if (playerStatus == null || battleManager == null)
             {
-                Debug.LogError("One or more references are null in UIManager.UpdateUI");
-                return; // 필요한 참조 중 하나라도 null이면 함수를 종료합니다.
+                Debug.LogError("UIManager.UpdateUI: playerStatus or battleManager is null");
+                return;
             }
 
+            // currentEnemyStatus가 null이면 함수 종료
+            if (battleManager.currentEnemyStatus == null)
+            {
+                Debug.LogError("UIManager.UpdateUI: currentEnemyStatus is null");
+                return;
+            }
+
+            // 여기서부터는 currentEnemyStatus가 null이 아닐 때만 실행되는 로직
             playerHealthText.text = "Player Health: " + playerStatus.CurrentHealth;
             enemyHealthText.text = "Enemy Health: " + battleManager.currentEnemyStatus.CurrentHealth;
             enemyBreakPointText.text = "Break Point: " + battleManager.currentEnemyStatus.BreakPoint;

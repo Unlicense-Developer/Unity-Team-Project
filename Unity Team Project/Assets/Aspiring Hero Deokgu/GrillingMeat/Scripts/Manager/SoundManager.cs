@@ -8,6 +8,7 @@ namespace GrillingMeatGame
     [RequireComponent(typeof(AudioSource))]
     public class SoundManager : MonoBehaviour
     {
+        public static SoundManager instance;
         AudioSource audioSource;
 
         //게임 상태 소리 
@@ -32,7 +33,8 @@ namespace GrillingMeatGame
 
         void Awake()
         {
-
+            if (null == instance)
+                instance = this;
         }
 
 

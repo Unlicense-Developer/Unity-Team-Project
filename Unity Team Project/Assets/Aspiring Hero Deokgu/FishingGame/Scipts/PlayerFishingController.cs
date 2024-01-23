@@ -230,7 +230,7 @@ public class PlayerFishingController : MonoBehaviour
 
                     if (FishNumber == 1 || FishNumber == 3 || FishNumber == 5)
                     {
-                        InventoryManager.Instance.AddItem("Bass");
+                        InventoryManager.Instance.AddItem("Blue Koi Fish");
                         FishingResult = 1;
                         ResultText();
                     }
@@ -369,7 +369,7 @@ public class PlayerFishingController : MonoBehaviour
 
         if (FishNumber == 1 || FishNumber == 2 || FishNumber == 3 || FishNumber == 4)
         {
-            InventoryManager.Instance.AddItem("Salmon");
+            InventoryManager.Instance.AddItem("Red Sea Bream");
             FishingResult = 3;
             ResultText();
         }
@@ -454,7 +454,8 @@ public class PlayerFishingController : MonoBehaviour
                 Alarm.DOFade(0f, 0.5f).SetDelay(0.1f).OnComplete(() =>
                 {
                     Alarm.gameObject.SetActive(false);
-                    Alarm.transform.position = new Vector3(0,0,0);
+                    Alarm.transform.position = new Vector3(960,540,0);
+                    Alarm.color = new Color(255 / 255f, 69 / 255f, 69 / 255f);
                 });
             });
     }

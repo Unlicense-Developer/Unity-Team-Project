@@ -10,6 +10,7 @@ public class PlayerInteract : MonoBehaviour
     public GameObject doorInteractUI; // 문 상호작용 UI 요소
     public GameObject chestInteractUI; // 상자 상호작용 UI 요소
     public GameObject entranceInteractUI; //  상호작용 UI 요소
+    public GameObject buttonInteractUI; //  버튼 상호작용 UI 요소
     private GameObject currentInteractable; // 현재 감지된 상호작용 가능한 객체
 
     private void Update()
@@ -52,6 +53,11 @@ public class PlayerInteract : MonoBehaviour
             currentInteractable = other.gameObject;
             DisableOtherInteractUIs(entranceInteractUI); // 입장 UI 활성화하고 나머지 비활성화
         }
+        else if (other.CompareTag("Button"))
+        {
+            currentInteractable = other.gameObject;
+            DisableOtherInteractUIs(buttonInteractUI); // 입장 UI 활성화하고 나머지 비활성화
+        }
     }
     private void DisableOtherInteractUIs(GameObject activeUI)
     {
@@ -60,6 +66,7 @@ public class PlayerInteract : MonoBehaviour
         doorInteractUI.SetActive(activeUI == doorInteractUI);
         chestInteractUI.SetActive(activeUI == chestInteractUI);
         entranceInteractUI.SetActive(activeUI == entranceInteractUI);
+        buttonInteractUI.SetActive(activeUI == buttonInteractUI);
     }
 
     public void DisableAllInteractUIs()
@@ -68,6 +75,7 @@ public class PlayerInteract : MonoBehaviour
         doorInteractUI.SetActive(false);
         chestInteractUI.SetActive(false);
         entranceInteractUI.SetActive(false);
+        buttonInteractUI.SetActive(false);
     }
 
     private void OnTriggerExit(Collider other)
@@ -108,6 +116,12 @@ public class PlayerInteract : MonoBehaviour
                 // 입구 상호작용 처리
                 EntranceController entrance = currentInteractable.GetComponent<EntranceController>();
                 entrance.Enter();
+            }
+            else if (currentInteractable.CompareTag("Button"))
+            {
+                // 버튼 상호작용 처리
+                ButtonController button = currentInteractable.GetComponent<ButtonController>();
+                button.PushButton();
             }
         }
     }

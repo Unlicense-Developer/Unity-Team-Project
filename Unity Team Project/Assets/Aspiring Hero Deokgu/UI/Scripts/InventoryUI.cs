@@ -23,6 +23,8 @@ public class InventoryUI : MonoBehaviour
                     InventoryManager.Instance.UpdateInven();
 
                 invenPanel.SetActive(!invenPanel.activeSelf);
+
+                WorldSoundManager.Instance.PlaySFX("ItemDrop");
             }
         }
     }

@@ -11,6 +11,8 @@ public class VolumeSetting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = WorldSoundManager.Instance.GetBGMSource();
+        volumeSlider.value = audioSource.volume;
         volumeSlider.onValueChanged.AddListener(delegate { OnValueChanged(); });
     }
 
@@ -21,6 +23,7 @@ public class VolumeSetting : MonoBehaviour
 
     void OnValueChanged()
     {
-        WorldSoundManager.Instance.SetBGMVolume(volumeSlider.value);
+        audioSource.volume = volumeSlider.value;
     }
+
 }

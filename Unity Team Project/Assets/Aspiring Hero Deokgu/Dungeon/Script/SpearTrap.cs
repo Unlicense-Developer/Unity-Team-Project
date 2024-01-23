@@ -11,11 +11,13 @@ public class SpearTrap : MonoBehaviour
     public float moveDuration = 0.2f;
     public float delayBetweenMovements = 2f;
 
-    public PlayerStatus player;
+    public PlayerStatus playerStatus;
+    public PlayerBattleController controller;
 
     private void Awake()
     {
-        player = FindObjectOfType<PlayerStatus>();
+        playerStatus = FindObjectOfType<PlayerStatus>();
+        controller = FindObjectOfType<PlayerBattleController>();
     }
 
     void Start()
@@ -27,7 +29,9 @@ public class SpearTrap : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            player.ReceiveDamage(10);
+            playerStatus.ReceiveDamage(10);
+            Debug.Log("PlayerController: 플레이어 피격!");
+            controller.PlayerHittedOther();
         }
     }
 

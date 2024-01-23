@@ -7,9 +7,9 @@ namespace GrillingMeatGame
 {
     public class ScoreManager : MonoBehaviour
     {
-
+        public static ScoreManager instance;
         readonly int scorePoint;
-        int score;
+        public int score;
         Animator meatColorChange;
 
         public Action<int> ScoreAddChangeNow; // 점수 + 액션 이벤트
@@ -20,6 +20,12 @@ namespace GrillingMeatGame
             this.scorePoint = scorePoint;
 
         }
+
+        void Awake()
+        {
+            if (null == instance)
+                instance = this;
+        }
         void Start()
         {
             meatColorChange = GameObject.FindWithTag("MEAT").GetComponent<Animator>();
@@ -29,14 +35,14 @@ namespace GrillingMeatGame
         public void AddScore()
         {
             //애니메이션 재생 시간이 ~ 일때 
-            score += 60; //60
+            score += 50;
             ScoreAddChangeNow?.Invoke(score);
             //0~1 (1이면 100% 재생이 끝난상태)
         }
         public void MinusScore()
         {
             //애니메이션 재생 시간이 ~ 일때
-            score -= 10;
+            score -= 20;
             ScoreMinusChangeNow?.Invoke(score);
         }
 

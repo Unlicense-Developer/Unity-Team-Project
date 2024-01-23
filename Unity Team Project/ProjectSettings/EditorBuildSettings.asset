@@ -12,22 +12,25 @@ EditorBuildSettings:
     path: Assets/Aspiring Hero Deokgu/Scenes/WorldMap.unity
     guid: 7878f3ea3304b0a4893cbcaa16537b81
   - enabled: 1
+    path: Assets/Aspiring Hero Deokgu/Dungeon/Scene/Dungeon.unity
+    guid: 720f0b728bf580e47b16ce0a6185014e
+  - enabled: 1
     path: Assets/Aspiring Hero Deokgu/Alchemy/Alchemy.unity
     guid: 5430f63be9014604798f2ba9c4b8f49a
   - enabled: 1
     path: Assets/Aspiring Hero Deokgu/Defence Game/Scenes/DefenceGameScene.unity
     guid: 33d9a8fdb72297c4cbc68d8068324923
   - enabled: 1
-    path: Assets/Aspiring Hero Deokgu/GrillingMeat/Scenes/GrillingMeat_Game.unity
-    guid: fb8f53d2448e7db40ace0358abc6ef76
-  - enabled: 1
     path: Assets/Aspiring Hero Deokgu/Vegan Knight/Scenes/VeganKnightScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Aspiring Hero Deokgu/Dungeon/Scene/Dungeon.unity
-    guid: 720f0b728bf580e47b16ce0a6185014e
+    path: Assets/Aspiring Hero Deokgu/CartDelivery/Scenes/CartDelivery.unity
+    guid: 1bf915a4aeeba264581962051534baca
   - enabled: 1
-    path: Assets/Aspiring Hero Deokgu/CartDelivery/Scenes/CartDelivery_240103.unity
-    guid: 2bbad518021352542904d75145aa8bd9
+    path: Assets/Aspiring Hero Deokgu/GrillingMeat/Scenes/GrillingMeat_Game_Title.unity
+    guid: 1f73f83c91767604cbb3825ac1e0110c
+  - enabled: 1
+    path: Assets/Aspiring Hero Deokgu/GrillingMeat/Scenes/GrillingMeat_Game_InGame.unity
+    guid: b3b85fa5c726fab4494ecb3a77b90723
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: ee772ebdac200ff489f2c4d74260eae2, type: 2}

@@ -213,6 +213,9 @@ namespace Alchemy
 
             yield return new WaitForSeconds(0.5f);
 
+            // 점수 비례 골드 지급
+            PlayerData.Instance.AddGold(score);
+
             // 최고 점수 갱신
             int maxScore = Mathf.Max(score, PlayerPrefs.GetInt("MaxScore"));
             PlayerPrefs.SetInt("MaxScore", maxScore); // 현재 점수와 기존 최고 점수 비교 후 저장
@@ -228,6 +231,7 @@ namespace Alchemy
         // 게임 재시작 함수
         public void Reset()
         {
+            AchievementManager.Instance.SetAchieveValue("Alchemy", 1);
             SfxPlay(Sfx.Button); // 버튼 클릭 사운드 효과 재생
             StartCoroutine(ResetCoroutine()); // 재시작 코루틴 시작
         }

@@ -13,6 +13,12 @@ public class ClosestVirtualCamera : MonoBehaviour
     void Start()
     {
         clearShotCamera = GetComponent<CinemachineClearShot>();
+
+        if (playerTransform == null)
+        {
+            playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        }
+
         if (clearShotCamera == null)
         {
             Debug.LogError("CinemachineClearShot 컴포넌트가 필요합니다.");

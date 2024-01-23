@@ -24,7 +24,7 @@ public class FireflyGuide : MonoBehaviour
             blackoutImage.color = new Color(0, 0, 0, 0);
         }
 
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false); // 반딧불이 오브젝트 비활성화
     }
 
     public void TriggerMovement()
@@ -34,6 +34,7 @@ public class FireflyGuide : MonoBehaviour
             gameObject.SetActive(true);
             followCamera.Priority = 100;
             followCamera.LookAt = transform; // 카메라가 반딧불이를 바라보게 설정
+            WorldSoundManager.Instance.PlaySFX("FireFly");
 
             StartCoroutine(FollowWaypoints());
             isMoving = true;
@@ -63,12 +64,13 @@ public class FireflyGuide : MonoBehaviour
         yield return new WaitForSeconds(2f); // 암전 전에 대기
         FadeOutEffect();
 
+        yield return new WaitForSeconds(1f); // 다시 플레이어 카메라로 전환 대기
+        followCamera.Priority = 0;
+        lookAtCamera.Priority = 0;
+
         yield return new WaitForSeconds(2f); // 암전 후 대기
         FadeInEffect();
 
-        // 다시 플레이어 카메라로 전환
-        followCamera.Priority = 0;
-        lookAtCamera.Priority = 0;
         gameObject.SetActive(false);
     }
 

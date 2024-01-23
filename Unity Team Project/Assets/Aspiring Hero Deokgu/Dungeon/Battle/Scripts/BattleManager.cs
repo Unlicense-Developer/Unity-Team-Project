@@ -343,6 +343,8 @@ namespace Dungeon
             playerTurn = false;
             enemyTurn = false;
 
+            currentEnemyBattleController.ResetFury();
+
             // 필요한 경우 추가 로직...
         }
 

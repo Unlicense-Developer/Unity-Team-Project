@@ -12,12 +12,14 @@ public class GobsMoveAgent : MonoBehaviour
     NavMeshAgent nav;
     Transform tr;
     Animator anim;
-    readonly float patrolSpeed = 1f;
-    readonly float chaseSpeed = 1.2f;
+    GobsAI Ai;
+    public float patrolSpeed = 0.9f;
+    public float chaseSpeed = 1.5f;
     private float damping = 1f;  //회전할때 속도 변수(계수)
     private bool isPatrol;
 
     public PlayerStatus player;
+    public PlayerBattleController controller;
 
     public bool IsPatrol
     {
@@ -49,14 +51,16 @@ public class GobsMoveAgent : MonoBehaviour
         }
     }
 
-    public float speed
+    public float Speed
     {
-        get { return nav.velocity.magnitude; }
+        get {return nav.velocity.magnitude;}
     }
 
     private void Awake()
     {
         player = FindObjectOfType<PlayerStatus>();
+        controller = FindObjectOfType<PlayerBattleController>();
+        Ai = GetComponent<GobsAI>();
     }
 
     void Start()
@@ -97,6 +101,7 @@ public class GobsMoveAgent : MonoBehaviour
         if (waypoints == null || waypoints.Length == 0) return; //배열이 비어있는지 체크
         nav.destination = waypoints[nextIndex].position;
         nav.isStopped = false;
+        anim.SetFloat("Speed", patrolSpeed);
     }
 
     public void ChasePlayer(Vector3 pos)
@@ -104,32 +109,33 @@ public class GobsMoveAgent : MonoBehaviour
         if (nav.isPathStale) return;    //이동경로를 못찾으면 뒤쪽은 동작하지 않음
         nav.destination = pos;
         nav.isStopped = false;
+        anim.SetFloat("Speed", chaseSpeed);
     }
 
-    public void Stop()
-    {
-        IsPatrol = false;
-        nav.isStopped = true;
-        nav.velocity = Vector3.zero;
-    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             player.ReceiveDamage(10);
-
-            StartCoroutine(GobDead());
+            Debug.Log("PlayerController: 플레이어 피격!");
+            controller.PlayerHittedOther();
+            GetComponent<GobsAI>().state = GobsAI.STATE.DIE;
+            StartCoroutine(GobsDead());
         }
     }
 
-    IEnumerator GobDead()
+    IEnumerator GobsDead()
     {
+        Ai.die();
+        IsPatrol = false;
+        nav.isStopped = true;
+        nav.speed = 0;
         anim.SetTrigger("IsDead");
         anim.SetBool("IsMove", false);
+        nav.SetDestination(transform.position);
         yield return new WaitForSeconds(2f);
         this.gameObject.SetActive(false);
-        Stop();
     }
 
 

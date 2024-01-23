@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Aspiring Hero Deokgu/Dungeon/Scene/Dungeon.unity
+- path: Assets/Aspiring Hero Deokgu/Scenes/Title.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

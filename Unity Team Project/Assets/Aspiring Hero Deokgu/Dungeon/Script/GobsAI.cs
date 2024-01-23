@@ -21,12 +21,11 @@ public class GobsAI : MonoBehaviour
     EnemyFOV enemyFOV;
 
     public bool isDie = false;
-    public float chaseDis = 5f;
-    public float rechaseDis = 4f;
+    public float chaseDis = 6.0f;
+    public float rechaseDis = 5.0f;
 
     readonly int hashIsMove = Animator.StringToHash("IsMove");
     readonly int hashDie = Animator.StringToHash("IsDaed");
-    readonly int hashSpeed = Animator.StringToHash("Speed");
 
     private void Awake()
     {
@@ -47,7 +46,10 @@ public class GobsAI : MonoBehaviour
     {
         while (!isDie)
         {
-            if (state == STATE.DIE) yield break;    //coroutine 종료
+            if (state == STATE.DIE)
+            {
+                yield break;    //coroutine 종료
+            }
 
             float distance = Vector3.Distance(PlayerT.position, GobsT.position);
             //float distance = (PlayerT.position - GobsT.position).sqrMagnitude;   //위에 사용한 방법보다 최적화된 방법
@@ -68,20 +70,20 @@ public class GobsAI : MonoBehaviour
     void patrol()
     {
         moveAgent.IsPatrol = true;
-        anim.SetBool(hashIsMove, true);
+        anim.SetBool("IsMove", false);
     }
 
     void chase()
     {
         moveAgent.ChaseTarget = PlayerT.position;
-        anim.SetBool(hashIsMove, true);
+        anim.SetBool("IsMove", true);
     }
-    void die()
+
+    public void die()
     {
-        moveAgent.Stop();
-        gameObject.GetComponent<CapsuleCollider>().enabled = false;
-        gameObject.SetActive(false);
+        anim.SetBool("IsMove", false);
         anim.SetTrigger(hashDie);
+        GetComponent<CapsuleCollider>().enabled = false;
     }
 
     IEnumerator UpdateState()

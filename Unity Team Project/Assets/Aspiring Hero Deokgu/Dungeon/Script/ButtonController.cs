@@ -13,12 +13,11 @@ public class ButtonController : MonoBehaviour
     {
         buttonManager = GetComponentInParent<ButtonManager>();
     }
-
-    public void Enter()
+    public void PushButton()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
 
-        if (player != null)
+        if (player != null && this.gameObject.activeSelf) // this.gameObject가 활성화 상태일 때만 조건문 실행
         {
             PlayerInteract playerInteract = player.GetComponent<PlayerInteract>();
             if (playerInteract != null)
@@ -28,6 +27,5 @@ public class ButtonController : MonoBehaviour
                 playerInteract.DisableAllInteractUIs();
             }
         }
-
     }
 }

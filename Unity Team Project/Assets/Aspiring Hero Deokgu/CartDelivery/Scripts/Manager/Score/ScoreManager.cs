@@ -25,6 +25,11 @@ namespace CartDelivery
             //시작 값 = 1000
             productPrice -= Price;
         }
+        public void PlusProductPrice(int Price) //물건 값어치 빼기
+        {
+            //시작 값 = 1000
+            productPrice += Price;
+        }
 
         void Update()
         {

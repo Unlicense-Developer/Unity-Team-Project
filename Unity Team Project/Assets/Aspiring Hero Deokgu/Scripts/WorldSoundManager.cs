@@ -119,9 +119,9 @@ public class WorldSoundManager : MonoBehaviour
         PlayBGM("Dungeon");
     }
 
-    public void SetBGMVolume(float value)
+    public AudioSource GetBGMSource()
     {
-        bgmSource.volume = value;
+        return bgmSource;
     }
 
     void PlayBGMOnSceneLoaded(Scene scene, LoadSceneMode mode)

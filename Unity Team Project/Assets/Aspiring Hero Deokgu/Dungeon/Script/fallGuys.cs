@@ -4,28 +4,33 @@ using UnityEngine;
 
 public class fallGuys : MonoBehaviour
 {
-    public GameObject StartPoint;
+    public GameObject BackPoint;
+
+    public GameObject PlayerT;
 
     private void OnTriggerEnter(Collider other)
     {
+        CharacterController playerController = PlayerT.GetComponent<CharacterController>();
+
         if (other.CompareTag("Player"))
         {
             StartCoroutine(FadeInOut());
-            other.transform.position = StartPoint.transform.position;
+            playerController.enabled = false;
+            other.transform.position = BackPoint.transform.position;
+            playerController.enabled = true;
             TextGUIManager.Instance.FallInDarkText();
-
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    /*private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             StartCoroutine(FadeInOut());
-            other.transform.position = StartPoint.transform.position;
+            other.transform.position = BackPoint.transform.position;
             TextGUIManager.Instance.FallInDarkText();
         }
-    }
+    }*/
 
     IEnumerator FadeInOut()
     {

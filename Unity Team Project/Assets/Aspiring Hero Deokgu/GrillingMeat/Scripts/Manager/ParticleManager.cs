@@ -25,8 +25,8 @@ namespace GrillingMeatGame
         void Start()
         {
             OnSmallSmoke();
-            OffAllSmoke();
         }
+
 
         public void OffAllSmoke()
         {

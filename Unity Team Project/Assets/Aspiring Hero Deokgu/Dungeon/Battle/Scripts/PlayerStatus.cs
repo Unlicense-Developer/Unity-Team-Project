@@ -39,6 +39,7 @@ namespace Dungeon
             Defense = 0; // 방어력 설정
 
             UpdatePotionCount(); // 이제 UIManager가 null이 아니라고 확신할 수 있습니다.
+            UpdateEquipmentBonuses(); // 던전 입장시 인벤토리의 장비 스탯 추가
         }
 
         // 총 공격력 계산
@@ -71,10 +72,29 @@ namespace Dungeon
             }
         }
 
+        public void UpdateEquipmentBonuses()
+        {
+            // Sword가 인벤토리에 있는 경우
+            if (InventoryManager.Instance.HasItem("Sword"))
+            {
+                AdditionalAttackDamage += 10; // 추가 공격력 증가
+            }
+
+            // Shield가 인벤토리에 있는 경우
+            if (InventoryManager.Instance.HasItem("Shield"))
+            {
+                Defense += 10; // 추가 방어력 증가
+            }
+
+            // 최종 공격력과 무력화 계산
+            CalculateTotalAttackDamage();
+            CalculateTotalBreakDamage();
+        }
+
         public void UpdatePotionCount()
         {
             PotionCount = InventoryManager.Instance.GetItemCount("Potion");
-            uiManager.UpdateUI(); // UI에 포션 수량을 업데이트하는 함수 호출
+            // uiManager.UpdateUI(); // UI에 포션 수량을 업데이트하는 함수 호출
         }
 
         public void UsePotion()

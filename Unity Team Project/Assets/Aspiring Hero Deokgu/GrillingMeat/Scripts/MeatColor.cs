@@ -7,6 +7,8 @@ namespace GrillingMeatGame
 {
     public class MeatColor : MonoBehaviour
     {
+        Vector3 originalPos;//오브젝트의 최초 위치를 저장할 변수
+        public float delay = 10f; //원래 위치로 돌아가기 전 대기 시간
         Animator meatColorChange; //고기 애니메이터
         BoxCollider2D meatCollider; //고기 Collider
         [SerializeField]
@@ -14,7 +16,7 @@ namespace GrillingMeatGame
 
         //MeatAniPlayingScoreStep의 4가지값
         [SerializeField]
-        float addScoreStartAniTime = 0.4f;
+        float addScoreStartAniTime = 0.3f;//0.4
         [SerializeField]
         float addScoreEndAniTime = 0.5f;
         [SerializeField]
@@ -32,6 +34,20 @@ namespace GrillingMeatGame
         void Start()
         {
             meatCollider.enabled = true; //처음에 고기 잡을수 있게 Collider 켜기
+            MeatStarPosSave();
+        }
+        void MeatStarPosSave()
+        {
+            originalPos = transform.position;  // 최초 위치와 회전을 저장
+        }
+
+        IEnumerator ReturnToOriginalPositionAfterDelay()
+        {
+            yield return new WaitForSeconds(delay); // 설정된 시간만큼 대기
+            meatCollider.enabled = true;//콜라이더 켜기
+            this.gameObject.GetComponentInChildren<SpriteRenderer>().enabled = true;//고기이미지 켜기
+            transform.position = originalPos; // 원래 위치로 복귀
+
         }
 
         public void OnTriggerEnter2D(Collider2D other)
@@ -44,14 +60,19 @@ namespace GrillingMeatGame
 
             if (other.gameObject.CompareTag("ENDPLATE"))
             {
-                Meats = GameObject.FindGameObjectsWithTag("MEAT");
                 if (other != null)
                 {
                     GameManager.instance.SoundEatPlay.Invoke(); // 고기 먹는소리 재생
                     meatColorChange.SetBool("Color", false); //고기 익히는 애니 멈춤
                     meatCollider.enabled = false; // 선택 안됨(Collider 끄기)
-
                     MeatAniPlayingScoreStep();// 고기 익는단계에 따라서 점수 다르게 계산 함수 실행
+                    this.gameObject.GetComponentInChildren<SpriteRenderer>().enabled = false; //고기이미지 끄기 
+                    meatColorChange.SetBool("Spawn", true); //생고기
+                    if (this.gameObject.GetComponentInChildren<SpriteRenderer>().enabled == false)//고기 이미지 꺼진상태 확인
+                    {
+
+                        StartCoroutine(ReturnToOriginalPositionAfterDelay()); // 원래 위치로 돌아가는 코루틴 실행
+                    }
                 }
             }
         }

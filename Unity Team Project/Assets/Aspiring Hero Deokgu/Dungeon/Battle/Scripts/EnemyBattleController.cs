@@ -58,8 +58,8 @@ namespace Dungeon
         {
             if (battleManager.enemyTurn && battleManager.playerStatus.isDeath == false)
             {
-                // 첫 번째 특수 공격 조건 검사: 체력 30% 이하 또는 turnCount 10 이상
-                if (!specialAttackPerformed && (enemy.CurrentHealth <= 30 || battleManager.turnCount >= 10))
+                // 첫 번째 특수 공격 조건 검사: 체력 30% 이하 또는 turnCount 20 이상
+                if (!specialAttackPerformed && (enemy.CurrentHealth <= 30 || battleManager.turnCount >= 20))
                 {
                     PerformSpecialAttack();
                     specialAttackPerformed = true; // 특수 공격 실행 표시
@@ -169,9 +169,19 @@ namespace Dungeon
             }
 
             // 애니메이션 속도 증가
-            animator.speed = 1.5f; // 예: 속도를 1.5배로 증가
+            animator.speed = 1.2f; // 예: 속도를 1.2배로 증가
 
             StartCoroutine(battleManager.EndPlayerTurnRoutine());
+        }
+
+        public void ResetFury()
+        {
+            foreach (Renderer renderer in childRenderers)
+            {
+                renderer.material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            }
+
+            auraEffectParticleSystem.Stop();
         }
 
         private void PlayRandomAnimation(string attackType, int variations)

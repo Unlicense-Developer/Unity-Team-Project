@@ -89,7 +89,7 @@ namespace GrillingMeatGame
         {
             //연기 파티클
             this.OnSmokeParticle -= particleManager.OnLargeSmoke;
-            this.OffSmokeParticle -= particleManager.OffAllSmoke;
+            //this.OffSmokeParticle -= particleManager.OffAllSmoke;
 
             //먹는 소리 재생
             this.SoundEatPlay -= soundManager.PlayEatSound;

@@ -63,6 +63,14 @@ public class InventoryManager : MonoBehaviour
         inven.Add(ItemDataManager.Instance.GetItem(item));
     }
 
+    public void AddMultipleItem(string item, int count)
+    {
+        for( int i = 0; i < count; i++)
+        {
+            inven.Add(ItemDataManager.Instance.GetItem(item));
+        }
+    }
+
     public void AddItem(GameObject item)
     {
         inven.Add(ItemDataManager.Instance.GetItem(item.transform.Find("Image_item").GetComponent<Image>().sprite.name));
@@ -103,7 +111,7 @@ public class InventoryManager : MonoBehaviour
 
     public void UpdateInven()
     {
-        foreach (Transform item in content)
+        foreach( Transform item in content)
         {
             Destroy(item.gameObject);
         }
@@ -121,12 +129,12 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void SelectItem(GameObject item)
+    public void SelectItem( GameObject item)
     {
         //select_Item = ItemDataManager.instance.GetItem(item.transform.Find("Image_item").GetComponent<Image>().sprite.name);
         select_Item = item;
         Debug.Log(select_Item.transform.Find("Image_item").GetComponent<Image>().sprite.name + " º±≈√");
-        sellPriceText.text = (GetSelectItem().value / 2).ToString();
+        sellPriceText.text = ( GetSelectItem().value / 2 ).ToString();
         select_Frame.SetActive(true);
 
         ActiveSelectItemInfo();
@@ -152,7 +160,7 @@ public class InventoryManager : MonoBehaviour
 
     public void DeleteSelectItem()
     {
-        if (select_Item == null)
+        if (select_Item == null) 
             return;
 
         RemoveItem(select_Item.transform.Find("Image_item").GetComponent<Image>().sprite.name);
@@ -208,7 +216,7 @@ public class InventoryManager : MonoBehaviour
 
     void ActiveSelectItemInfo()
     {
-        if (select_Frame.activeSelf)
+        if( select_Frame.activeSelf)
         {
             selectItemInfo.SetActive(true);
             selectItemInfoName.text = GetSelectItem().itemName;
@@ -228,5 +236,10 @@ public class InventoryManager : MonoBehaviour
     {
         inven = PlayerData.Instance.GetInvenData();
         gold = PlayerData.Instance.GetGold();
+    }
+
+    public void SetSellPrice(TMP_Text sellText)
+    {
+        sellPriceText = sellText;
     }
 }

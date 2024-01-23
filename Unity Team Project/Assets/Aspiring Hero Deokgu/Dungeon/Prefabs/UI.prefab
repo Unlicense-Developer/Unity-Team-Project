@@ -3735,12 +3735,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebab20b2cf368d240bdb18f9e2068659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gold: 0
   sellPriceText: {fileID: 0}
   goldText: {fileID: 3305097103384459057}
   selectItemInfoName: {fileID: 0}
   selectItemInfoText: {fileID: 0}
   selectItemSellPrice: {fileID: 0}
   content: {fileID: 4815951457141496528}
+  inven_UI: {fileID: 0}
   selectItemInfoImage: {fileID: 0}
   select_Frame: {fileID: 6172395272954972100}
   invenSlotPrefab: {fileID: 1985606802136885429, guid: 104b84ff5ae8a5345b13d553efb0b18b, type: 3}
@@ -13174,7 +13176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2361076832293158303
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16777,6 +16779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a879e0d96eed01144a29b9489d0fb5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shop_UI: {fileID: 0}
   shopContent: {fileID: 4049839103167176825}
   select_Frame: {fileID: 2327897393535072936}
   shopSlotPrefab: {fileID: 8383583935993132893, guid: 02e50734103baa3408953f8eac402c97, type: 3}
@@ -18941,6 +18944,7 @@ GameObject:
   - component: {fileID: 239920017389929689}
   - component: {fileID: 7520258752197265492}
   - component: {fileID: 1596412692700604531}
+  - component: {fileID: 6356887012286542241}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -19005,6 +19009,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6356887012286542241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8462769467975381451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba21a1426a3ec85409163a6d493b0946, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadePanel: {fileID: 1596412692700604531}
 --- !u!1 &8496264952967688619
 GameObject:
   m_ObjectHideFlags: 0
@@ -19374,7 +19391,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: OPEN
+  m_text: GetItem
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a13ff0b409d9f0c4587bc374a734a6fb, type: 2}
   m_sharedMaterial: {fileID: -692951568046761803, guid: a13ff0b409d9f0c4587bc374a734a6fb, type: 2}
@@ -19401,8 +19418,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

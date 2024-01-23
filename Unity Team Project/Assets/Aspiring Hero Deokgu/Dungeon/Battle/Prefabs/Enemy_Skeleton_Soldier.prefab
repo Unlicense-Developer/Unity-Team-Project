@@ -18451,9 +18451,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72748cd2ca47e38418475d89d4d77651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 300
+  Health: 200
   CurrentHealth: 0
-  BreakPoint: 50
+  BreakPoint: 40
   AttackDamage: 30
 --- !u!114 &3608276892092426454
 MonoBehaviour:

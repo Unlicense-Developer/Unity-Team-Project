@@ -75,7 +75,7 @@ public class EnemyBase : MonoBehaviour
 
     void CheckDead()
     {
-        if(isDead && animator.GetCurrentAnimatorStateInfo(0).IsName("Enemy_Run"))
+        if (isDead && animator.GetCurrentAnimatorStateInfo(0).IsName("Enemy_Run"))
         {
             animator.SetInteger("Anim State Num", Random.Range(1, 5));
             myAgent.isStopped = true;
@@ -84,8 +84,11 @@ public class EnemyBase : MonoBehaviour
 
     public void PlayDead()
     {
-        sound.PlayDeathSound();
+        if (gameObject.tag == "Orc")
+            AchievementManager.Instance.SetAchieveValue("Defence", 1);
+
         DefenceGameManager.Instance.AddScore(killScore);
+        sound.PlayDeathSound();
         StartCoroutine(DeleteAfterSeconds());
     }
 

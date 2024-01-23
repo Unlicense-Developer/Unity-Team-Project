@@ -75303,8 +75303,29 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 0.2
+    functionName: OnWalkSoundFour
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.73333335
-    functionName: OnWalkSound
+    functionName: OnWalkSoundOne
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.4
+    functionName: OnWalkSoundTwo
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 2.0333333
+    functionName: OnWalkSoundThree
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

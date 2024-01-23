@@ -12,6 +12,7 @@ public class TextGUIManager : MonoBehaviour
     public Text Event1Text;
     public Text Event2Text;
     public Text FallText;
+    public Text TriggerText;
 
     public float Duration_A = 1f;
 
@@ -22,6 +23,7 @@ public class TextGUIManager : MonoBehaviour
         Event1Text.color = new Color(Event1Text.color.r, Event1Text.color.g, Event1Text.color.b, 0f);
         Event2Text.color = new Color(Event2Text.color.r, Event2Text.color.g, Event2Text.color.b, 0f);
         FallText.color = new Color(FallText.color.r, FallText.color.g, FallText.color.b, 0f);
+        TriggerText.color = new Color(TriggerText.color.r, TriggerText.color.g, TriggerText.color.b, 0f);
     }
 
     public void EventCameraTextA()
@@ -61,6 +63,21 @@ public class TextGUIManager : MonoBehaviour
             DOVirtual.DelayedCall(3f, () =>
             {
                 FallText.DOFade(0f, 1f).SetEase(Ease.OutQuad).OnComplete(() =>
+                {
+                    // 사라진 후에 할 작업들을 여기에 추가할 수 있습니다.
+                });
+            });
+        });
+    }
+
+    public void PentaTrigger()
+    {
+        TriggerText.DOFade(1f, 0.3f).SetEase(Ease.OutQuad).OnComplete(() =>
+        {
+            // 3초 후에 텍스트가 서서히 사라지는 애니메이션
+            DOVirtual.DelayedCall(3f, () =>
+            {
+                TriggerText.DOFade(0f, 1f).SetEase(Ease.OutQuad).OnComplete(() =>
                 {
                     // 사라진 후에 할 작업들을 여기에 추가할 수 있습니다.
                 });

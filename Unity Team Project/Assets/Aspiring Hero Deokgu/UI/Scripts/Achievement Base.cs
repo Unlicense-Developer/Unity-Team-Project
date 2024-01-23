@@ -78,7 +78,16 @@ public class AchievementBase : MonoBehaviour
         achieve_Value = value;
         UpdateAchievement();
 
-        if (achieve_Value == achieve_MaxValue)
+        if (achieve_Value >= achieve_MaxValue)
+            GameClearAchievement();
+    }
+
+    public void AddAchieveValue(int value)
+    {
+        achieve_Value += value;
+        UpdateAchievement();
+
+        if (achieve_Value >= achieve_MaxValue)
             GameClearAchievement();
     }
 
@@ -86,6 +95,7 @@ public class AchievementBase : MonoBehaviour
     {
         if (!isClear) return;
 
+        InventoryManager.Instance.AddGold(rewardGold);
         rewardGoldUI.SetActive(false);
         aquiredGoldUI.SetActive(true);
     }

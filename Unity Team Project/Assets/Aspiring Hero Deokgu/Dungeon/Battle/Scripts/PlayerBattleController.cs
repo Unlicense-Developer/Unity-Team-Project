@@ -171,6 +171,14 @@ namespace Dungeon
                 StartCoroutine(battleManager.EndPlayerTurnRoutine());
             }
         }
+        public void PlayerHittedOther()
+        {
+            hittedEffectParticleSystem.Play();
+            int hitVariant = Random.Range(1, 4); // 1부터 3까지 랜덤 숫자 생성
+
+            string hitSoundName = $"MaleHitted({hitVariant})";
+            WorldSoundManager.Instance.PlaySFX(hitSoundName);
+        }
 
         public void SwordHitted()
         {

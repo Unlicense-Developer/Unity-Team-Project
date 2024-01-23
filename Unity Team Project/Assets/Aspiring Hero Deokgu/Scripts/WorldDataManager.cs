@@ -7,6 +7,8 @@ public class WorldDataManager : MonoBehaviour
 {
     public void SaveGame()
     {
+        WorldSoundManager.Instance.PlaySFX("Save");
+
         SaveData data = new SaveData();
         data.currentScene = SceneManager.GetActiveScene().name;
 
@@ -33,6 +35,8 @@ public class WorldDataManager : MonoBehaviour
 
     public void LoadGame()
     {
+        WorldSoundManager.Instance.PlaySFX("Load");
+
         SaveData data = SaveSystem.LoadGame();
         if (data != null)
         {
